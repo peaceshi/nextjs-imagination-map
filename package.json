@@ -8,12 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "10.2.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "deck.gl": "^8.4.16",
+    "next": "^10.2.2",
+    "next-i18next": "^8.3.0",
+    "next-pwa": "^5.2.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/react": "17.0.6",
-    "typescript": "4.2.4"
+    "@danmarshall/deckgl-typings": "^4.9.2",
+    "@types/react": "^17.0.6",
+    "eslint": "^7.27.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
   }
 }
