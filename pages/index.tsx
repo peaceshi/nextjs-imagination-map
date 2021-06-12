@@ -34,9 +34,9 @@ const newViewport = viewport.fitBounds([
 /* global window */
 const devicePixelRatio = (typeof window !== 'undefined' && window.devicePixelRatio) || 1;
 
-function getTooltip({tile}) {
-  return tile && `tile: x: ${tile.x}, y: ${tile.y}, z: ${tile.z}`;
-}
+// function getTooltip({tile}) {
+//   return tile && `tile: x: ${tile.x}, y: ${tile.y}, z: ${tile.z}`;
+// }
 
 export default function Home({showBorder = true, onTilesLoad = null}) {
   const tileLayer = new TileLayer({
@@ -49,7 +49,7 @@ export default function Home({showBorder = true, onTilesLoad = null}) {
     // and we aren't limited by the browser to a certain number per domain.
     maxRequests: -1,
 
-    pickable: false,
+    pickable: false,//@ts-expect-error: Bad types define
     onViewportLoad: onTilesLoad,
     autoHighlight: showBorder,
     highlightColor: [60, 60, 60, 40],
@@ -59,6 +59,7 @@ export default function Home({showBorder = true, onTilesLoad = null}) {
     // tileSize: 256 / devicePixelRatio,
     tileSize: 256 / devicePixelRatio,
     extent:[0,0,-79.17,135],
+//@ts-expect-error: Bad types define
     renderSubLayers: props => {
       const {
         bbox: {west, south, east, north}
@@ -74,7 +75,7 @@ export default function Home({showBorder = true, onTilesLoad = null}) {
           new PathLayer({
             id: `${props.id}-border`,
             visible: props.visible,
-            data: [[[west, north], [west, south], [east, south], [east, north], [west, north]]],
+            data: [[[west, north], [west, south], [east, south], [east, north], [west, north]]],//@ts-expect-error: Bad types define
             getPath: d => d,
             getColor: [255, 255, 255],
             widthMinPixels: 1
@@ -86,9 +87,9 @@ export default function Home({showBorder = true, onTilesLoad = null}) {
               tiles: `id:${props.id}`,
               lonlat:`(${west.toFixed(2)},${north.toFixed(2)})`
             }],
-            fontWeight:'bold',
+            fontWeight:'bold',//@ts-expect-error: Bad types define
             getPosition:[west, north],
-            getColor: [255, 255, 255],
+            getColor: [255, 255, 255],//@ts-expect-error: Bad types define
             getText: d => d.lonlat,
             getSize: 32,
             getTextAnchor: 'middle',
@@ -101,9 +102,9 @@ export default function Home({showBorder = true, onTilesLoad = null}) {
               info: `${props.id}\n(x: ${props.tile.x}, y: ${props.tile.y}, z: ${props.tile.z})`,
               lonlat:[west+(east-west)/2, north+(south-north)/2],
             }],
-            fontWeight:'bold',
+            fontWeight:'bold',//@ts-expect-error: Bad types define
             getPosition:d => d.lonlat,
-            getColor: [255, 255, 255],
+            getColor: [255, 255, 255],//@ts-expect-error: Bad types define
             getText: d => d.info,
             getSize: 24,
             getTextAnchor: 'middle',
