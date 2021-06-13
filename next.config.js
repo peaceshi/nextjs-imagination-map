@@ -14,6 +14,16 @@ const nextConfig = {
   future:{
     webpack5: true
   },
+  webpack: (config, options) => {
+    config.module.rules.push({
+      resolve:{
+        alias: {
+          "mapbox-gl": "maplibre-gl"
+        }
+      },
+    })
+    return config
+  },
   // basePath: '/v3',
   experimental:{},
   reactStrictMode: true,

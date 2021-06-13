@@ -900,19 +900,19 @@
     "@types/react" "*"
     indefinitely-typed "^1.1.0"
 
-"@deck.gl/aggregation-layers@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/aggregation-layers/download/@deck.gl/aggregation-layers-8.4.16.tgz#faa60b5805aea7fea9583e3277d3b97ced93a609"
-  integrity sha1-+qYLWAWup/6pWD4yd9O5fO2Tpgk=
+"@deck.gl/aggregation-layers@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/aggregation-layers/download/@deck.gl/aggregation-layers-8.4.17.tgz#296e1b12cd2a468e4096b5457a721072c5514538"
+  integrity sha1-KW4bEs0qRo5AlrVFenIQcsVRRTg=
   dependencies:
     "@luma.gl/shadertools" "^8.4.1"
     "@math.gl/web-mercator" "^3.4.2"
     d3-hexbin "^0.2.1"
 
-"@deck.gl/carto@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/carto/download/@deck.gl/carto-8.4.16.tgz#407fa12cf06840bcf0bc7131d897665b87669186"
-  integrity sha1-QH+hLPBoQLzwvHEx2JdmW4dmkYY=
+"@deck.gl/carto@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/carto/download/@deck.gl/carto-8.4.17.tgz#8d054ab0d32f851f6467658d291796a54b0da059"
+  integrity sha1-jQVKsNMvhR9kZ2WNKReWpUsNoFk=
   dependencies:
     "@loaders.gl/loader-utils" "^2.3.13"
     "@loaders.gl/mvt" "^2.3.13"
@@ -921,10 +921,10 @@
     cartocolor "^4.0.2"
     d3-scale "^3.2.3"
 
-"@deck.gl/core@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/core/download/@deck.gl/core-8.4.16.tgz#5b439077a105f66966c380d27a23675be18e487d"
-  integrity sha1-W0OQd6EF9mlmw4DSeiNnW+GOSH0=
+"@deck.gl/core@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/core/download/@deck.gl/core-8.4.17.tgz#28ad4cc0198787c2f7604100966fa62c4ca00f85"
+  integrity sha1-KK1MwBmHh8L3YEEAlm+mLEygD4U=
   dependencies:
     "@loaders.gl/core" "^2.3.13"
     "@loaders.gl/images" "^2.3.13"
@@ -935,17 +935,17 @@
     mjolnir.js "^2.5.0"
     probe.gl "^3.2.1"
 
-"@deck.gl/extensions@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/extensions/download/@deck.gl/extensions-8.4.16.tgz#a0d7583ff3af38260f9fee38138c668b462faf2a"
-  integrity sha1-oNdYP/OvOCYPn+44E4xmi0Yvryo=
+"@deck.gl/extensions@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/extensions/download/@deck.gl/extensions-8.4.17.tgz#ac4606e2d81863efa84c54ef3a5d956fbe1e7ce5"
+  integrity sha1-rEYG4tgYY++oTFTvOl2Vb74efOU=
   dependencies:
     "@luma.gl/shadertools" "^8.4.1"
 
-"@deck.gl/geo-layers@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/geo-layers/download/@deck.gl/geo-layers-8.4.16.tgz#90d82ccdf84a6d8cc3bc5726606074ac27d429c5"
-  integrity sha1-kNgszfhKbYzDvFcmYGB0rCfUKcU=
+"@deck.gl/geo-layers@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/geo-layers/download/@deck.gl/geo-layers-8.4.17.tgz#c5f98344413f49452312f783f26078999292f5ae"
+  integrity sha1-xfmDREE/SUUjEveD8mB4mZKS9a4=
   dependencies:
     "@loaders.gl/3d-tiles" "^2.3.13"
     "@loaders.gl/gis" "^2.3.13"
@@ -959,47 +959,47 @@
     long "^3.2.0"
     math.gl "^3.4.2"
 
-"@deck.gl/google-maps@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/google-maps/download/@deck.gl/google-maps-8.4.16.tgz#56d7e9e22a6d7aed3e748e5a803d3e1cb37fde52"
-  integrity sha1-Vtfp4ipteu0+dI5agD0+HLN/3lI=
+"@deck.gl/google-maps@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/google-maps/download/@deck.gl/google-maps-8.4.17.tgz#b35a175181aea7651b8c7ab56151fe04bd69bd55"
+  integrity sha1-s1oXUYGup2UbjHq1YVH+BL1pvVU=
 
-"@deck.gl/json@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/json/download/@deck.gl/json-8.4.16.tgz#8dd3458b72e0397bc70726b530015011e82d6217"
-  integrity sha1-jdNFi3LgOXvHBya1MAFQEegtYhc=
+"@deck.gl/json@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/json/download/@deck.gl/json-8.4.17.tgz#89ecac1cd4d81d9669ca01ca2bcd5b3c994ecc53"
+  integrity sha1-ieysHNTYHZZpygHKK81bPJlOzFM=
   dependencies:
     d3-dsv "^1.0.8"
     expression-eval "^2.0.0"
 
-"@deck.gl/layers@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/layers/download/@deck.gl/layers-8.4.16.tgz#a79eb0a9cbcf14586a934384ac2d02c22e884cce"
-  integrity sha1-p56wqcvPFFhqk0OErC0Cwi6ITM4=
+"@deck.gl/layers@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/layers/download/@deck.gl/layers-8.4.17.tgz#ad1d0990e82d38d447042d0156e9c5e8fa416ab1"
+  integrity sha1-rR0JkOgtONRHBC0BVunF6PpBarE=
   dependencies:
     "@loaders.gl/images" "^2.3.13"
     "@mapbox/tiny-sdf" "^1.1.0"
     "@math.gl/polygon" "^3.4.2"
     earcut "^2.0.6"
 
-"@deck.gl/mapbox@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/mapbox/download/@deck.gl/mapbox-8.4.16.tgz#8ba4a3e77a709d18bfdc8bffc0b42197ba7f848b"
-  integrity sha1-i6Sj53pwnRi/3Iv/wLQhl7p/hIs=
+"@deck.gl/mapbox@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/mapbox/download/@deck.gl/mapbox-8.4.17.tgz#7aa28a184f139bcaa53630a8aa6ce4c201869e27"
+  integrity sha1-eqKKGE8Tm8qlNjCoqmzkwgGGnic=
 
-"@deck.gl/mesh-layers@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/mesh-layers/download/@deck.gl/mesh-layers-8.4.16.tgz#8f43d0e8361b443f76e439e19e4917b18c6620cd"
-  integrity sha1-j0PQ6DYbRD925DnhnkkXsYxmIM0=
+"@deck.gl/mesh-layers@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/mesh-layers/download/@deck.gl/mesh-layers-8.4.17.tgz#54b88d00f36316ac34fdc52b82c93d1cdc735c11"
+  integrity sha1-VLiNAPNjFqw0/cUrgsk9HNxzXBE=
   dependencies:
     "@loaders.gl/gltf" "^2.3.13"
     "@luma.gl/experimental" "^8.4.1"
     "@luma.gl/shadertools" "^8.4.1"
 
-"@deck.gl/react@8.4.16":
-  version "8.4.16"
-  resolved "https://registry.nlark.com/@deck.gl/react/download/@deck.gl/react-8.4.16.tgz#4d995cf2707d6892849ae5f923cae265297fe816"
-  integrity sha1-TZlc8nB9aJKEmuX5I8riZSl/6BY=
+"@deck.gl/react@8.4.17":
+  version "8.4.17"
+  resolved "https://registry.nlark.com/@deck.gl/react/download/@deck.gl/react-8.4.17.tgz#180f6a85c3e040888462629de4ccb6526682dcf4"
+  integrity sha1-GA9qhcPgQIiEYmKd5My2UmaC3PQ=
   dependencies:
     prop-types "^15.6.0"
 
@@ -1251,20 +1251,53 @@
     "@luma.gl/gltools" "8.4.5"
     probe.gl "^3.2.1"
 
+"@mapbox/geojson-rewind@^0.5.0":
+  version "0.5.1"
+  resolved "https://registry.nlark.com/@mapbox/geojson-rewind/download/@mapbox/geojson-rewind-0.5.1.tgz#adbe16dc683eb40e90934c51a5e28c7bbf44f4e1"
+  integrity sha1-rb4W3Gg+tA6Qk0xRpeKMe79E9OE=
+  dependencies:
+    get-stream "^6.0.1"
+    minimist "^1.2.5"
+
+"@mapbox/geojson-types@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/@mapbox/geojson-types/download/@mapbox/geojson-types-1.0.2.tgz#9aecf642cb00eab1080a57c4f949a65b4a5846d6"
+  integrity sha1-muz2QssA6rEIClfE+UmmW0pYRtY=
+
+"@mapbox/jsonlint-lines-primitives@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npm.taobao.org/@mapbox/jsonlint-lines-primitives/download/@mapbox/jsonlint-lines-primitives-2.0.2.tgz#ce56e539f83552b58d10d672ea4d6fc9adc7b234"
+  integrity sha1-zlblOfg1UrWNENZy6k1vya3HsjQ=
+
+"@mapbox/mapbox-gl-supported@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.npm.taobao.org/@mapbox/mapbox-gl-supported/download/@mapbox/mapbox-gl-supported-1.5.0.tgz?cache=0&sync_timestamp=1608790235439&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40mapbox%2Fmapbox-gl-supported%2Fdownload%2F%40mapbox%2Fmapbox-gl-supported-1.5.0.tgz#f60b6a55a5d8e5ee908347d2ce4250b15103dc8e"
+  integrity sha1-9gtqVaXY5e6Qg0fSzkJQsVED3I4=
+
+"@mapbox/mapbox-gl-supported@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/@mapbox/mapbox-gl-supported/download/@mapbox/mapbox-gl-supported-2.0.0.tgz?cache=0&sync_timestamp=1608790235439&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40mapbox%2Fmapbox-gl-supported%2Fdownload%2F%40mapbox%2Fmapbox-gl-supported-2.0.0.tgz#bb133cd91e562c006713fbc83f21e4b6f711a388"
+  integrity sha1-uxM82R5WLABnE/vIPyHktvcRo4g=
+
 "@mapbox/martini@^0.2.0":
   version "0.2.0"
   resolved "https://registry.npm.taobao.org/@mapbox/martini/download/@mapbox/martini-0.2.0.tgz#1af70211fbe994abf26e37f1388ca69c02cd43b4"
   integrity sha1-GvcCEfvplKvybjfxOIymnALNQ7Q=
 
-"@mapbox/point-geometry@~0.1.0":
+"@mapbox/point-geometry@0.1.0", "@mapbox/point-geometry@^0.1.0", "@mapbox/point-geometry@~0.1.0":
   version "0.1.0"
   resolved "https://registry.npm.taobao.org/@mapbox/point-geometry/download/@mapbox/point-geometry-0.1.0.tgz#8a83f9335c7860effa2eeeca254332aa0aeed8f2"
   integrity sha1-ioP5M1x4YO/6Lu7KJUMyqgru2PI=
 
-"@mapbox/tiny-sdf@^1.1.0":
+"@mapbox/tiny-sdf@^1.1.0", "@mapbox/tiny-sdf@^1.1.1", "@mapbox/tiny-sdf@^1.2.5":
   version "1.2.5"
   resolved "https://registry.npm.taobao.org/@mapbox/tiny-sdf/download/@mapbox/tiny-sdf-1.2.5.tgz#424c620a96442b20402552be70a7f62a8407cc59"
   integrity sha1-QkxiCpZEKyBAJVK+cKf2KoQHzFk=
+
+"@mapbox/unitbezier@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.npm.taobao.org/@mapbox/unitbezier/download/@mapbox/unitbezier-0.0.0.tgz#15651bd553a67b8581fb398810c98ad86a34524e"
+  integrity sha1-FWUb1VOme4WB+zmIEMmK2Go0Uk4=
 
 "@mapbox/vector-tile@^1.3.1":
   version "1.3.1"
@@ -1272,6 +1305,11 @@
   integrity sha1-06dMkEAtBuiexm3knsgX/1NAlmY=
   dependencies:
     "@mapbox/point-geometry" "~0.1.0"
+
+"@mapbox/whoots-js@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npm.taobao.org/@mapbox/whoots-js/download/@mapbox/whoots-js-3.1.0.tgz#497c67a1cef50d1a2459ba60f315e448d2ad87fe"
+  integrity sha1-SXxnoc71DRokWbpg8xXkSNKth/4=
 
 "@math.gl/core@3.4.3", "@math.gl/core@^3.3.0", "@math.gl/core@^3.4.1", "@math.gl/core@^3.4.2":
   version "3.4.3"
@@ -1306,7 +1344,7 @@
   dependencies:
     "@math.gl/core" "3.4.3"
 
-"@math.gl/web-mercator@^3.3.0", "@math.gl/web-mercator@^3.4.2":
+"@math.gl/web-mercator@^3.3.0", "@math.gl/web-mercator@^3.4.2", "@math.gl/web-mercator@^3.4.3":
   version "3.4.3"
   resolved "https://registry.nlark.com/@math.gl/web-mercator/download/@math.gl/web-mercator-3.4.3.tgz#6bcb262a92453399229b173bc9a825ebd3356f38"
   integrity sha1-a8smKpJFM5kimxc7yagl69M1bzg=
@@ -1436,6 +1474,11 @@
   resolved "https://registry.nlark.com/@types/estree/download/@types/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha1-4Xfmme4bjCLSMXTKqnQiZEOJUJ8=
 
+"@types/geojson@*", "@types/geojson@^7946.0.7":
+  version "7946.0.7"
+  resolved "https://registry.nlark.com/@types/geojson/download/@types/geojson-7946.0.7.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fgeojson%2Fdownload%2F%40types%2Fgeojson-7946.0.7.tgz#c8fa532b60a0042219cdf173ca21a975ef0666ad"
+  integrity sha1-yPpTK2CgBCIZzfFzyiGpde8GZq0=
+
 "@types/glob@^7.1.1":
   version "7.1.3"
   resolved "https://registry.nlark.com/@types/glob/download/@types/glob-7.1.3.tgz?cache=0&sync_timestamp=1621241222840&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fglob%2Fdownload%2F%40types%2Fglob-7.1.3.tgz#e6ba80f36b7daad2c685acd9266382e68985c183"
@@ -1468,6 +1511,13 @@
   version "7.0.7"
   resolved "https://registry.nlark.com/@types/json-schema/download/@types/json-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
   integrity sha1-mKmTUWyFnrDVxMjwmDF6nqaNua0=
+
+"@types/mapbox-gl@^2.0.3":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@types/mapbox-gl/download/@types/mapbox-gl-2.3.0.tgz#8a88784b1e5e332c9e609a32fe4299789279ed47"
+  integrity sha1-ioh4Sx5eMyyeYJoy/kKZeJJ57Uc=
+  dependencies:
+    "@types/geojson" "*"
 
 "@types/minimatch@*":
   version "3.0.4"
@@ -1555,7 +1605,7 @@ acorn-jsx@^5.3.1:
 
 acorn@^7.4.0:
   version "7.4.1"
-  resolved "https://registry.nlark.com/acorn/download/acorn-7.4.1.tgz?cache=0&sync_timestamp=1622440161899&other_urls=https%3A%2F%2Fregistry.nlark.com%2Facorn%2Fdownload%2Facorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
+  resolved "https://registry.nlark.com/acorn/download/acorn-7.4.1.tgz?cache=0&sync_timestamp=1623419719979&other_urls=https%3A%2F%2Fregistry.nlark.com%2Facorn%2Fdownload%2Facorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha1-/q7SVZc9LndVW4PbwIhRpsY1IPo=
 
 aggregate-error@^3.0.0:
@@ -1931,9 +1981,9 @@ callsites@^3.0.0:
   integrity sha1-s2MKvYlDQy9Us/BRkjjjPNffL3M=
 
 caniuse-lite@^1.0.30001202, caniuse-lite@^1.0.30001219, caniuse-lite@^1.0.30001228:
-  version "1.0.30001236"
-  resolved "https://registry.nlark.com/caniuse-lite/download/caniuse-lite-1.0.30001236.tgz#0a80de4cdf62e1770bb46a30d884fc8d633e3958"
-  integrity sha1-CoDeTN9i4XcLtGow2IT8jWM+OVg=
+  version "1.0.30001237"
+  resolved "https://registry.nlark.com/caniuse-lite/download/caniuse-lite-1.0.30001237.tgz?cache=0&sync_timestamp=1623477010737&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcaniuse-lite%2Fdownload%2Fcaniuse-lite-1.0.30001237.tgz#4b7783661515b8e7151fc6376cfd97f0e427b9e5"
+  integrity sha1-S3eDZhUVuOcVH8Y3bP2X8OQnueU=
 
 cartocolor@^4.0.2:
   version "4.0.2"
@@ -2049,7 +2099,7 @@ color-name@~1.1.4:
 
 colorbrewer@1.0.0:
   version "1.0.0"
-  resolved "https://registry.nlark.com/colorbrewer/download/colorbrewer-1.0.0.tgz#4f97333b969ba7612382be4bc3394b341fb4c8a2"
+  resolved "https://registry.npm.taobao.org/colorbrewer/download/colorbrewer-1.0.0.tgz#4f97333b969ba7612382be4bc3394b341fb4c8a2"
   integrity sha1-T5czO5abp2Ejgr5LwzlLNB+0yKI=
 
 colorette@^1.2.2:
@@ -2195,6 +2245,11 @@ css.escape@1.5.1:
   resolved "https://registry.npm.taobao.org/css.escape/download/css.escape-1.5.1.tgz#42e27d4fa04ae32f931a4b4d4191fa9cddee97cb"
   integrity sha1-QuJ9T6BK4y+TGktNQZH6nN3ul8s=
 
+csscolorparser@~1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npm.taobao.org/csscolorparser/download/csscolorparser-1.0.3.tgz#b34f391eea4da8f3e98231e2ccd8df9c041f171b"
+  integrity sha1-s085HupNqPPpgjHizNjfnAQfFxs=
+
 cssnano-preset-simple@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/cssnano-preset-simple/download/cssnano-preset-simple-2.0.0.tgz#b55e72cb970713f425560a0e141b0335249e2f96"
@@ -2297,21 +2352,21 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
     ms "2.1.2"
 
 deck.gl@^8.4.16:
-  version "8.4.16"
-  resolved "https://registry.nlark.com/deck.gl/download/deck.gl-8.4.16.tgz#86dc983e990c7c797f55e431dee75aac281f54c2"
-  integrity sha1-htyYPpkMfHl/VeQx3udarCgfVMI=
+  version "8.4.17"
+  resolved "https://registry.nlark.com/deck.gl/download/deck.gl-8.4.17.tgz#043f375f4ae6166fcde4125d3aff35af2864d718"
+  integrity sha1-BD83X0rmFm/N5BJdOv81ryhk1xg=
   dependencies:
-    "@deck.gl/aggregation-layers" "8.4.16"
-    "@deck.gl/carto" "8.4.16"
-    "@deck.gl/core" "8.4.16"
-    "@deck.gl/extensions" "8.4.16"
-    "@deck.gl/geo-layers" "8.4.16"
-    "@deck.gl/google-maps" "8.4.16"
-    "@deck.gl/json" "8.4.16"
-    "@deck.gl/layers" "8.4.16"
-    "@deck.gl/mapbox" "8.4.16"
-    "@deck.gl/mesh-layers" "8.4.16"
-    "@deck.gl/react" "8.4.16"
+    "@deck.gl/aggregation-layers" "8.4.17"
+    "@deck.gl/carto" "8.4.17"
+    "@deck.gl/core" "8.4.17"
+    "@deck.gl/extensions" "8.4.17"
+    "@deck.gl/geo-layers" "8.4.17"
+    "@deck.gl/google-maps" "8.4.17"
+    "@deck.gl/json" "8.4.17"
+    "@deck.gl/layers" "8.4.17"
+    "@deck.gl/mapbox" "8.4.17"
+    "@deck.gl/mesh-layers" "8.4.17"
+    "@deck.gl/react" "8.4.17"
 
 dedent@^0.7.0:
   version "0.7.0"
@@ -2352,6 +2407,11 @@ depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.nlark.com/depd/download/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
+
+dequal@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npm.taobao.org/dequal/download/dequal-2.0.2.tgz#85ca22025e3a87e65ef75a7a437b35284a7e319d"
+  integrity sha1-hcoiAl46h+Ze91p6Q3s1KEp+MZ0=
 
 des.js@^1.0.0:
   version "1.0.1"
@@ -2399,7 +2459,7 @@ draco3d@^1.3.6:
   resolved "https://registry.nlark.com/draco3d/download/draco3d-1.4.1.tgz#2abdcf7b59caaac50f7e189aec454176c57146b2"
   integrity sha1-Kr3Pe1nKqsUPfhia7EVBdsVxRrI=
 
-earcut@^2.0.6:
+earcut@^2.0.6, earcut@^2.2.2:
   version "2.2.2"
   resolved "https://registry.npm.taobao.org/earcut/download/earcut-2.2.2.tgz#41b0bc35f63e0fe80da7cddff28511e7e2e80d11"
   integrity sha1-QbC8NfY+D+gNp83f8oUR5+LoDRE=
@@ -2524,7 +2584,7 @@ eslint-scope@^5.1.1:
 
 eslint-utils@^2.1.0:
   version "2.1.0"
-  resolved "https://registry.nlark.com/eslint-utils/download/eslint-utils-2.1.0.tgz?cache=0&sync_timestamp=1620975524854&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-utils%2Fdownload%2Feslint-utils-2.1.0.tgz#d2de5e03424e707dc10c74068ddedae708741b27"
+  resolved "https://registry.nlark.com/eslint-utils/download/eslint-utils-2.1.0.tgz#d2de5e03424e707dc10c74068ddedae708741b27"
   integrity sha1-0t5eA0JOcH3BDHQGjd7a5wh0Gyc=
   dependencies:
     eslint-visitor-keys "^1.1.0"
@@ -2586,7 +2646,7 @@ eslint@^7.27.0:
 
 espree@^7.3.0, espree@^7.3.1:
   version "7.3.1"
-  resolved "https://registry.npm.taobao.org/espree/download/espree-7.3.1.tgz?cache=0&sync_timestamp=1607143957865&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fespree%2Fdownload%2Fespree-7.3.1.tgz#f2df330b752c6f55019f8bd89b7660039c1bbbb6"
+  resolved "https://registry.nlark.com/espree/download/espree-7.3.1.tgz#f2df330b752c6f55019f8bd89b7660039c1bbbb6"
   integrity sha1-8t8zC3Usb1UBn4vYm3ZgA5wbu7Y=
   dependencies:
     acorn "^7.4.0"
@@ -2799,6 +2859,11 @@ gensync@^1.0.0-beta.2:
   resolved "https://registry.npm.taobao.org/gensync/download/gensync-1.0.0-beta.2.tgz?cache=0&sync_timestamp=1603829667876&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgensync%2Fdownload%2Fgensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
   integrity sha1-MqbudsPX9S1GsrGuXZP+qFgKJeA=
 
+geojson-vt@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.npm.taobao.org/geojson-vt/download/geojson-vt-3.2.1.tgz#f8adb614d2c1d3f6ee7c4265cad4bbf3ad60c8b7"
+  integrity sha1-+K22FNLB0/bufEJlytS7861gyLc=
+
 get-intrinsic@^1.0.2, get-intrinsic@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/get-intrinsic/download/get-intrinsic-1.1.1.tgz?cache=0&sync_timestamp=1612364352840&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fget-intrinsic%2Fdownload%2Fget-intrinsic-1.1.1.tgz#15f59f376f855c446963948f0d24cd3637b4abc6"
@@ -2820,12 +2885,12 @@ get-own-enumerable-property-symbols@^3.0.0:
   resolved "https://registry.npm.taobao.org/get-own-enumerable-property-symbols/download/get-own-enumerable-property-symbols-3.0.2.tgz#b5fde77f22cbe35f390b4e089922c50bce6ef664"
   integrity sha1-tf3nfyLL4185C04ImSLFC85u9mQ=
 
-get-stream@^6.0.0:
+get-stream@^6.0.0, get-stream@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npm.taobao.org/get-stream/download/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
   integrity sha1-omLY7vZ6ztV8KFKtYWdSakPL97c=
 
-gl-matrix@^3.0.0:
+gl-matrix@^3.0.0, gl-matrix@^3.2.1, gl-matrix@^3.3.0:
   version "3.3.0"
   resolved "https://registry.npm.taobao.org/gl-matrix/download/gl-matrix-3.3.0.tgz#232eef60b1c8b30a28cbbe75b2caf6c48fd6358b"
   integrity sha1-Iy7vYLHIswooy751ssr2xI/WNYs=
@@ -2893,6 +2958,11 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   version "4.2.6"
   resolved "https://registry.nlark.com/graceful-fs/download/graceful-fs-4.2.6.tgz#ff040b2b0853b23c3d31027523706f1885d76bee"
   integrity sha1-/wQLKwhTsjw9MQJ1I3BvGIXXa+4=
+
+grid-index@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/grid-index/download/grid-index-1.1.0.tgz#97f8221edec1026c8377b86446a7c71e79522ea7"
+  integrity sha1-l/giHt7BAmyDd7hkRqfHHnlSLqc=
 
 h3-js@^3.6.0:
   version "3.7.2"
@@ -3324,7 +3394,7 @@ js-yaml@^3.13.1:
 
 jsep@^0.3.0:
   version "0.3.5"
-  resolved "https://registry.nlark.com/jsep/download/jsep-0.3.5.tgz#3fd79ebd92f6f434e4857d5272aaeef7d948264d"
+  resolved "https://registry.npm.taobao.org/jsep/download/jsep-0.3.5.tgz#3fd79ebd92f6f434e4857d5272aaeef7d948264d"
   integrity sha1-P9eevZL29DTkhX1Scqru99lIJk0=
 
 jsesc@^2.5.1:
@@ -3386,6 +3456,11 @@ jsonfile@^6.0.1:
     universalify "^2.0.0"
   optionalDependencies:
     graceful-fs "^4.1.6"
+
+kdbush@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/kdbush/download/kdbush-3.0.0.tgz#f8484794d47004cc2d85ed3a79353dbe0abc2bf0"
+  integrity sha1-+EhHlNRwBMwthe06eTU9vgq8K/A=
 
 levn@^0.4.1:
   version "0.4.1"
@@ -3540,6 +3615,64 @@ make-dir@^3.0.2, make-dir@^3.1.0:
   dependencies:
     semver "^6.0.0"
 
+mapbox-gl@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.nlark.com/mapbox-gl/download/mapbox-gl-2.3.0.tgz#2f8243da89ff639497963d7f865d12523d9b96de"
+  integrity sha1-L4JD2on/Y5SXlj1/hl0SUj2blt4=
+  dependencies:
+    "@mapbox/geojson-rewind" "^0.5.0"
+    "@mapbox/geojson-types" "^1.0.2"
+    "@mapbox/jsonlint-lines-primitives" "^2.0.2"
+    "@mapbox/mapbox-gl-supported" "^2.0.0"
+    "@mapbox/point-geometry" "^0.1.0"
+    "@mapbox/tiny-sdf" "^1.2.5"
+    "@mapbox/unitbezier" "^0.0.0"
+    "@mapbox/vector-tile" "^1.3.1"
+    "@mapbox/whoots-js" "^3.1.0"
+    csscolorparser "~1.0.3"
+    earcut "^2.2.2"
+    geojson-vt "^3.2.1"
+    gl-matrix "^3.3.0"
+    grid-index "^1.1.0"
+    minimist "^1.2.5"
+    murmurhash-js "^1.0.0"
+    pbf "^3.2.1"
+    potpack "^1.0.1"
+    quickselect "^2.0.0"
+    rw "^1.3.3"
+    supercluster "^7.1.3"
+    tinyqueue "^2.0.3"
+    vt-pbf "^3.1.1"
+
+maplibre-gl@^1.14.0:
+  version "1.14.0"
+  resolved "https://registry.nlark.com/maplibre-gl/download/maplibre-gl-1.14.0.tgz#035663dae6cbaaca5b06024f6c5b51a42db1fc84"
+  integrity sha1-A1Zj2ubLqspbBgJPbFtRpC2x/IQ=
+  dependencies:
+    "@mapbox/geojson-rewind" "^0.5.0"
+    "@mapbox/geojson-types" "^1.0.2"
+    "@mapbox/jsonlint-lines-primitives" "^2.0.2"
+    "@mapbox/mapbox-gl-supported" "^1.5.0"
+    "@mapbox/point-geometry" "^0.1.0"
+    "@mapbox/tiny-sdf" "^1.1.1"
+    "@mapbox/unitbezier" "^0.0.0"
+    "@mapbox/vector-tile" "^1.3.1"
+    "@mapbox/whoots-js" "^3.1.0"
+    csscolorparser "~1.0.3"
+    earcut "^2.2.2"
+    geojson-vt "^3.2.1"
+    gl-matrix "^3.2.1"
+    grid-index "^1.1.0"
+    minimist "^1.2.5"
+    murmurhash-js "^1.0.0"
+    pbf "^3.2.1"
+    potpack "^1.0.1"
+    quickselect "^2.0.0"
+    rw "^1.3.3"
+    supercluster "^7.1.0"
+    tinyqueue "^2.0.3"
+    vt-pbf "^3.1.1"
+
 math.gl@^3.4.2:
   version "3.4.3"
   resolved "https://registry.nlark.com/math.gl/download/math.gl-3.4.3.tgz#8e73db7900dec6a5eb0c2c54af7429793b95e7b8"
@@ -3626,6 +3759,11 @@ ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.npm.taobao.org/ms/download/ms-2.1.2.tgz?cache=0&sync_timestamp=1607433856030&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fms%2Fdownload%2Fms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=
+
+murmurhash-js@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/murmurhash-js/download/murmurhash-js-1.0.0.tgz#b06278e21fc6c37fa5313732b0412bcb6ae15f51"
+  integrity sha1-sGJ44h/Gw3+lMTcysEEry2rhX1E=
 
 nanoid@^3.1.22:
   version "3.1.23"
@@ -4033,12 +4171,17 @@ pnp-webpack-plugin@1.6.4:
 
 postcss@8.2.13:
   version "8.2.13"
-  resolved "https://registry.nlark.com/postcss/download/postcss-8.2.13.tgz?cache=0&sync_timestamp=1623282002530&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fpostcss%2Fdownload%2Fpostcss-8.2.13.tgz#dbe043e26e3c068e45113b1ed6375d2d37e2129f"
+  resolved "https://registry.nlark.com/postcss/download/postcss-8.2.13.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fpostcss%2Fdownload%2Fpostcss-8.2.13.tgz#dbe043e26e3c068e45113b1ed6375d2d37e2129f"
   integrity sha1-2+BD4m48Bo5FETse1jddLTfiEp8=
   dependencies:
     colorette "^1.2.2"
     nanoid "^3.1.22"
     source-map "^0.6.1"
+
+potpack@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/potpack/download/potpack-1.0.1.tgz#d1b1afd89e4c8f7762865ec30bd112ab767e2ebf"
+  integrity sha1-0bGv2J5Mj3dihl7DC9ESq3Z+Lr8=
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -4078,7 +4221,7 @@ progress@^2.0.0:
   resolved "https://registry.npm.taobao.org/progress/download/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha1-foz42PW48jnBvGi+tOt4Vn1XLvg=
 
-prop-types@15.7.2, prop-types@^15.6.0:
+prop-types@15.7.2, prop-types@^15.6.0, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -4139,6 +4282,11 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npm.taobao.org/queue-microtask/download/queue-microtask-1.2.3.tgz?cache=0&sync_timestamp=1616391471040&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqueue-microtask%2Fdownload%2Fqueue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha1-SSkii7xyTfrEPg77BYyve2z7YkM=
 
+quickselect@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/quickselect/download/quickselect-2.0.0.tgz#f19680a486a5eefb581303e023e98faaf25dd018"
+  integrity sha1-8ZaApIal7vtYEwPgI+mPqvJd0Bg=
+
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/randombytes/download/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -4183,12 +4331,26 @@ react-i18next@^11.8.13:
 
 react-is@16.13.1, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
-  resolved "https://registry.nlark.com/react-is/download/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  resolved "https://registry.nlark.com/react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1623428670723&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
+
+react-map-gl@^6.1.16:
+  version "6.1.16"
+  resolved "https://registry.nlark.com/react-map-gl/download/react-map-gl-6.1.16.tgz#47e1a200b4dea7f981f2be36f96933f202e6bd7e"
+  integrity sha1-R+GiALTep/mB8r42+Wkz8gLmvX4=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@types/geojson" "^7946.0.7"
+    "@types/mapbox-gl" "^2.0.3"
+    mapbox-gl "^2.3.0"
+    mjolnir.js "^2.5.0"
+    prop-types "^15.7.2"
+    resize-observer-polyfill "^1.5.1"
+    viewport-mercator-project "^7.0.3"
 
 react-refresh@0.8.3:
   version "0.8.3"
-  resolved "https://registry.nlark.com/react-refresh/download/react-refresh-0.8.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-refresh%2Fdownload%2Freact-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
+  resolved "https://registry.nlark.com/react-refresh/download/react-refresh-0.8.3.tgz?cache=0&sync_timestamp=1623428708895&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-refresh%2Fdownload%2Freact-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha1-ch1GV2ctQAxePHXQY8SoX7LV1o8=
 
 react@^17.0.2:
@@ -4286,6 +4448,11 @@ require-from-string@^2.0.2:
   resolved "https://registry.npm.taobao.org/require-from-string/download/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
   integrity sha1-iaf92TgmEmcxjq/hT5wy5ZjDaQk=
 
+resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.npm.taobao.org/resize-observer-polyfill/download/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ=
+
 resolve-from@^4.0.0:
   version "4.0.0"
   resolved "https://registry.nlark.com/resolve-from/download/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
@@ -4352,9 +4519,9 @@ rollup-plugin-terser@^7.0.0:
     terser "^5.0.0"
 
 rollup@^2.43.1:
-  version "2.51.1"
-  resolved "https://registry.nlark.com/rollup/download/rollup-2.51.1.tgz?cache=0&sync_timestamp=1623131102836&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frollup%2Fdownload%2Frollup-2.51.1.tgz#87bcd4095fe79b14c9bec0edc7ffa44e4827f793"
-  integrity sha1-h7zUCV/nmxTJvsDtx/+kTkgn95M=
+  version "2.51.2"
+  resolved "https://registry.nlark.com/rollup/download/rollup-2.51.2.tgz?cache=0&sync_timestamp=1623390144289&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frollup%2Fdownload%2Frollup-2.51.2.tgz#6de71e28c833089a0bd745a09671a3e2b92af6b7"
+  integrity sha1-beceKMgzCJoL10WglnGj4rkq9rc=
   optionalDependencies:
     fsevents "~2.3.1"
 
@@ -4365,7 +4532,7 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-rw@1:
+rw@1, rw@^1.3.3:
   version "1.3.3"
   resolved "https://registry.npm.taobao.org/rw/download/rw-1.3.3.tgz#3f862dfa91ab766b14885ef4d01124bfda074fb4"
   integrity sha1-P4Yt+pGrdmsUiF700BEkv9oHT7Q=
@@ -4394,7 +4561,7 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
 
 scheduler@^0.20.2:
   version "0.20.2"
-  resolved "https://registry.nlark.com/scheduler/download/scheduler-0.20.2.tgz?cache=0&sync_timestamp=1623341913793&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fscheduler%2Fdownload%2Fscheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
+  resolved "https://registry.nlark.com/scheduler/download/scheduler-0.20.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fscheduler%2Fdownload%2Fscheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
   integrity sha1-S67jlDbjSqk7SHS93L8P6Li1DpE=
   dependencies:
     loose-envify "^1.1.0"
@@ -4727,6 +4894,13 @@ stylis@3.5.4:
   resolved "https://registry.npm.taobao.org/stylis/download/stylis-3.5.4.tgz#f665f25f5e299cf3d64654ab949a57c768b73fbe"
   integrity sha1-9mXyX14pnPPWRlSrlJpXx2i3P74=
 
+supercluster@^7.1.0, supercluster@^7.1.3:
+  version "7.1.3"
+  resolved "https://registry.npm.taobao.org/supercluster/download/supercluster-7.1.3.tgz#8c5412c7d7e53b010f7514e87f279544babc3425"
+  integrity sha1-jFQSx9flOwEPdRTofyeVRLq8NCU=
+  dependencies:
+    kdbush "^3.0.0"
+
 supports-color@^5.3.0:
   version "5.5.0"
   resolved "https://registry.nlark.com/supports-color/download/supports-color-5.5.0.tgz?cache=0&sync_timestamp=1622293630895&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsupports-color%2Fdownload%2Fsupports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
@@ -4747,6 +4921,13 @@ supports-color@^8.0.0:
   integrity sha1-zW/BfihQDP9WwbhsCn/UpUpzAFw=
   dependencies:
     has-flag "^4.0.0"
+
+swr@^0.5.6:
+  version "0.5.6"
+  resolved "https://registry.nlark.com/swr/download/swr-0.5.6.tgz#70bfe9bc9d7ac49a064be4a0f4acf57982e55a31"
+  integrity sha1-cL/pvJ16xJoGS+Sg9Kz1eYLlWjE=
+  dependencies:
+    dequal "2.0.2"
 
 table@^6.0.9:
   version "6.7.1"
@@ -4813,6 +4994,11 @@ timers-browserify@2.0.12, timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
+tinyqueue@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npm.taobao.org/tinyqueue/download/tinyqueue-2.0.3.tgz#64d8492ebf39e7801d7bd34062e29b45b2035f08"
+  integrity sha1-ZNhJLr8554Ade9NAYuKbRbIDXwg=
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/to-arraybuffer/download/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
@@ -4849,7 +5035,7 @@ ts-pnp@^1.1.6:
 
 tslib@^1.9.0:
   version "1.14.1"
-  resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.14.1.tgz?cache=0&sync_timestamp=1617647281845&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  resolved "https://registry.nlark.com/tslib/download/tslib-1.14.1.tgz?cache=0&sync_timestamp=1623450901878&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
 
 tty-browserify@0.0.0:
@@ -4889,7 +5075,7 @@ type-fest@^0.7.1:
   resolved "https://registry.nlark.com/type-fest/download/type-fest-0.7.1.tgz?cache=0&sync_timestamp=1622543370439&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftype-fest%2Fdownload%2Ftype-fest-0.7.1.tgz#8dda65feaf03ed78f0a3f9678f1869147f7c5c48"
   integrity sha1-jdpl/q8D7Xjwo/lnjxhpFH98XEg=
 
-typescript@^4.2.4:
+typescript@^4.3.0:
   version "4.3.2"
   resolved "https://registry.nlark.com/typescript/download/typescript-4.3.2.tgz#399ab18aac45802d6f2498de5054fcbbe716a805"
   integrity sha1-OZqxiqxFgC1vJJjeUFT8u+cWqAU=
@@ -5024,6 +5210,13 @@ v8-compile-cache@^2.0.3:
   resolved "https://registry.npm.taobao.org/v8-compile-cache/download/v8-compile-cache-2.3.0.tgz?cache=0&sync_timestamp=1614993639567&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fv8-compile-cache%2Fdownload%2Fv8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha1-LeGWGMZtwkfc+2+ZM4A12CRaLO4=
 
+viewport-mercator-project@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.nlark.com/viewport-mercator-project/download/viewport-mercator-project-7.0.3.tgz#6c7cf15cbfd490003d99d68ff5cbb2443237c79a"
+  integrity sha1-bHzxXL/UkAA9mdaP9cuyRDI3x5o=
+  dependencies:
+    "@math.gl/web-mercator" "^3.4.3"
+
 vm-browserify@1.1.2, vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
@@ -5033,6 +5226,15 @@ void-elements@3.1.0:
   version "3.1.0"
   resolved "https://registry.npm.taobao.org/void-elements/download/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
   integrity sha1-YU9/v42AHwu18GYfWy9XhXUOTwk=
+
+vt-pbf@^3.1.1:
+  version "3.1.3"
+  resolved "https://registry.nlark.com/vt-pbf/download/vt-pbf-3.1.3.tgz#68fd150756465e2edae1cc5c048e063916dcfaac"
+  integrity sha1-aP0VB1ZGXi7a4cxcBI4GORbc+qw=
+  dependencies:
+    "@mapbox/point-geometry" "0.1.0"
+    "@mapbox/vector-tile" "^1.3.1"
+    pbf "^3.2.1"
 
 watchpack@2.1.1:
   version "2.1.1"
