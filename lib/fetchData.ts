@@ -1,3 +1,4 @@
+//@ts-expect-error: Bad types define
 import { load } from "@loaders.gl/core";
 import { ImageLoader } from "@loaders.gl/images";
 import { Tile } from "./Interface";

@@ -2,7 +2,7 @@ import Head from "next/head";
 import React, { ReactElement, useState } from "react";
 // import Map from "@components/map";
 import OrthographicMap from "@components/OrthographicMap";
-export default function Layout({ children, home }: { children: unknown; home: string }): ReactElement {
+export default function Layout({ children, home }: { children: unknown; home: unknown }): ReactElement {
   const [index, setIndex] = useState<number>(0);
   return (
     <div>

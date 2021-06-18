@@ -73,7 +73,7 @@ export default function OrthographicMap(): ReactElement {
       effects={[postProcessEffect]}
       // _onMetrics={onMetrics}
       // onViewStateChange={onViewStateChange}
-      //@ts-expect-error: Bad types define
+      ////@ts-expect-error: Bad types define
       //   getCursor={getCursor}
       useDevicePixels={false}
     />

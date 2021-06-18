@@ -15,5 +15,6 @@ export const useTileLayer = (properties: TileLayerProperties): TileLayer<TileLay
   );
 
   // setDiffProperties(diff);
+  //@ts-expect-error: Bad types define
   return new TileLayer({ ...properties, diff });
 };
