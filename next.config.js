@@ -9,23 +9,23 @@ const nextConfig = {
   /* config options here */
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "de"],
+    locales: ["en", "de"]
   },
-  future:{
+  future: {
     webpack5: true
   },
   webpack: (config, options) => {
     config.module.rules.push({
-      resolve:{
+      resolve: {
         alias: {
           "mapbox-gl": "maplibre-gl"
         }
-      },
-    })
-    return config
+      }
+    });
+    return config;
   },
   // basePath: '/v3',
-  experimental:{},
-  reactStrictMode: true,
+  experimental: {},
+  reactStrictMode: true
 };
 module.exports = nextConfig;

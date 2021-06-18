@@ -1,0 +1,12 @@
+.build
+build
+.next
+web_modules
+layers/
+icons/
+data/
+public/sw.js
+public/sw.js.map
+public/workbox-*.js
+public/workbox-*.js.map
+cspell.json

@@ -1,0 +1,42 @@
+{
+    "version": "0.1",
+    "language": "en",
+    "words": [
+        "ahooks",
+        "antd",
+        "bbox",
+        "clonedeep",
+        "commitlint",
+        "danmarshall",
+        "deckgl",
+        "desaturate",
+        "echarts",
+        "esbenp",
+        "fankui",
+        "fileheader",
+        "immer",
+        "luma",
+        "mapbox",
+        "maplibre",
+        "peaceshi",
+        "pickable",
+        "postbuild",
+        "precaching",
+        "prestart",
+        "shadertools",
+        "Sider",
+        "skypack",
+        "stylelint",
+        "stylelintrc",
+        "tailwindcss",
+        "tsdoc"
+    ],
+    "flagWords": [
+        "hte"
+    ],
+    "ignorePaths": [
+        "node_modules",
+        "build",
+        ".next"
+    ]
+}
