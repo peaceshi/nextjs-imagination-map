@@ -9,3 +9,4 @@ workbox-config.js
 workbox-config-dev.js
 public/sw.js
 public/workbox-*.js
+next.config.__vercel_builder_backup__.js
