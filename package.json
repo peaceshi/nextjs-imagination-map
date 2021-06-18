@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "",
+    "prebuild": "yarn run check:all",
     "build": "next build",
     "start": "next start",
     "check:all": "yarn run eslint:check && yarn run stylelint:check && yarn run prettier:check",
