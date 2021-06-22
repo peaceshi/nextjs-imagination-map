@@ -1,6 +1,9 @@
 //@ts-expect-error: Bad types define
 import { load } from "@loaders.gl/core";
 import { ImageLoader } from "@loaders.gl/images";
+//@ts-expect-error: Bad types define
+import { JSONLoader } from "@loaders.gl/json";
+import { FeatureCollection } from "@nebula.gl/edit-modes";
 import { Tile } from "./Interface";
 
 export const fetchDziMeta = async (dziSource: string): Promise<{ height: number; width: number; tileSize: number }> => {
@@ -17,9 +20,8 @@ export const fetchDziMeta = async (dziSource: string): Promise<{ height: number;
 };
 
 export const fetchTileData = async ({ x, y, z }: Pick<Tile, "x" | "y" | "z">): Promise<[]> => {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-  return (await load(`https://assets.yuanshen.site/tiles/map.image_files/${14 + z}/${x}_${y}.png`, ImageLoader, {
-    worker: true,
-    reuseWorkers: true
-  })) as Promise<[]>;
+  return (await load(`https://assets.yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
+};
+export const fetchGeoJson = async (url: string): Promise<FeatureCollection> => {
+  return (await load(url, JSONLoader)) as Promise<FeatureCollection>;
 };

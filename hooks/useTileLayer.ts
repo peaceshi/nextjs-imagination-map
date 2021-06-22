@@ -1,11 +1,8 @@
-import type { TileLayerProperties } from "@lib/Interface";
 import { TileLayer } from "@deck.gl/geo-layers";
-
-import { useEffect, useMemo, useState } from "react";
+import type { TileLayerProperties } from "@lib/Interface";
+import { useMemo } from "react";
 
 export const useTileLayer = (properties: TileLayerProperties): TileLayer<TileLayerProperties> => {
-  const [diffProperties, setDiffProperties] = useState({});
-
   const diff = useMemo(
     () => ({
       // getTileData: properties.getTileData,
