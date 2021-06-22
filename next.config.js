@@ -11,9 +11,7 @@ const nextConfig = {
     defaultLocale: "en",
     locales: ["en", "de"]
   },
-  future: {
-    webpack5: true
-  },
+  future: {},
   webpack: (config, options) => {
     config.module.rules.push({
       resolve: {
@@ -23,6 +21,11 @@ const nextConfig = {
       }
     });
     return config;
+  },
+  eslint: {
+    // Warning: Dangerously allow production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true
   },
   // basePath: '/v3',
   experimental: {},
