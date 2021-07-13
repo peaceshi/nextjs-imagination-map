@@ -1,11 +1,30 @@
-import React, { ReactElement, useContext } from "react";
-// import { MapContext } from "react-map-gl";
+import Link from "next/link";
+import React, { ReactElement } from "react";
 
-// export function CurrentZoomLevel(): ReactElement {
-//   const context = useContext(MapContext);
-//   return (
-//     <div style={{ position: "absolute", right: 0, bottom: 20, backgroundColor: "yellow" }}>
-//       {/* <div>zoomLevel:{context.viewport?.zoom}</div> */}
-//     </div>
-//   );
-// }
+export const TileLayerChangePanel = ({
+  style,
+  setTileLayerUrlIndex
+}: {
+  style: React.CSSProperties;
+  setTileLayerUrlIndex: (argument0: number) => void;
+}): ReactElement => {
+  return (
+    <div style={style}>
+      <div>
+        <Link href="/">
+          <button onClick={() => setTileLayerUrlIndex(0)}>to Teyvat</button>
+        </Link>
+      </div>
+      <div>
+        <Link href="/qd">
+          <button onClick={() => setTileLayerUrlIndex(1)}>to QD</button>
+        </Link>
+      </div>
+      <div>
+        <Link href="/qd1">
+          <button onClick={() => setTileLayerUrlIndex(2)}>to QD1</button>
+        </Link>
+      </div>
+    </div>
+  );
+};

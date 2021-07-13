@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
   }
 });
 export default function Home(): ReactElement {
-  const [tileLayerUrlIndex, setTileLayerUrlIndex] = useState<number>(0);
+  const [tileLayerUrlIndex, setTileLayerUrlIndex] = useState<number>(1);
   const { t } = useTranslation(["common", "footer"]);
   const router = useRouter();
   return (
@@ -27,12 +27,12 @@ export default function Home(): ReactElement {
       </Layout>
       <div style={{ position: "absolute", left: 0, top: 20 }}>
         <div>
-          <Link href="/" locale={router.locale === "en" ? "de" : "en"}>
+          <Link href="/qd1" locale={router.locale === "en" ? "de" : "en"}>
             <button>{t("footer:description")}</button>
           </Link>
         </div>
         <div>
-          <Link href="/" locale={router.locale === "en" ? "de" : "en"}>
+          <Link href="/qd1" locale={router.locale === "en" ? "de" : "en"}>
             <button>{t("common:change-locale")}</button>
           </Link>
         </div>

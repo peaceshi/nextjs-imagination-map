@@ -32,7 +32,7 @@ const postProcessEffect = new PostProcessEffect(vignette, {
   amount: 0.6
 });
 
-export default function OrthographicMap(): ReactElement {
+export default function OrthographicMap({ index }: { index: number }): ReactElement {
   const [layersAnimations, setLayersAnimations] = useState({
     getColor0: Animations.fadeOutColor,
     transitions0: Animations.fadeOut,
@@ -55,7 +55,7 @@ export default function OrthographicMap(): ReactElement {
     maxZoom: 0,
     extent: [0, 0, 24576, 24576],
     refinementStrategy: "best-available",
-    getTileData: async ({ x, y, z }: Tile) => await fetchTileData({ x, y, z }),
+    getTileData: async ({ x, y, z }: Tile) => await fetchTileData({ x, y, z }, index),
     renderSubLayers: (properties: TileLayersSubProperties) => {
       const { left, bottom, right, top } = properties.tile.bbox;
       const width = 24576;

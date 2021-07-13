@@ -19,8 +19,20 @@ export const fetchDziMeta = async (dziSource: string): Promise<{ height: number;
   return { height, width, tileSize };
 };
 
-export const fetchTileData = async ({ x, y, z }: Pick<Tile, "x" | "y" | "z">): Promise<[]> => {
-  return (await load(`https://assets.yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
+export const fetchTileData = async ({ x, y, z }: Pick<Tile, "x" | "y" | "z">, tileUrlIndex: number): Promise<[]> => {
+  switch (tileUrlIndex) {
+    case 1:
+      return (await load(`https://assets.yuanshen.site/tiles_qd/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
+    case 2:
+      return (await load(`https://assets.yuanshen.site/tiles_qd1/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
+    default:
+      return (await load(`https://assets.yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
+  }
+  // return (await load(`https://assets.yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
+  // return (await load(
+  //   `http://ysmap.projectxero.top/mapdata/yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`,
+  //   ImageLoader
+  // )) as Promise<[]>;
 };
 export const fetchGeoJson = async (url: string): Promise<FeatureCollection> => {
   return (await load(url, JSONLoader)) as Promise<FeatureCollection>;
