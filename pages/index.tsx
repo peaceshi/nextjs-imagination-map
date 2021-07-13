@@ -1,7 +1,7 @@
 import Layout from "@components/layout";
 import OrthographicMap from "@components/OrthographicMap";
 import { TileLayerChangePanel } from "@components/panel";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
@@ -10,7 +10,7 @@ import * as React from "react";
 import { ReactElement, useState } from "react";
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
     //@ts-expect-error: Bad types define
     ...(await serverSideTranslations(locale, ["common", "footer"]))
