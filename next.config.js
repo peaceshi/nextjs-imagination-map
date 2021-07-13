@@ -1,16 +1,13 @@
 // The `next.config.js` file must be a JavaScript file as it does not get parsed by Babel or TypeScript,
 // however you can add some type checking in your IDE using JSDoc as below:
-
+const { i18n } = require("./next-i18next.config");
 // @ts-check
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  **/
 const nextConfig = {
   /* config options here */
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "de"]
-  },
+  i18n,
   future: {},
   webpack: (config, options) => {
     config.module.rules.push({
@@ -27,6 +24,10 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true
   },
+  extends: [
+    //...
+    "plugin:@next/next/recommended"
+  ],
   // basePath: '/v3',
   experimental: {},
   reactStrictMode: true
