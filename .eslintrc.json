@@ -3,6 +3,7 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
+    "tsconfigRootDir": "./",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
