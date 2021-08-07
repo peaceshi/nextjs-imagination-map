@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "envinfo": "npx envinfo --npmPackages  --system --browsers --binaries --duplicates",
     "check:all": "yarn run eslint:check && yarn run stylelint:check && yarn run prettier:check",
     "eslint:check": "eslint ./",
     "eslint:fix": "eslint ./ --fix",
