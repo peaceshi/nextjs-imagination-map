@@ -31,3 +31,12 @@ assignees: ""
 ### Screenshots
 
 <!-- If applicable, add screenshots to help explain your problem. -->
+
+### Environment info
+
+- Browser:
+- Output of `yarn envinfo`:
+
+```bash
+# Paste output of `yarn envinfo` here
+```
