@@ -2138,9 +2138,9 @@
   integrity sha1-KrDV2i5YFflLC51LldHl8kOrLKc=
 
 "@types/react@*", "@types/react@^17.0.6":
-  version "17.0.11"
-  resolved "https://registry.nlark.com/@types/react/download/@types/react-17.0.11.tgz#67fcd0ddbf5a0b083a0f94e926c7d63f3b836451"
-  integrity sha1-Z/zQ3b9aCwg6D5TpJsfWPzuDZFE=
+  version "17.0.16"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.16.tgz#056f40c45645761527baeb7d89d842a6abdf285a"
+  integrity sha512-3kCUiOOlQTwUUvjNFkbBTWMTxdTGybz/PfjCw9JmaRGcEDBQh+nGMg7/E9P2rklhJuYVd25IYLNcvqgSPCPksg==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
