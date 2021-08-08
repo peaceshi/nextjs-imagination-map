@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "commit": "npx git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "envinfo": "npx envinfo --npmPackages  --system --browsers --binaries --duplicates",
     "check:all": "yarn run eslint:check && yarn run stylelint:check && yarn run prettier:check",
