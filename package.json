@@ -15,7 +15,14 @@
     "prettier:check": "prettier --check .",
     "prettier:format": "prettier --write .",
     "stylelint:check": "stylelint .",
-    "stylelint:fix": "stylelint ./ --fix"
+    "stylelint:fix": "stylelint ./ --fix",
+    "packages:check-update": "ncu --deep --timeout 600000",
+    "packages:update": "ncu -u --deep --timeout 600000 --reject '/*.gl/' && yarn install && yarn upgrade",
+    "packages:doctor": "ncu --doctor -u",
+    "packages:taze": "npx taze -r",
+    "packages:major": "npm taze major",
+    "packages:minor": "npx taze minor",
+    "packages:sort": "sort-package-json"
   },
   "husky": {
     "hooks": {
@@ -77,7 +84,9 @@
     "eslint-plugin-unicorn": "^33.0.1",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
+    "npm-check-updates": "^11.8.3",
     "prettier": "^2.3.1",
+    "sort-package-json": "^1.50.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-rational-order": "^0.1.2",
