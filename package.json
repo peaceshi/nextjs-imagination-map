@@ -17,7 +17,7 @@
     "stylelint:check": "stylelint .",
     "stylelint:fix": "stylelint ./ --fix",
     "packages:check-update": "ncu --deep --timeout 600000",
-    "packages:update": "ncu -u --deep --timeout 600000 --reject '/*.gl/' && yarn install && yarn upgrade",
+    "packages:update": "ncu -u --deep --timeout 600000 --reject '/*.gl' && yarn install && yarn upgrade",
     "packages:doctor": "ncu --doctor -u",
     "packages:taze": "npx taze -r",
     "packages:major": "npm taze major",
