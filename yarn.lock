@@ -1088,10 +1088,10 @@
   dependencies:
     chalk "^4.0.0"
 
-"@danmarshall/deckgl-typings@^4.9.2":
-  version "4.9.2"
-  resolved "https://registry.nlark.com/@danmarshall/deckgl-typings/download/@danmarshall/deckgl-typings-4.9.2.tgz#688025f2122aec04ec69aaf557848c761e9afde9"
-  integrity sha1-aIAl8hIq7ATsaar1V4SMdh6a/ek=
+"@danmarshall/deckgl-typings@^4.9.3":
+  version "4.9.3"
+  resolved "https://registry.yarnpkg.com/@danmarshall/deckgl-typings/-/deckgl-typings-4.9.3.tgz#888bb243be1e76ce46030f189e16486ff4a60eec"
+  integrity sha512-2UpA936ZSwtfvip+4bH0jP9iCvy47YXnwRmyGC6DlldMwOYnPnsR/u3Et/CHS8gNXFlrMm2ntTtqRmGaiapH/w==
   dependencies:
     "@types/hammerjs" "^2.0.36"
     "@types/react" "*"
