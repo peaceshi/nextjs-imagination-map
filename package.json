@@ -22,13 +22,8 @@
     "packages:taze": "npx taze -r",
     "packages:major": "npm taze major",
     "packages:minor": "npx taze minor",
-    "packages:sort": "sort-package-json"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "packages:sort": "sort-package-json",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx,mjs,ts,tsx}": [
