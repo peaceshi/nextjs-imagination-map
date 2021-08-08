@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import "../styles/globals.css";
+import "../styles/index.sass";
 import type { AppProps } from "next/app";
 import { appWithTranslation } from "next-i18next";
 

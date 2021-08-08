@@ -1,0 +1,22 @@
+@import "_variables";
+
+.html.dark {
+  // brand colors
+  --#{$namespace}-c-brand: #3aa675;
+  --#{$namespace}-c-brand-light: #349469;
+
+  // background colors
+  --#{$namespace}-c-bg: #22272e;
+  --#{$namespace}-c-bg-light: #2b313a;
+  --#{$namespace}-c-bg-lighter: #262c34;
+
+  // text colors
+  --#{$namespace}-c-text: #adbac7;
+  --#{$namespace}-c-text-light: #96a7b7;
+  --#{$namespace}-c-text-lighter: #8b9eb0;
+  --#{$namespace}-c-text-lightest: #8094a8;
+
+  // border colors
+  --#{$namespace}-c-border: #3e4c5a;
+  --#{$namespace}-c-border-dark: #34404c;
+}

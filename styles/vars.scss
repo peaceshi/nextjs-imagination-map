@@ -1,0 +1,32 @@
+@import "_variables";
+
+:root {
+  // brand colors
+  --#{$namespace}-c-brand: #3eaf7c;
+  --#{$namespace}-c-brand-light: #4abf8a;
+
+  // background colors
+  --#{$namespace}-c-bg: #fff;
+  --#{$namespace}-c-bg-light: #f3f4f5;
+  --#{$namespace}-c-bg-lighter: #eee;
+  --#{$namespace}-c-bg-navbar: var(--c-bg);
+  --#{$namespace}-c-bg-sidebar: var(--c-bg);
+  --#{$namespace}-c-bg-arrow: #ccc;
+
+  // text colors
+  --#{$namespace}-c-text: #2c3e50;
+  --#{$namespace}-c-text-accent: var(--c-brand);
+  --#{$namespace}-c-text-light: #3a5169;
+  --#{$namespace}-c-text-lighter: #4e6e8e;
+  --#{$namespace}-c-text-lightest: #6a8bad;
+  --#{$namespace}-c-text-quote: #999;
+
+  // border colors
+  --#{$namespace}-c-border: #eaecef;
+  --#{$namespace}-c-border-dark: #dfe2e5;
+
+  // font vars
+  --#{$namespace}-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --#{$namespace}-font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
