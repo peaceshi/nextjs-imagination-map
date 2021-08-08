@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "envinfo": "npx envinfo --npmPackages  --system --browsers --binaries --duplicates",
     "check:all": "yarn run eslint:check && yarn run stylelint:check && yarn run prettier:check",
     "eslint:check": "eslint ./",
@@ -36,6 +37,11 @@
       "prettier --write"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@koale/useworker": "^4.0.2",
     "@loaders.gl/images": "^2.3.13",
@@ -58,6 +64,8 @@
     "@types/react": "^17.0.6",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.28.0",
     "eslint-config-next": "^11.0.0",
     "eslint-config-prettier": "^8.3.0",
