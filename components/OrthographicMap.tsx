@@ -1,6 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import DeckGL from "@deck.gl/react";
 import { useIconLayer, useJsonDiff, useTileLayer } from "@hooks/hooks";
-import { Animations } from "@lib/Animations";
+import { Animations } from "@lib/animations";
 import { fetchTileData } from "@lib/fetchData";
 import { FeatureProperties, Tile, TileLayersSubProperties } from "@lib/Interface";
 import { vignette } from "@luma.gl/shadertools";
