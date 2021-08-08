@@ -8,11 +8,14 @@
   "rules": {
     "comment-empty-line-before": null,
     "function-name-case": "lower",
+    "at-rule-no-unknown": null,
     "no-invalid-double-slash-comments": null,
     "no-descending-specificity": null,
+    "no-irregular-whitespace": null,
     "declaration-empty-line-before": null,
+    "value-keyword-case": null,
     "plugin/declaration-block-no-ignored-properties": true,
-    "plugin/no-low-performance-animation-properties": true
+    "plugin/no-low-performance-animation-properties": null
   },
   "ignoreFiles": ["!./styles/**/*.{css,less,scss}", "!/styles/**/*.*"]
 }
