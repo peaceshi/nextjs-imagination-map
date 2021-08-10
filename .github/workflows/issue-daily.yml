@@ -2,16 +2,16 @@ name: issue-daily
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   issue-close-stale:
     name: close stale issues
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-cool/issues-helper@v2.2.1
+      - uses: actions-cool/issues-helper@v2.3.1
         with:
-          actions: 'close-issues'
+          actions: "close-issues"
           token: ${{ secrets.GITHUB_TOKEN }}
-          labels: 'need reproduction, stale'
+          labels: "need reproduction, stale"
           inactive-day: 3
