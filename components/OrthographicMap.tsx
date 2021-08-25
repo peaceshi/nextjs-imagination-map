@@ -4,7 +4,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import DeckGL from "@deck.gl/react";
 import { useIconLayer, useJsonDiff, useTileLayer } from "@hooks/hooks";
-import { Animations } from "@lib/animations";
+// import { Animations } from "@lib/Animations";
 import { fetchTileData } from "@lib/fetchData";
 import { FeatureProperties, Tile, TileLayersSubProperties } from "@lib/Interface";
 import { vignette } from "@luma.gl/shadertools";
@@ -15,15 +15,15 @@ import { BitmapLayer, OrthographicController, OrthographicView, PostProcessEffec
 import React, { ReactElement, useCallback, useState } from "react";
 
 const mapCenter = {
-  deltaX: 12288,
-  deltaY: 12288
+  deltaX: 3568,
+  deltaY: 6286
 };
 const INITIAL_VIEW_STATE = {
   target: [mapCenter.deltaX, mapCenter.deltaY, 0],
   bearing: 0,
-  zoom: -6,
+  zoom: -3,
   maxZoom: 10,
-  minZoom: -6
+  minZoom: -3
 };
 const controller = {
   type: OrthographicController,
@@ -37,16 +37,16 @@ const postProcessEffect = new PostProcessEffect(vignette, {
 });
 
 export default function OrthographicMap({ index }: { index: number }): ReactElement {
-  const [layersAnimations, setLayersAnimations] = useState({
-    getColor0: Animations.fadeOutColor,
-    transitions0: Animations.fadeOut,
-    getColor1: Animations.fadeOutColor,
-    transitions1: Animations.fadeOut,
-    getColor2: Animations.fadeOutColor,
-    transitions2: Animations.fadeOut
-  });
+  // const [layersAnimations, setLayersAnimations] = useState({
+  //   getColor0: Animations.fadeOutColor,
+  //   transitions0: Animations.fadeOut,
+  //   getColor1: Animations.fadeOutColor,
+  //   transitions1: Animations.fadeOut,
+  //   getColor2: Animations.fadeOutColor,
+  //   transitions2: Animations.fadeOut
+  // });
 
-  const layersAnimationsDebounce = useDebounce(layersAnimations, { wait: 500 });
+  // const layersAnimationsDebounce = useDebounce(layersAnimations, { wait: 500 });
   const view = new OrthographicView({ id: "teyvat" });
 
   const diff = useJsonDiff(
@@ -57,13 +57,13 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
     tileSize: 256,
     minZoom: -6,
     maxZoom: 0,
-    extent: [0, 0, 24576, 24576],
+    extent: [0, 0, 12288, 12288],
     refinementStrategy: "best-available",
     getTileData: async ({ x, y, z }: Tile) => await fetchTileData({ x, y, z }, index),
     renderSubLayers: (properties: TileLayersSubProperties) => {
       const { left, bottom, right, top } = properties.tile.bbox;
-      const width = 24576;
-      const height = 24576;
+      const width = 12288;
+      const height = 12288;
       const { id, data } = properties;
       const bbox = {
         left: clamp(left, 0, width) as number,
@@ -91,9 +91,10 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
       d?.geometry?.coordinates[0],
       d.geometry.coordinates[1]
     ],
-    getColor: [236, 236, 236, layersAnimationsDebounce.getColor0],
-    //@ts-expect-error: Bad types define
-    transitions: layersAnimationsDebounce.transitions0
+    // getColor: [236, 236, 236, layersAnimationsDebounce.getColor0],
+    getColor: [236, 236, 236]
+    ////@ts-expect-error: Bad types define
+    // transitions: layersAnimationsDebounce.transitions0
   });
   const tagLayer1 = useIconLayer({
     id: "tagLayer1",
@@ -106,9 +107,9 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
       d?.geometry?.coordinates[0],
       d.geometry.coordinates[1]
     ],
-    getColor: [236, 236, 236, layersAnimationsDebounce.getColor1],
-    //@ts-expect-error: Bad types define
-    transitions: layersAnimationsDebounce.transitions1
+    // getColor: [236, 236, 236, layersAnimationsDebounce.getColor1],
+    getColor: [236, 236, 236]
+    // transitions: layersAnimationsDebounce.transitions1
   });
   const tagLayer2 = useIconLayer({
     id: "tagLayer2",
@@ -121,63 +122,63 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
       d?.geometry?.coordinates[0],
       d.geometry.coordinates[1]
     ],
-    getColor: [236, 236, 236, layersAnimationsDebounce.getColor2],
-    //@ts-expect-error: Bad types define
-    transitions: layersAnimationsDebounce.transitions2
+    // getColor: [236, 236, 236, layersAnimationsDebounce.getColor2],
+    getColor: [236, 236, 236]
+    // transitions: layersAnimationsDebounce.transitions2
   });
-  const onViewStateChange = useCallback(
-    ({ viewState, interactionState }) => {
-      if (interactionState.isZooming) {
-        // viewState.transitionDuration = 300;
-      }
-      // Deckgl will update on every change, so we need to add a region for debounce
-      if (
-        (viewState.zoom < -4 && layersAnimationsDebounce.getColor0 == Animations.fadeOutColor) ||
-        (viewState.zoom < -4 && layersAnimationsDebounce.getColor1 == Animations.fadeInColor)
-      ) {
-        setLayersAnimations({
-          ...layersAnimations,
-          getColor0: Animations.fadeInColor,
-          transitions0: Animations.fadeIn,
-          getColor1: Animations.fadeOutColor,
-          transitions1: Animations.fadeOut
-        });
-      }
-      if (
-        (viewState.zoom > -4 && layersAnimationsDebounce.getColor0 == 255) ||
-        (viewState.zoom > -4 && viewState.zoom < -3 && layersAnimationsDebounce.getColor1 == 0) ||
-        (viewState.zoom < -3 && layersAnimationsDebounce.getColor2 == 255)
-      ) {
-        setLayersAnimations({
-          ...layersAnimations,
-          getColor0: Animations.fadeOutColor,
-          transitions0: Animations.fadeOut,
-          getColor1: Animations.fadeInColor,
-          transitions1: Animations.fadeIn,
-          getColor2: Animations.fadeOutColor,
-          transitions2: Animations.fadeOut
-        });
-      }
-      if (
-        (viewState.zoom > -3 && layersAnimationsDebounce.getColor1 == Animations.fadeInColor) ||
-        (viewState.zoom > -3 && layersAnimationsDebounce.getColor2 == Animations.fadeOutColor)
-      ) {
-        setLayersAnimations({
-          ...layersAnimations,
-          getColor1: Animations.fadeOutColor,
-          transitions1: Animations.fadeOut,
-          getColor2: Animations.fadeInColor,
-          transitions2: Animations.fadeIn
-        });
-      }
-    },
-    [
-      layersAnimations,
-      layersAnimationsDebounce.getColor0,
-      layersAnimationsDebounce.getColor1,
-      layersAnimationsDebounce.getColor2
-    ]
-  );
+  // const onViewStateChange = useCallback(
+  //   ({ viewState, interactionState }) => {
+  //     if (interactionState.isZooming) {
+  //       // viewState.transitionDuration = 300;
+  //     }
+  //     // Deckgl will update on every change, so we need to add a region for debounce
+  //     if (
+  //       (viewState.zoom < -4 && layersAnimationsDebounce.getColor0 == Animations.fadeOutColor) ||
+  //       (viewState.zoom < -4 && layersAnimationsDebounce.getColor1 == Animations.fadeInColor)
+  //     ) {
+  //       setLayersAnimations({
+  //         ...layersAnimations,
+  //         getColor0: Animations.fadeInColor,
+  //         transitions0: Animations.fadeIn,
+  //         getColor1: Animations.fadeOutColor,
+  //         transitions1: Animations.fadeOut
+  //       });
+  //     }
+  //     if (
+  //       (viewState.zoom > -4 && layersAnimationsDebounce.getColor0 == 255) ||
+  //       (viewState.zoom > -4 && viewState.zoom < -3 && layersAnimationsDebounce.getColor1 == 0) ||
+  //       (viewState.zoom < -3 && layersAnimationsDebounce.getColor2 == 255)
+  //     ) {
+  //       setLayersAnimations({
+  //         ...layersAnimations,
+  //         getColor0: Animations.fadeOutColor,
+  //         transitions0: Animations.fadeOut,
+  //         getColor1: Animations.fadeInColor,
+  //         transitions1: Animations.fadeIn,
+  //         getColor2: Animations.fadeOutColor,
+  //         transitions2: Animations.fadeOut
+  //       });
+  //     }
+  //     if (
+  //       (viewState.zoom > -3 && layersAnimationsDebounce.getColor1 == Animations.fadeInColor) ||
+  //       (viewState.zoom > -3 && layersAnimationsDebounce.getColor2 == Animations.fadeOutColor)
+  //     ) {
+  //       setLayersAnimations({
+  //         ...layersAnimations,
+  //         getColor1: Animations.fadeOutColor,
+  //         transitions1: Animations.fadeOut,
+  //         getColor2: Animations.fadeInColor,
+  //         transitions2: Animations.fadeIn
+  //       });
+  //     }
+  //   },
+  //   [
+  //     layersAnimations,
+  //     layersAnimationsDebounce.getColor0,
+  //     layersAnimationsDebounce.getColor1,
+  //     layersAnimationsDebounce.getColor2
+  //   ]
+  // );
 
   return (
     <DeckGL
@@ -190,7 +191,7 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
       style={{ backgroundColor: "#000000" }}
       effects={[postProcessEffect]}
       // _onMetrics={onMetrics}
-      onViewStateChange={onViewStateChange}
+      // onViewStateChange={onViewStateChange}
       ////@ts-expect-error: Bad types define
       //   getCursor={getCursor}
       useDevicePixels={false}
