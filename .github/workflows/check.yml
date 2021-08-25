@@ -6,8 +6,8 @@ on:
       - dev
       - main
     paths-ignore:
-      - 'docs/**'
-      - '**.md'
+      - "docs/**"
+      - "**.md"
   pull_request:
     branches:
       - dev
@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: ['12', '14']
+        node: ["12", "14"]
 
     runs-on: ${{ matrix.os }}
 
