@@ -39,6 +39,12 @@
       }
     ],
     "unicorn/numeric-separators-style": "off",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "ignore": ["-env."]
+      }
+    ],
     "typescript-eslint/indent": "off",
     "react/display-name": ["off", { "ignoreTranspilerName": true }]
   },
