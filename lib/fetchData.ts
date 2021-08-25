@@ -1,7 +1,5 @@
-//@ts-expect-error: Bad types define
 import { load } from "@loaders.gl/core";
 import { ImageLoader } from "@loaders.gl/images";
-//@ts-expect-error: Bad types define
 import { JSONLoader } from "@loaders.gl/json";
 import { FeatureCollection } from "@nebula.gl/edit-modes";
 import { Tile } from "./Interface";
@@ -26,7 +24,8 @@ export const fetchTileData = async ({ x, y, z }: Pick<Tile, "x" | "y" | "z">, ti
     case 2:
       return (await load(`https://assets.yuanshen.site/tiles_qd1/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
     default:
-      return (await load(`https://assets.yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
+      // return (await load(`https://assets.yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
+      return (await load(`https://assets.yuanshen.site/tiles_md/${z + 13}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
   }
   // return (await load(`https://assets.yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
   // return (await load(
