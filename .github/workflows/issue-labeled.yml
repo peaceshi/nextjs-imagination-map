@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions-cool/issues-helper@v2.2.1
         with:
-          actions: 'close-issue, lock-issue'
+          actions: "close-issue, lock-issue"
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
           body: |
@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions-cool/issues-helper@v2.2.1
         with:
-          actions: 'create-comment'
+          actions: "create-comment"
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
           body: |
