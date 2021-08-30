@@ -1290,12 +1290,19 @@
     "@loaders.gl/images" "3.0.9"
     "@loaders.gl/loader-utils" "3.0.9"
 
-"@loaders.gl/images@3.0.9", "@loaders.gl/images@^3.0.8", "@loaders.gl/images@^3.0.9":
+"@loaders.gl/images@3.0.9":
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@loaders.gl/images/-/images-3.0.9.tgz#25a0c2c59914629c945f2ae739576c608058c70b"
   integrity sha512-c7doawQC/SIZmdU9Qrc0VRu95ynOYPS+VKlCL4hiQsxIJkswTv+HpBEBzmPyHeVoyH65+80Osh20jfB0XNC39A==
   dependencies:
     "@loaders.gl/loader-utils" "3.0.9"
+
+"@loaders.gl/images@^3.0.8", "@loaders.gl/images@^3.0.9":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/images/-/images-3.0.10.tgz#a9203c9122fc5f9040ebd39a9912a0459a425dcf"
+  integrity sha512-RAA0wfCExLm/U3M4AFa8Jo+s04XlLKsRA+S37y/9LpJ0Nu0jm/8hmzY6BXiB5FWDDLrQME0mNDqaSR4KSNs5zg==
+  dependencies:
+    "@loaders.gl/loader-utils" "3.0.10"
 
 "@loaders.gl/json@^3.0.9":
   version "3.0.9"
@@ -1306,7 +1313,16 @@
     "@loaders.gl/loader-utils" "3.0.9"
     "@loaders.gl/schema" "3.0.9"
 
-"@loaders.gl/loader-utils@3.0.9", "@loaders.gl/loader-utils@^3.0.8":
+"@loaders.gl/loader-utils@3.0.10", "@loaders.gl/loader-utils@^3.0.8":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/loader-utils/-/loader-utils-3.0.10.tgz#731fddb9ecd379daf8fd31903699cbcb8d08c4f7"
+  integrity sha512-kxG0OEL+HbKbAwfKv8oIxCaSpmt7R1XL4y1+aPIq26v0Ios4c6HXvSaBa1Q3LDTbquMx+5/cQilqXq1CqEAtSA==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    "@loaders.gl/worker-utils" "3.0.10"
+    "@probe.gl/stats" "^3.4.0"
+
+"@loaders.gl/loader-utils@3.0.9":
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@loaders.gl/loader-utils/-/loader-utils-3.0.9.tgz#3a0e574510bf89d77fa5c3d3508d41f9c8778450"
   integrity sha512-DLQWYklEDcKWb6LGtzNUQqlDaHXUVAB/uA5a7bzyXbSswoC6jqwSOxSdJ42UsSHhvHRj7l6HOtNUICJ7q+IMiQ==
@@ -1366,6 +1382,13 @@
     "@math.gl/geospatial" "^3.5.1"
     "@math.gl/web-mercator" "^3.5.1"
     "@probe.gl/stats" "^3.4.0"
+
+"@loaders.gl/worker-utils@3.0.10":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/worker-utils/-/worker-utils-3.0.10.tgz#ffc972ee9003520a0421aedc7407776a96cacb2c"
+  integrity sha512-9ERZAsN3AcG3uXntN1n8BvEHrF14AKWhEpJy7WdtJQIX6ExHUr3891brKHImr3ougImrbfChu/VMRPgz7Pwl9A==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
 
 "@loaders.gl/worker-utils@3.0.9":
   version "3.0.9"
