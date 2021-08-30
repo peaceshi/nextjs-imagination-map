@@ -1270,7 +1270,17 @@
     "@loaders.gl/worker-utils" "3.0.9"
     draco3d "1.4.1"
 
-"@loaders.gl/gis@3.0.9", "@loaders.gl/gis@^3.0.8":
+"@loaders.gl/gis@3.0.10", "@loaders.gl/gis@^3.0.8":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/gis/-/gis-3.0.10.tgz#b24038fe50caa213a3974ad6f5a1401b40da4687"
+  integrity sha512-xYi07F7sgtqTw8qLxy0wPfP+ZUpzn+eOI70nhrKq32NzYP+LolsFNPcd+vh6toa5K9WSKQfSDn4fMv8kqSsyPA==
+  dependencies:
+    "@loaders.gl/loader-utils" "3.0.10"
+    "@loaders.gl/schema" "3.0.10"
+    "@mapbox/vector-tile" "^1.3.1"
+    pbf "^3.2.1"
+
+"@loaders.gl/gis@3.0.9":
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@loaders.gl/gis/-/gis-3.0.9.tgz#81dc1e046bbb48fcac54bc215c5f6a38cee04b95"
   integrity sha512-rS0Vu2UdESE8qq3tUlB4X+zZKQGs9BknYxrWQZ8rLEP3VQ7bP6frN2VowQLHxR9up8sU1vHVNtpawmn+Y0lgdw==
@@ -1298,15 +1308,24 @@
     "@loaders.gl/loader-utils" "3.0.9"
 
 "@loaders.gl/json@^3.0.9":
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/@loaders.gl/json/-/json-3.0.9.tgz#987e9ba875dfa2f573816083fafc72dcff8d64c5"
-  integrity sha512-EhSynBmQQ0xOAETizW3yGa/66tgtUzBNg78oFkeMdzNOrhev+h+90oiwJ3ztV5QnbFkd2yXGaCTF6cMqW0ikLQ==
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/json/-/json-3.0.10.tgz#873dcd6a10cae5565e3e18f64fdf6d967d31c98d"
+  integrity sha512-H9ojHTtDD+FXE8YTpm2/k17D7RzULByrGHCsAZb9CTNXM+00btkVcNkHEzjQWTfQSBrXhRgb8EF1kM+DulvC2Q==
   dependencies:
-    "@loaders.gl/gis" "3.0.9"
-    "@loaders.gl/loader-utils" "3.0.9"
-    "@loaders.gl/schema" "3.0.9"
+    "@loaders.gl/gis" "3.0.10"
+    "@loaders.gl/loader-utils" "3.0.10"
+    "@loaders.gl/schema" "3.0.10"
 
-"@loaders.gl/loader-utils@3.0.9", "@loaders.gl/loader-utils@^3.0.8":
+"@loaders.gl/loader-utils@3.0.10", "@loaders.gl/loader-utils@^3.0.8":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/loader-utils/-/loader-utils-3.0.10.tgz#731fddb9ecd379daf8fd31903699cbcb8d08c4f7"
+  integrity sha512-kxG0OEL+HbKbAwfKv8oIxCaSpmt7R1XL4y1+aPIq26v0Ios4c6HXvSaBa1Q3LDTbquMx+5/cQilqXq1CqEAtSA==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    "@loaders.gl/worker-utils" "3.0.10"
+    "@probe.gl/stats" "^3.4.0"
+
+"@loaders.gl/loader-utils@3.0.9":
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@loaders.gl/loader-utils/-/loader-utils-3.0.9.tgz#3a0e574510bf89d77fa5c3d3508d41f9c8778450"
   integrity sha512-DLQWYklEDcKWb6LGtzNUQqlDaHXUVAB/uA5a7bzyXbSswoC6jqwSOxSdJ42UsSHhvHRj7l6HOtNUICJ7q+IMiQ==
@@ -1333,6 +1352,15 @@
     "@loaders.gl/loader-utils" "3.0.9"
     "@math.gl/polygon" "^3.5.1"
     pbf "^3.2.1"
+
+"@loaders.gl/schema@3.0.10":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/schema/-/schema-3.0.10.tgz#b721decf02200780e04c89d970ca678990aa5b00"
+  integrity sha512-TG0/VAgp4oRQ50L5Vc1rG3c+lmReOJ6oZihW095ZEt11hB5/ImgCunDfJhFSGVUpwBa0MkZPPAEo2jn9EcOQuA==
+  dependencies:
+    "@types/geojson" "^7946.0.7"
+    apache-arrow "^4.0.0"
+    d3-dsv "^1.2.0"
 
 "@loaders.gl/schema@3.0.9":
   version "3.0.9"
@@ -1366,6 +1394,13 @@
     "@math.gl/geospatial" "^3.5.1"
     "@math.gl/web-mercator" "^3.5.1"
     "@probe.gl/stats" "^3.4.0"
+
+"@loaders.gl/worker-utils@3.0.10":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/worker-utils/-/worker-utils-3.0.10.tgz#ffc972ee9003520a0421aedc7407776a96cacb2c"
+  integrity sha512-9ERZAsN3AcG3uXntN1n8BvEHrF14AKWhEpJy7WdtJQIX6ExHUr3891brKHImr3ougImrbfChu/VMRPgz7Pwl9A==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
 
 "@loaders.gl/worker-utils@3.0.9":
   version "3.0.9"
