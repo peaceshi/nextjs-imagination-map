@@ -63,7 +63,7 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
     renderSubLayers: (properties: TileLayersSubProperties) => {
       const { left, bottom, right, top } = properties.tile.bbox;
       const width = 12288;
-      const height = 12288;
+      const height = 13568;
       const { id, data } = properties;
       const bbox = {
         left: clamp(left, 0, width) as number,
