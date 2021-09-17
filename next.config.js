@@ -3,22 +3,21 @@
 const { i18n } = require("./next-i18next.config");
 // @ts-check
 /**
- * @type {import('next/dist/next-server/server/config').NextConfig}
+ * @type {import('next').NextConfig}
  **/
 const nextConfig = {
   /* config options here */
   i18n,
-  future: {},
-  webpack: (config, options) => {
-    config.module.rules.push({
-      resolve: {
-        alias: {
-          "mapbox-gl": "maplibre-gl"
-        }
-      }
-    });
-    return config;
-  },
+  // webpack: (config, options) => {
+  //   config.module.rules.push({
+  //     resolve: {
+  //       alias: {
+  //         "mapbox-gl": "maplibre-gl"
+  //       }
+  //     }
+  //   });
+  //   return config;
+  // },
   eslint: {
     // Warning: Dangerously allow production builds to successfully complete even if
     // your project has ESLint errors.
@@ -29,7 +28,13 @@ const nextConfig = {
     "plugin:@next/next/recommended"
   ],
   // basePath: '/v3',
-  experimental: {},
-  reactStrictMode: true
+  reactStrictMode: true,
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true
+  }
 };
 module.exports = nextConfig;
