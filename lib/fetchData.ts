@@ -25,7 +25,7 @@ export const fetchTileData = async ({ x, y, z }: Pick<Tile, "x" | "y" | "z">, ti
       return (await load(`https://assets.yuanshen.site/tiles_qd1/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
     default:
       // return (await load(`https://assets.yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
-      return (await load(`https://assets.yuanshen.site/tiles_md/${z + 13}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
+      return (await load(`https://assets.yuanshen.site/tiles_dq2/${z + 13}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
   }
   // return (await load(`https://assets.yuanshen.site/tiles/${z + 14}/${x}_${y}.jpg`, ImageLoader)) as Promise<[]>;
   // return (await load(
