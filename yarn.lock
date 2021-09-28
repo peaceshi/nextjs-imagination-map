@@ -1070,9 +1070,9 @@
     chalk "^4.0.0"
 
 "@danmarshall/deckgl-typings@^4.9.5":
-  version "4.9.5"
-  resolved "https://registry.yarnpkg.com/@danmarshall/deckgl-typings/-/deckgl-typings-4.9.5.tgz#902e912087fd1e0419e7712def749f5a99078b59"
-  integrity sha512-y5qlDWbKt64Rt7kdoEQEzWIPwkta3NKzAMbetEs3qHz1nyW+1lu/0Q4A/4j24V6HEd40AwXmKIV1Yc7JszNGJw==
+  version "4.9.7"
+  resolved "https://registry.yarnpkg.com/@danmarshall/deckgl-typings/-/deckgl-typings-4.9.7.tgz#f078722e32819aa40ebedac88bf3be4c02e97287"
+  integrity sha512-9tHfbBF8/baaJtQQ4u9MMmL6bDZu6cKi7Ajs5OJKn7/KU0q7okyjo+FlXvxmJodYUn7UJQlVM/J+elTIB86sUg==
   dependencies:
     "@types/hammerjs" "^2.0.36"
     "@types/react" "*"
