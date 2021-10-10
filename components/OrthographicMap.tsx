@@ -49,10 +49,10 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
   // const layersAnimationsDebounce = useDebounce(layersAnimations, { wait: 500 });
   const view = new OrthographicView({ id: "teyvat" });
 
-  const diff = useJsonDiff(
-    "https://assets.yuanshen.site/data/region.json",
-    "https://assets.yuanshen.site/data/latest-region.json"
-  );
+  // const diff = useJsonDiff(
+  //   "https://assets.yuanshen.site/data/region.json",
+  //   "https://assets.yuanshen.site/data/latest-region.json"
+  // );
   const tileLayer = useTileLayer({
     tileSize: 256,
     minZoom: -6,
@@ -80,52 +80,52 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
       ];
     }
   });
-  const tagLayer0 = useIconLayer({
-    id: "tagLayer0",
-    data: diff[0],
-    sizeScale: 1,
-    sizeUnits: "meters",
-    getIcon: (d: FeatureWithProps<Geometry, FeatureProperties>) => d?.properties?.image,
-    getSize: 1150,
-    getPosition: (d: FeatureWithProps<Point, FeatureProperties>) => [
-      d?.geometry?.coordinates[0],
-      d.geometry.coordinates[1]
-    ],
-    // getColor: [236, 236, 236, layersAnimationsDebounce.getColor0],
-    getColor: [236, 236, 236]
-    ////@ts-expect-error: Bad types define
-    // transitions: layersAnimationsDebounce.transitions0
-  });
-  const tagLayer1 = useIconLayer({
-    id: "tagLayer1",
-    data: diff[1],
-    sizeScale: 1,
-    sizeUnits: "meters",
-    getIcon: (d: FeatureWithProps<Geometry, FeatureProperties>) => d?.properties?.image,
-    getSize: 250,
-    getPosition: (d: FeatureWithProps<Point, FeatureProperties>) => [
-      d?.geometry?.coordinates[0],
-      d.geometry.coordinates[1]
-    ],
-    // getColor: [236, 236, 236, layersAnimationsDebounce.getColor1],
-    getColor: [236, 236, 236]
-    // transitions: layersAnimationsDebounce.transitions1
-  });
-  const tagLayer2 = useIconLayer({
-    id: "tagLayer2",
-    data: diff[2],
-    sizeScale: 1,
-    sizeUnits: "meters",
-    getIcon: (d: FeatureWithProps<Geometry, FeatureProperties>) => d?.properties?.image,
-    getSize: 150,
-    getPosition: (d: FeatureWithProps<Point, FeatureProperties>) => [
-      d?.geometry?.coordinates[0],
-      d.geometry.coordinates[1]
-    ],
-    // getColor: [236, 236, 236, layersAnimationsDebounce.getColor2],
-    getColor: [236, 236, 236]
-    // transitions: layersAnimationsDebounce.transitions2
-  });
+  // const tagLayer0 = useIconLayer({
+  //   id: "tagLayer0",
+  //   data: diff[0],
+  //   sizeScale: 1,
+  //   sizeUnits: "meters",
+  //   getIcon: (d: FeatureWithProps<Geometry, FeatureProperties>) => d?.properties?.image,
+  //   getSize: 1150,
+  //   getPosition: (d: FeatureWithProps<Point, FeatureProperties>) => [
+  //     d?.geometry?.coordinates[0],
+  //     d.geometry.coordinates[1]
+  //   ],
+  //   // getColor: [236, 236, 236, layersAnimationsDebounce.getColor0],
+  //   getColor: [236, 236, 236]
+  //   ////@ts-expect-error: Bad types define
+  //   // transitions: layersAnimationsDebounce.transitions0
+  // });
+  // const tagLayer1 = useIconLayer({
+  //   id: "tagLayer1",
+  //   data: diff[1],
+  //   sizeScale: 1,
+  //   sizeUnits: "meters",
+  //   getIcon: (d: FeatureWithProps<Geometry, FeatureProperties>) => d?.properties?.image,
+  //   getSize: 250,
+  //   getPosition: (d: FeatureWithProps<Point, FeatureProperties>) => [
+  //     d?.geometry?.coordinates[0],
+  //     d.geometry.coordinates[1]
+  //   ],
+  //   // getColor: [236, 236, 236, layersAnimationsDebounce.getColor1],
+  //   getColor: [236, 236, 236]
+  //   // transitions: layersAnimationsDebounce.transitions1
+  // });
+  // const tagLayer2 = useIconLayer({
+  //   id: "tagLayer2",
+  //   data: diff[2],
+  //   sizeScale: 1,
+  //   sizeUnits: "meters",
+  //   getIcon: (d: FeatureWithProps<Geometry, FeatureProperties>) => d?.properties?.image,
+  //   getSize: 150,
+  //   getPosition: (d: FeatureWithProps<Point, FeatureProperties>) => [
+  //     d?.geometry?.coordinates[0],
+  //     d.geometry.coordinates[1]
+  //   ],
+  //   // getColor: [236, 236, 236, layersAnimationsDebounce.getColor2],
+  //   getColor: [236, 236, 236]
+  //   // transitions: layersAnimationsDebounce.transitions2
+  // });
   // const onViewStateChange = useCallback(
   //   ({ viewState, interactionState }) => {
   //     if (interactionState.isZooming) {
@@ -183,18 +183,19 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
   return (
     <DeckGL
       views={[view]}
-      layers={[tileLayer, tagLayer0, tagLayer1, tagLayer2]}
+      // layers={[tileLayer, tagLayer0, tagLayer1, tagLayer2]}
+      layers={[tileLayer]}
       initialViewState={INITIAL_VIEW_STATE}
-      controller={controller}
+      controller={true}
       ////@ts-expect-error: Bad types define
       // getTooltip={getTooltip}
-      style={{ backgroundColor: "#000000" }}
-      effects={[postProcessEffect]}
+      // style={{ backgroundColor: "#000000" }}
+      // effects={[postProcessEffect]}
       // _onMetrics={onMetrics}
       // onViewStateChange={onViewStateChange}
       ////@ts-expect-error: Bad types define
       //   getCursor={getCursor}
-      useDevicePixels={false}
+      // useDevicePixels={false}
     />
   );
 }
