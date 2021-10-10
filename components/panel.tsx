@@ -25,6 +25,11 @@ export const TileLayerChangePanel = ({
           <button onClick={() => setTileLayerUrlIndex(2)}>to QD1</button>
         </Link>
       </div>
+      <div>
+        <Link href="layers/ImageTileLayer">
+          <button onClick={() => setTileLayerUrlIndex(2)}>ImageTileLayer</button>
+        </Link>
+      </div>
     </div>
   );
 };
