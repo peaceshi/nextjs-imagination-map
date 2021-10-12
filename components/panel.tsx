@@ -26,7 +26,7 @@ export const TileLayerChangePanel = ({
         </Link>
       </div>
       <div>
-        <Link href="layers/ImageTileLayer">
+        <Link href="/layers/ImageTileLayer">
           <button onClick={() => setTileLayerUrlIndex(2)}>ImageTileLayer</button>
         </Link>
       </div>
