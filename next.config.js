@@ -1,12 +1,17 @@
 // The `next.config.js` file must be a JavaScript file as it does not get parsed by Babel or TypeScript,
 // however you can add some type checking in your IDE using JSDoc as below:
 const { i18n } = require("./next-i18next.config");
+const withPWA = require("next-pwa");
+const runtimeCaching = require("next-pwa/cache");
 // @ts-check
 /**
  * @type {import('next').NextConfig}
  **/
-const nextConfig = {
-  /* config options here */
+const nextConfig = withPWA({
+  pwa: {
+    dest: "public",
+    runtimeCaching
+  },
   i18n,
   // webpack: (config, options) => {
   //   config.module.rules.push({
@@ -36,5 +41,6 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true
   }
-};
+});
+
 module.exports = nextConfig;
