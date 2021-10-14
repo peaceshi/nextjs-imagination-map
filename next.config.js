@@ -10,6 +10,7 @@ const runtimeCaching = require("next-pwa/cache");
 const nextConfig = withPWA({
   pwa: {
     dest: "public",
+    cacheOnFrontEndNav: true,
     runtimeCaching
   },
   i18n,

@@ -4,6 +4,14 @@ import React, { ReactElement } from "react";
 const APP_NAME = "next-pwa example";
 const APP_DESCRIPTION = "This is an example of using next-pwa plugin";
 
+// const serviceWorker = () => {
+//   if ("serviceWorker" in navigator) {
+//     window.addEventListener("load", () => {
+//       navigator.serviceWorker.
+//     });
+//   }
+// };
+
 export default class extends Document {
   static async getInitialProps(context: DocumentContext): Promise<DocumentInitialProps> {
     return await Document.getInitialProps(context);
@@ -31,7 +39,7 @@ export default class extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
 
           <link rel="manifest" href="/manifest.webmanifest" />
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/icons/favicon.ico" />
           <style>{`
             html, body, #__next {
               height: 100%;
@@ -43,6 +51,7 @@ export default class extends Document {
               text-align: center;
             }
             `}</style>
+          {/* <script>{serviceWorker}</script> */}
         </Head>
         <body>
           <Main />
