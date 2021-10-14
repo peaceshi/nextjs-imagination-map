@@ -91,3 +91,10 @@ lib-cov
 
 # Yarn Integrity file
 .yarn-integrity
+# public dir
+public/icons/
+public/sw.js*
+public/workbox-*.js*
+public/favicon.ico
+public/fallback-*.js*
+public/worker-*.js
