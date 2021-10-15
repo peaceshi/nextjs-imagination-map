@@ -2238,16 +2238,6 @@
   resolved "https://registry.nlark.com/@types/scheduler/download/@types/scheduler-0.16.2.tgz?cache=0&sync_timestamp=1629709152024&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fscheduler%2Fdownload%2F%40types%2Fscheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=
 
-"@types/source-list-map@*":
-  version "0.1.2"
-  resolved "https://registry.nlark.com/@types/source-list-map/download/@types/source-list-map-0.1.2.tgz#0078836063ffaf17412349bba364087e0ac02ec9"
-  integrity sha1-AHiDYGP/rxdBI0m7o2QIfgrALsk=
-
-"@types/tapable@^1":
-  version "1.0.8"
-  resolved "https://registry.nlark.com/@types/tapable/download/@types/tapable-1.0.8.tgz?cache=0&sync_timestamp=1629709376833&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Ftapable%2Fdownload%2F%40types%2Ftapable-1.0.8.tgz#b94a4391c85666c7b73299fd3ad79d4faa435310"
-  integrity sha1-uUpDkchWZse3Mpn9OtedT6pDUxA=
-
 "@types/text-encoding-utf-8@^1.0.1":
   version "1.0.2"
   resolved "https://registry.nlark.com/@types/text-encoding-utf-8/download/@types/text-encoding-utf-8-1.0.2.tgz#896e94ce99b653e886a9b925e9dc12c92af7b1ae"
@@ -2258,38 +2248,10 @@
   resolved "https://registry.nlark.com/@types/trusted-types/download/@types/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
   integrity sha1-/CWtmUO8rBHM64Fo208nXg5y51Y=
 
-"@types/uglify-js@*":
-  version "3.13.1"
-  resolved "https://registry.nlark.com/@types/uglify-js/download/@types/uglify-js-3.13.1.tgz?cache=0&sync_timestamp=1629709561839&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fuglify-js%2Fdownload%2F%40types%2Fuglify-js-3.13.1.tgz#5e889e9e81e94245c75b6450600e1c5ea2878aea"
-  integrity sha1-XoienoHpQkXHW2RQYA4cXqKHiuo=
-  dependencies:
-    source-map "^0.6.1"
-
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2":
   version "2.0.6"
   resolved "https://registry.nlark.com/@types/unist/download/@types/unist-2.0.6.tgz?cache=0&sync_timestamp=1629709633346&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Funist%2Fdownload%2F%40types%2Funist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
   integrity sha1-JQp7FsO5H2cqJFUuxkZ47rHToI0=
-
-"@types/webpack-sources@*":
-  version "3.2.0"
-  resolved "https://registry.nlark.com/@types/webpack-sources/download/@types/webpack-sources-3.2.0.tgz?cache=0&sync_timestamp=1629709718286&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fwebpack-sources%2Fdownload%2F%40types%2Fwebpack-sources-3.2.0.tgz#16d759ba096c289034b26553d2df1bf45248d38b"
-  integrity sha1-FtdZuglsKJA0smVT0t8b9FJI04s=
-  dependencies:
-    "@types/node" "*"
-    "@types/source-list-map" "*"
-    source-map "^0.7.3"
-
-"@types/webpack@^4.4.31":
-  version "4.41.31"
-  resolved "https://registry.nlark.com/@types/webpack/download/@types/webpack-4.41.31.tgz#c35f252a3559ddf9c85c0d8b0b42019025e581aa"
-  integrity sha1-w18lKjVZ3fnIXA2LC0IBkCXlgao=
-  dependencies:
-    "@types/node" "*"
-    "@types/tapable" "^1"
-    "@types/uglify-js" "*"
-    "@types/webpack-sources" "*"
-    anymatch "^3.0.0"
-    source-map "^0.6.0"
 
 "@typescript-eslint/eslint-plugin@^4.33.0":
   version "4.33.0"
@@ -2517,7 +2479,7 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-anymatch@^3.0.0, anymatch@~3.1.1, anymatch@~3.1.2:
+anymatch@~3.1.1, anymatch@~3.1.2:
   version "3.1.2"
   resolved "https://registry.npm.taobao.org/anymatch/download/anymatch-3.1.2.tgz?cache=0&sync_timestamp=1617747494189&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fanymatch%2Fdownload%2Fanymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"
   integrity sha1-wFV8CWrzLxBhmPT04qODU343hxY=
@@ -3211,12 +3173,11 @@ clean-stack@^2.0.0:
   resolved "https://registry.nlark.com/clean-stack/download/clean-stack-2.2.0.tgz?cache=0&sync_timestamp=1621915054928&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fclean-stack%2Fdownload%2Fclean-stack-2.2.0.tgz#ee8472dbb129e727b31e8a10a427dee9dfe4008b"
   integrity sha1-7oRy27Ep5yezHooQpCfe6d/kAIs=
 
-clean-webpack-plugin@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.nlark.com/clean-webpack-plugin/download/clean-webpack-plugin-3.0.0.tgz#a99d8ec34c1c628a4541567aa7b457446460c62b"
-  integrity sha1-qZ2Ow0wcYopFQVZ6p7RXRGRgxis=
+clean-webpack-plugin@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/clean-webpack-plugin/-/clean-webpack-plugin-4.0.0.tgz#72947d4403d452f38ed61a9ff0ada8122aacd729"
+  integrity sha512-WuWE1nyTNAyW5T7oNyys2EN0cfP2fdRxhxnIQWiAp0bMabPdHhoGxM8A6YL2GhqwgrPnnaemVE7nv5XJ2Fhh2w==
   dependencies:
-    "@types/webpack" "^4.4.31"
     del "^4.1.1"
 
 cli-boxes@^2.2.1:
@@ -6866,16 +6827,16 @@ next-i18next@^8.8.0:
     react-i18next "^11.8.13"
 
 next-pwa@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.nlark.com/next-pwa/download/next-pwa-5.3.1.tgz#5bcd854422a452fd1fd56500d1c483664d9733d9"
-  integrity sha1-W82FRCKkUv0f1WUA0cSDZk2XM9k=
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-5.3.2.tgz#fd78cd21588695428ed4002ea167458425f62c99"
+  integrity sha512-tbgdfykqxJg/sdN5LNCm8+64yC9rlGh00Eq++OVq9HZqy7zllRAasLP+TFmYZkHpsTotxMBRiCEEzObwxhtSBw==
   dependencies:
     babel-loader "^8.2.2"
-    clean-webpack-plugin "^3.0.0"
+    clean-webpack-plugin "^4.0.0"
     globby "^11.0.4"
-    terser-webpack-plugin "^5.1.4"
-    workbox-webpack-plugin "^6.2.4"
-    workbox-window "^6.2.4"
+    terser-webpack-plugin "^5.2.4"
+    workbox-webpack-plugin "^6.3.0"
+    workbox-window "^6.3.0"
 
 next@^11.1.2:
   version "11.1.2"
@@ -8681,7 +8642,7 @@ source-map-url@^0.4.0:
   resolved "https://registry.npm.taobao.org/source-map-url/download/source-map-url-0.4.1.tgz?cache=0&sync_timestamp=1612211015749&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsource-map-url%2Fdownload%2Fsource-map-url-0.4.1.tgz#0af66605a745a5a2f91cf1bbf8a7afbc283dec56"
   integrity sha1-CvZmBadFpaL5HPG7+KevvCg97FY=
 
-source-map@0.7.3, source-map@^0.7.3, source-map@~0.7.2:
+source-map@0.7.3, source-map@~0.7.2:
   version "0.7.3"
   resolved "https://registry.npm.taobao.org/source-map/download/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=
@@ -9237,10 +9198,10 @@ tempy@^0.6.0:
     type-fest "^0.16.0"
     unique-string "^2.0.0"
 
-terser-webpack-plugin@^5.1.4:
+terser-webpack-plugin@^5.2.4:
   version "5.2.4"
-  resolved "https://registry.nlark.com/terser-webpack-plugin/download/terser-webpack-plugin-5.2.4.tgz#ad1be7639b1cbe3ea49fab995cbe7224b31747a1"
-  integrity sha1-rRvnY5scvj6kn6uZXL5yJLMXR6E=
+  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.2.4.tgz#ad1be7639b1cbe3ea49fab995cbe7224b31747a1"
+  integrity sha512-E2CkNMN+1cho04YpdANyRrn8CyN4yMy+WdFKZIySFZrGXZxJwJP6PMNGGc/Mcr6qygQHUUqRxnAPmi0M9f00XA==
   dependencies:
     jest-worker "^27.0.6"
     p-limit "^3.1.0"
@@ -10008,10 +9969,10 @@ workbox-sw@6.3.0:
   resolved "https://registry.nlark.com/workbox-sw/download/workbox-sw-6.3.0.tgz#8b805a3ac5339e8df0e6ba36c491d9cd01aa9f3f"
   integrity sha1-i4BaOsUzno3w5ro2xJHZzQGqnz8=
 
-workbox-webpack-plugin@^6.2.4:
+workbox-webpack-plugin@^6.3.0:
   version "6.3.0"
-  resolved "https://registry.nlark.com/workbox-webpack-plugin/download/workbox-webpack-plugin-6.3.0.tgz#86c6c6fcb5fc151e6b4ccd8d7041d3da6a4a4271"
-  integrity sha1-hsbG/LX8FR5rTM2NcEHT2mpKQnE=
+  resolved "https://registry.yarnpkg.com/workbox-webpack-plugin/-/workbox-webpack-plugin-6.3.0.tgz#86c6c6fcb5fc151e6b4ccd8d7041d3da6a4a4271"
+  integrity sha512-3l5H8h7O2eUgTAISQoglDe4VJDDYTZaDnkRY0FY2+eFOXA+fZoWuDSmLiMnA0uYqPC4NWVTZwP549E0dWgiWjw==
   dependencies:
     fast-json-stable-stringify "^2.1.0"
     pretty-bytes "^5.4.1"
@@ -10020,7 +9981,7 @@ workbox-webpack-plugin@^6.2.4:
     webpack-sources "^1.4.3"
     workbox-build "6.3.0"
 
-workbox-window@6.3.0, workbox-window@^6.2.4:
+workbox-window@6.3.0, workbox-window@^6.3.0:
   version "6.3.0"
   resolved "https://registry.nlark.com/workbox-window/download/workbox-window-6.3.0.tgz#f669a0715363c35e519d1b6d919e04da7ce369ea"
   integrity sha1-9mmgcVNjw15RnRttkZ4E2nzjaeo=
