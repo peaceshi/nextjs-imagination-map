@@ -12,6 +12,7 @@ import { clamp } from "@math.gl/core";
 import { FeatureWithProps, Geometry, Point } from "@nebula.gl/edit-modes";
 import { useDebounce } from "ahooks";
 import { BitmapLayer, OrthographicController, OrthographicView, PostProcessEffect } from "deck.gl";
+import { ControllerOptions } from "@deck.gl/core/controllers/controller";
 import React, { ReactElement, useCallback, useState } from "react";
 
 const mapCenter = {
@@ -25,9 +26,9 @@ const INITIAL_VIEW_STATE = {
   maxZoom: 10,
   minZoom: -3
 };
-const controller = {
-  type: OrthographicController,
+const controller: ControllerOptions = {
   scrollZoom: { smooth: true },
+  touchZoom: true,
   doubleClickZoom: false,
   inertia: true
 };
@@ -57,13 +58,13 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
     tileSize: 256,
     minZoom: -6,
     maxZoom: 0,
-    extent: [0, 0, 12288, 12288],
+    extent: [0, 0, 12288, 15360],
     refinementStrategy: "best-available",
     getTileData: async ({ x, y, z }: Tile) => await fetchTileData({ x, y, z }, index),
     renderSubLayers: (properties: TileLayersSubProperties) => {
       const { left, bottom, right, top } = properties.tile.bbox;
       const width = 12288;
-      const height = 13568;
+      const height = 15360;
       const { id, data } = properties;
       const bbox = {
         left: clamp(left, 0, width) as number,
@@ -186,7 +187,7 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
       // layers={[tileLayer, tagLayer0, tagLayer1, tagLayer2]}
       layers={[tileLayer]}
       initialViewState={INITIAL_VIEW_STATE}
-      controller={true}
+      controller={controller}
       ////@ts-expect-error: Bad types define
       // getTooltip={getTooltip}
       // style={{ backgroundColor: "#000000" }}
