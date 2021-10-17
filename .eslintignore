@@ -7,7 +7,8 @@ snowpack.config.js
 web-test-runner.config.js
 workbox-config.js
 workbox-config-dev.js
-public/sw.js
-public/workbox-*.js
-next.config.__vercel_builder_backup__.js
 next-i18next.config.js
+public/sw.js*
+public/workbox-*.js*
+public/fallback-*.js*
+public/worker-*.js
