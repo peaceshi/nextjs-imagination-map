@@ -29,7 +29,8 @@
         "stylelint",
         "stylelintrc",
         "tailwindcss",
-        "tsdoc"
+        "tsdoc",
+        "Webp"
     ],
     "flagWords": [
         "hte"
