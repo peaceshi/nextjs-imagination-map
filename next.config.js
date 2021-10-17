@@ -13,6 +13,15 @@ const nextConfig = withPWA({
     cacheOnFrontEndNav: true,
     runtimeCaching
   },
+  async redirects() {
+    return [
+      {
+        source: "/favicon.ico",
+        destination: "/icons/favicon.ico",
+        permanent: true
+      }
+    ];
+  },
   i18n,
   // webpack: (config, options) => {
   //   config.module.rules.push({
@@ -41,7 +50,8 @@ const nextConfig = withPWA({
     // your project has type errors.
     // !! WARN !!
     ignoreBuildErrors: true
-  }
+  },
+  compress: false
 });
 
 module.exports = nextConfig;
