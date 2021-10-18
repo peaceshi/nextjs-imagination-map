@@ -1,0 +1,11 @@
+.right {
+  position: absolute;
+  right: 0;
+  top: 20;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  top: 20;
+}

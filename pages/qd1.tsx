@@ -1,14 +1,12 @@
-import Layout from "@components/layout";
+import Layout from "@components/Layout";
 import OrthographicMap from "@components/OrthographicMap";
-import { TileLayerChangePanel } from "@components/panel";
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
-import * as React from "react";
-import { ReactElement, useState } from "react";
-
+import React, { ReactElement, useState } from "react";
+const Panel = dynamic(() => import("@components/Panel"));
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
@@ -25,22 +23,7 @@ export default function Home(): ReactElement {
       <Layout>
         <OrthographicMap index={tileLayerUrlIndex} />
       </Layout>
-      <div style={{ position: "absolute", left: 0, top: 20 }}>
-        <div>
-          <Link href="/qd1" locale={router.locale === "en" ? "de" : "en"}>
-            <button>{t("footer:description")}</button>
-          </Link>
-        </div>
-        <div>
-          <Link href="/qd1" locale={router.locale === "en" ? "de" : "en"}>
-            <button>{t("common:change-locale")}</button>
-          </Link>
-        </div>
-      </div>
-      <TileLayerChangePanel
-        style={{ position: "absolute", right: 0, top: 20 }}
-        setTileLayerUrlIndex={setTileLayerUrlIndex}
-      />
+      <Panel href="/qd1" t={t} router={router} setTileLayerUrlIndex={setTileLayerUrlIndex} />
     </>
   );
 }
