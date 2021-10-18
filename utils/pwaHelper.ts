@@ -28,7 +28,7 @@ const serviceWorkerUpdate = async (serviceWorker: ServiceWorkerContainer): Promi
   await serviceWorker.ready.then((registration) => {
     registration.addEventListener("updatefound", () => {
       console.log("Newer version is available");
-      alert("Newer version is available");
+      alert("Newer version is available. Reload page to apply changes.");
     });
     return;
   });
@@ -71,7 +71,7 @@ export const pwaHelper = (): void => {
       window.addEventListener("load", () => {
         serviceWorkerState(navigator.serviceWorker);
         void serviceWorkerUpdate(navigator.serviceWorker);
-        void serviceWorkerNotification(navigator.serviceWorker);
+        // void serviceWorkerNotification(navigator.serviceWorker);
       });
     } else {
       console.error(`ServiceWorker not supported`);
