@@ -14,6 +14,7 @@ import { useDebounce } from "ahooks";
 import { BitmapLayer, OrthographicController, OrthographicView, PostProcessEffect } from "deck.gl";
 import { ControllerOptions } from "@deck.gl/core/controllers/controller";
 import React, { ReactElement, useCallback, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const mapCenter = {
   deltaX: 3568,
@@ -187,11 +188,11 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
       // layers={[tileLayer, tagLayer0, tagLayer1, tagLayer2]}
       layers={[tileLayer]}
       initialViewState={INITIAL_VIEW_STATE}
-      controller={controller}
+      controller={isMobile ? true : controller}
       ////@ts-expect-error: Bad types define
       // getTooltip={getTooltip}
       // style={{ backgroundColor: "#000000" }}
-      // effects={[postProcessEffect]}
+      effects={[postProcessEffect]}
       // _onMetrics={onMetrics}
       // onViewStateChange={onViewStateChange}
       ////@ts-expect-error: Bad types define
