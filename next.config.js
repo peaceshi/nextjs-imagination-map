@@ -51,7 +51,8 @@ const nextConfig = withPWA({
     // !! WARN !!
     ignoreBuildErrors: true
   },
-  compress: false
+  compress: false,
+  poweredByHeader: false
 });
 
 module.exports = nextConfig;
