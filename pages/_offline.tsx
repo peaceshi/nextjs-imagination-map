@@ -1,4 +1,4 @@
-import Layout from "@components/layout";
+import Layout from "@components/Layout";
 import { useRouter } from "next/router";
 import * as React from "react";
 import { ReactElement } from "react";
