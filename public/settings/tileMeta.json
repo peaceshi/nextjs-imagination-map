@@ -1,0 +1,33 @@
+{
+  "baseUrl": "https://assets.yuanshen.site",
+  "dq3": {
+    "tileName": "tiles_dq3",
+    "tileLevel": 13,
+    "tileRegion": "Teyvat",
+    "tileSize": 256,
+    "minZoomNative": -2,
+    "maxZoomNative": 0,
+    "width": 12288,
+    "height": 15360
+  },
+  "qd": {
+    "tileName": "tiles_qd",
+    "tileLevel": 14,
+    "tileRegion": "qd",
+    "tileSize": 256,
+    "minZoomNative": -2,
+    "maxZoomNative": 0,
+    "width": 12288,
+    "height": 12288
+  },
+  "qd1": {
+    "tileName": "tiles_qd1",
+    "tileLevel": 14,
+    "tileRegion": "qd1",
+    "tileSize": 256,
+    "minZoomNative": -2,
+    "maxZoomNative": 0,
+    "width": 12288,
+    "height": 12288
+  }
+}

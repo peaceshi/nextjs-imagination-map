@@ -1,0 +1,9 @@
+{
+  "teyvat": {
+    "viewID": "teyvat",
+    "mapsCenter": [3568, 6286],
+    "zoom": -6,
+    "maxZoom": 10,
+    "minZoom": -8
+  }
+}

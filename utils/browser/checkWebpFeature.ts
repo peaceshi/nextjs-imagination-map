@@ -1,13 +1,13 @@
-type WebpImageType = string;
+type WebpImageFeature = string;
 type WebpImageDataBase64 = string;
 /**
- * @description Webp ImageKey
- * @param {WebpImageType} key Webp ImageType
+ * @description Webp ImageObject
+ * @param {WebpImageFeature} key Webp ImageFeature
  * @param {WebpImageDataBase64} value Webp ImageData
  */
-type WebpImageKey = { [key: WebpImageType]: WebpImageDataBase64 };
+type WebpImageObject = { [key: WebpImageFeature]: WebpImageDataBase64 };
 
-const testWebpImages: Array<WebpImageKey> = [
+const testWebpImages: Array<WebpImageObject> = [
   { lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA" },
   { lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==" },
   {
@@ -20,28 +20,30 @@ const testWebpImages: Array<WebpImageKey> = [
   }
 ];
 
-const imageData = (key: WebpImageKey): [WebpImageType, WebpImageDataBase64] => {
-  const feature = Object.keys(key)[0];
-  const value = Object.values(key)[0];
+const imageData = (object: WebpImageObject): [WebpImageFeature, WebpImageDataBase64] => {
+  const feature = Object.keys(object)[0];
+  const value = Object.values(object)[0];
   return [feature, value];
 };
-const eventHandler = (img: HTMLImageElement, feature: WebpImageType) => {
+const eventHandler = (img: HTMLImageElement, feature: WebpImageFeature) => {
   if (img.width > 0 && img.height > 0) {
     console.log(`webp: ${feature} is supported.`);
     localStorage.setItem(`webp`, "true");
   } else {
-    console.log(`webp: ${feature} is not supported.`);
+    console.error(`webp: ${feature} is not supported.`);
     localStorage.setItem(`webp`, "false");
   }
 };
 
-const checkImage = (key: WebpImageKey) => {
-  const [feature, value] = imageData(key);
-  console.log(`test webp support: {${feature}: ${value}}`);
-  const img = new Image();
-  img.src = `data:image/webp;base64,${value}`;
-  img.addEventListener("load", () => eventHandler(img, feature), { once: true });
-  img.addEventListener("error", () => console.error(`webp is not supported`), { once: true });
+const checkImage = async (images: WebpImageObject[]) => {
+  for await (const key of images) {
+    const [feature, value] = imageData(key);
+    console.log(`test webp support: {${feature}: ${value}}`);
+    const img = new Image();
+    img.src = `data:image/webp;base64,${value}`;
+    img.addEventListener("load", () => eventHandler(img, feature), { once: true });
+    img.addEventListener("error", () => console.error(`webp is not supported`), { once: true });
+  }
 };
 /**
  * @description check if webp is supported.
@@ -51,13 +53,7 @@ export const checkWebpFeature = async (): Promise<void> => {
   if (typeof window !== "undefined") {
     // Because of the way Next.js handles SSR,
     // make sure your function is being called in client side only.
-    if (localStorage.getItem("webp") == "true") {
-      return;
-    } else {
-      for await (const key of testWebpImages) {
-        checkImage(key);
-      }
-    }
+    localStorage.getItem("webp") ?? (await checkImage(testWebpImages));
   }
 };
 
