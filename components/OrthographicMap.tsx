@@ -3,9 +3,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import DeckGL from "@deck.gl/react";
-import { useIconLayer, useJsonDiff, useTileLayer } from "@hooks/hooks";
+import { useAnimation, useIconLayer, useJsonDiff, useTileLayer } from "@hooks/hooks";
 // import { Animations } from "@lib/Animations";
-import { fetchTileData } from "@lib/fetchData";
+import { fetchTileData } from "@lib/fetchTileData";
 import { FeatureProperties, Tile, TileLayersSubProperties } from "@lib/Interface";
 import { vignette } from "@luma.gl/shadertools";
 import { clamp } from "@math.gl/core";
@@ -13,19 +13,21 @@ import { FeatureWithProps, Geometry, Point } from "@nebula.gl/edit-modes";
 import { useDebounce } from "ahooks";
 import { BitmapLayer, OrthographicController, OrthographicView, PostProcessEffect } from "deck.gl";
 import { ControllerOptions } from "@deck.gl/core/controllers/controller";
-import React, { ReactElement, useCallback, useState } from "react";
+import React, { ReactElement, useCallback, useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
+import { ScatterplotLayer } from "@deck.gl/layers";
+import { DataFilterExtension } from "@deck.gl/extensions";
 
 const mapCenter = {
   deltaX: 3568,
   deltaY: 6286
 };
 const INITIAL_VIEW_STATE = {
-  target: [mapCenter.deltaX, mapCenter.deltaY, 0],
+  target: [6144, 6144, 0],
   bearing: 0,
-  zoom: -3,
+  zoom: -3, // full zoom level
   maxZoom: 10,
-  minZoom: -3
+  minZoom: -6
 };
 const controller: ControllerOptions = {
   scrollZoom: { smooth: true },
@@ -57,8 +59,8 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
   // );
   const tileLayer = useTileLayer({
     tileSize: 256,
-    minZoom: -6,
-    maxZoom: 0,
+    minZoom: -2, // native tile level
+    maxZoom: 0, // native tile level
     extent: [0, 0, 12288, 15360],
     refinementStrategy: "best-available",
     getTileData: async ({ x, y, z }: Tile) => await fetchTileData({ x, y, z }, index),
@@ -181,12 +183,12 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
   //     layersAnimationsDebounce.getColor2
   //   ]
   // );
-
+  const scatterplotLayer = useAnimation();
   return (
     <DeckGL
       views={[view]}
       // layers={[tileLayer, tagLayer0, tagLayer1, tagLayer2]}
-      layers={[tileLayer]}
+      layers={[tileLayer, ...scatterplotLayer]}
       initialViewState={INITIAL_VIEW_STATE}
       controller={isMobile ? true : controller}
       ////@ts-expect-error: Bad types define
