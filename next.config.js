@@ -3,6 +3,33 @@
 const { i18n } = require("./next-i18next.config");
 const withPWA = require("next-pwa");
 const runtimeCaching = require("next-pwa/cache");
+
+const securityHeaders = [
+  {
+    key: "X-DNS-Prefetch-Control",
+    value: "on"
+  },
+  {
+    key: "Strict-Transport-Security",
+    value: "max-age=63072000; includeSubDomains; preload"
+  },
+  {
+    key: "X-XSS-Protection",
+    value: "1; mode=block"
+  },
+  {
+    key: "X-Content-Type-Options",
+    value: "nosniff"
+  },
+  {
+    key: "Referrer-Policy",
+    value: "no-referrer"
+  },
+  {
+    key: "Content-Security-Policy",
+    value: "script-src 'self'; object-src 'none'; style-src yuanshen.site *.yuanshen.site; child-src https:"
+  }
+];
 // @ts-check
 /**
  * @type {import('next').NextConfig}
@@ -12,6 +39,14 @@ const nextConfig = withPWA({
     dest: "public",
     cacheOnFrontEndNav: true,
     runtimeCaching
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: securityHeaders
+      }
+    ];
   },
   async redirects() {
     return [
