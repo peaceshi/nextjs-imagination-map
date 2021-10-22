@@ -4413,6 +4413,11 @@ eslint-plugin-react-hooks@^4.2.0:
   resolved "https://registry.npmmirror.com/eslint-plugin-react-hooks/download/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
   integrity sha1-jCKcJo1GiVYzTJQ7tF/IYCgPVVY=
 
+eslint-plugin-react-hooks@^4.2.1-alpha-02f411578-20211019:
+  version "4.2.1-alpha-02f411578-20211019"
+  resolved "https://registry.npmmirror.com/eslint-plugin-react-hooks/download/eslint-plugin-react-hooks-4.2.1-alpha-02f411578-20211019.tgz#70bee2b1a47562878773cfdcef08044878760838"
+  integrity sha1-cL7isaR1YoeHc8/c7wgESHh2CDg=
+
 eslint-plugin-react@^7.23.1, eslint-plugin-react@^7.26.1:
   version "7.26.1"
   resolved "https://registry.npmmirror.com/eslint-plugin-react/download/eslint-plugin-react-7.26.1.tgz#41bcfe3e39e6a5ac040971c1af94437c80daa40e"
