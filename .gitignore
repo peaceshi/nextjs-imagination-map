@@ -92,7 +92,6 @@ lib-cov
 # Yarn Integrity file
 .yarn-integrity
 # public dir
-public/data/
 public/icons/
 public/sw.js*
 public/workbox-*.js*
