@@ -27,7 +27,8 @@ const securityHeaders = [
   },
   {
     key: "Content-Security-Policy",
-    value: "script-src 'self'; object-src 'none'; style-src yuanshen.site *.yuanshen.site; child-src https:"
+    value:
+      "script-src 'self'; object-src 'none'; style-src yuanshen.site *.yuanshen.site *.minemc.top minemc.top; child-src https:"
   }
 ];
 // @ts-check
@@ -38,7 +39,8 @@ const nextConfig = withPWA({
   pwa: {
     dest: "public",
     cacheOnFrontEndNav: true,
-    runtimeCaching
+    runtimeCaching,
+    buildExcludes: [/middleware-manifest\.json$/]
   },
   async headers() {
     return [
@@ -87,7 +89,8 @@ const nextConfig = withPWA({
     ignoreBuildErrors: true
   },
   compress: false,
-  poweredByHeader: false
+  poweredByHeader: false,
+  swcMinify: false
 });
 
 module.exports = nextConfig;
