@@ -1,20 +1,27 @@
 // 修饰命名空间
 $namespace: map;
+
 // 修饰状态
 $state-prefix: "is-";
+
 // 修饰类型的
 $modifier-separator: "--";
+
 // 划分空间分隔符
 $element-separator: "__";
 
 // wide screen
 $wide: 1440px !default;
+
 // desktop
 $desktop: 1280px !default;
+
 // narrow desktop / iPad
 $pad: 959px !default;
+
 // wide mobile
 $mobile: 719px !default;
+
 // narrow mobile
 $mobileS: 419px !default;
 
@@ -36,7 +43,6 @@ $colorPicker: (
   "orange": #f39c12,
   "purple": #8e44ad
 ) !default;
-
 $MQNarrow: 959px !default;
 $MQMobile: 719px !default;
 $MQMobileNarrow: 419px !default;

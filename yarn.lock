@@ -7232,6 +7232,11 @@ postcss-safe-parser@^6.0.0:
   resolved "https://registry.nlark.com/postcss-safe-parser/download/postcss-safe-parser-6.0.0.tgz#bb4c29894171a94bc5c996b9a30317ef402adaa1"
   integrity sha1-u0wpiUFxqUvFyZa5owMX70Aq2qE=
 
+postcss-scss@^4.0.1:
+  version "4.0.2"
+  resolved "https://registry.npmmirror.com/postcss-scss/download/postcss-scss-4.0.2.tgz?cache=0&sync_timestamp=1635496103823&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpostcss-scss%2Fdownload%2Fpostcss-scss-4.0.2.tgz#39ddcc0ab32f155d5ab328ee91353d67a52d537b"
+  integrity sha1-Od3MCrMvFV1asyjukTU9Z6UtU3s=
+
 postcss-selector-parser@^6.0.6:
   version "6.0.6"
   resolved "https://registry.nlark.com/postcss-selector-parser/download/postcss-selector-parser-6.0.6.tgz?cache=0&sync_timestamp=1620752924836&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fpostcss-selector-parser%2Fdownload%2Fpostcss-selector-parser-6.0.6.tgz#2c5bba8174ac2f6981ab631a42ab0ee54af332ea"
@@ -8457,10 +8462,27 @@ stylelint-config-prettier@^9.0.3:
   resolved "https://registry.npmmirror.com/stylelint-config-prettier/download/stylelint-config-prettier-9.0.3.tgz#0dccebeff359dcc393c9229184408b08964d561c"
   integrity sha1-Dczr7/NZ3MOTySKRhECLCJZNVhw=
 
+stylelint-config-recommended-scss@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.npmmirror.com/stylelint-config-recommended-scss/download/stylelint-config-recommended-scss-5.0.1.tgz#4f16ff9c85966c0c37de5243b628eef104da504e"
+  integrity sha512-kVI5lX8jtaw9uNnnxxziw+LhW59m0x/JzGj8zVepeFQJ56eM4HazN4gMyCRQQSLr/8CXlIHGOW34CV5hIMr3FQ==
+  dependencies:
+    postcss-scss "^4.0.1"
+    stylelint-config-recommended "^6.0.0"
+    stylelint-scss "^4.0.0"
+
 stylelint-config-recommended@^6.0.0:
   version "6.0.0"
   resolved "https://registry.npmmirror.com/stylelint-config-recommended/download/stylelint-config-recommended-6.0.0.tgz?cache=0&sync_timestamp=1634869999369&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fstylelint-config-recommended%2Fdownload%2Fstylelint-config-recommended-6.0.0.tgz#fd2523a322836005ad9bf473d3e5534719c09f9d"
   integrity sha1-/SUjoyKDYAWtm/Rz0+VTRxnAn50=
+
+stylelint-config-standard-scss@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmmirror.com/stylelint-config-standard-scss/download/stylelint-config-standard-scss-2.0.1.tgz#b0cafad0a32c7eea13e045913c4e6a6de45be69c"
+  integrity sha512-TW5NLquUSS0mg2N31zzaSbYRbV/CMifSVLdpgo6VdGvjysgYqJOcKM/5bmXucTOsdfqomcPXetFZ3adC7nD+cg==
+  dependencies:
+    stylelint-config-recommended-scss "^5.0.0"
+    stylelint-config-standard "^23.0.0"
 
 stylelint-config-standard@^23.0.0:
   version "23.0.0"
@@ -8486,6 +8508,17 @@ stylelint-order@^5.0.0:
   dependencies:
     postcss "^8.3.11"
     postcss-sorting "^7.0.1"
+
+stylelint-scss@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmmirror.com/stylelint-scss/download/stylelint-scss-4.0.0.tgz#4901ced92b9c68e37649799a39defbd5f2ac5bcd"
+  integrity sha1-SQHO2SucaON2SXmaOd771fKsW80=
+  dependencies:
+    lodash "^4.17.15"
+    postcss-media-query-parser "^0.2.3"
+    postcss-resolve-nested-selector "^0.1.1"
+    postcss-selector-parser "^6.0.6"
+    postcss-value-parser "^4.1.0"
 
 stylelint@^14.0.1:
   version "14.0.1"

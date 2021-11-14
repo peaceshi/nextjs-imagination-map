@@ -18,7 +18,6 @@
 
   @for $i from 1 through $length {
     $char: string.slice($string, $i, $i);
-
     $property: "#{$property}#{if(is-upper-case($char), "-#{string.to-lower-case($char)}",$char)}";
   }
 
@@ -32,7 +31,7 @@
   }
 
   // it's a shortcut config
-  @if (meta.type-of($value) == list and list.length($value) == 2) {
+  @if meta.type-of($value) == list and list.length($value) == 2 {
     $isLegal: true;
 
     @each $color in $value {
@@ -51,17 +50,17 @@
   }
 
   // it's a valid map color config
-  @if (meta.type-of($value) == map) {
-    @if (meta.type-of(map.get($value, "light")) == color) and (meta.type-of(map.get($value, "dark")) == color) {
+  @if meta.type-of($value) == map {
+    @if meta.type-of(map.get($value, "light")) == color) and (meta.type-of(map.get($value, "dark")) == color {
       @return true;
     }
 
-    @if (islegal-config(map.get($value, "base"))) {
+    @if islegal-config(map.get($value, "base")) {
       $scale: map.get($value, "scale");
 
-      @if (meta.type-of($scale) == map) {
+      @if meta.type-of($scale) == map {
         @each $name, $amount in $scale {
-          @if (meta.type-of($amount) != number) {
+          @if meta.type-of($amount) != number {
             @debug "Unexpected value: getting #{$value}";
 
             @return false;
@@ -72,7 +71,6 @@
       }
     }
   }
-
   @debug "Unexpected value: getting #{$value}";
 
   @return false;

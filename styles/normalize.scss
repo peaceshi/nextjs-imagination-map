@@ -77,7 +77,7 @@ h6 {
   line-height: 1.25;
 
   &:hover .header-anchor {
-    opacity: 1;
+    opacity: 100%;
   }
 }
 
@@ -114,14 +114,14 @@ a.header-anchor {
   margin-left: -0.87em;
   padding-right: 0.23em;
   font-size: 0.85em;
-  opacity: 0;
+  opacity: 0%;
 
   &:hover {
     text-decoration: none;
   }
 
   &:focus-visible {
-    opacity: 1;
+    opacity: 100%;
   }
 }
 

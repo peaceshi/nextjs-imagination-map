@@ -31,7 +31,7 @@
       "prettier --write",
       "eslint --fix"
     ],
-    "styles/*.{css,less,scss}": [
+    "styles/*.{css,less,scss,sass}": [
       "stylelint --config .stylelintrc.json --fix"
     ],
     "styles/*.{css,scss,less,json,html,md,markdown}": [
@@ -87,6 +87,7 @@
     "stylelint": "^14.0.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^23.0.0",
+    "stylelint-config-standard-scss": "^2.0.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
     "stylelint-high-performance-animation": "^1.5.2",
     "stylelint-order": "^5.0.0",

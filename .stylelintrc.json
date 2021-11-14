@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
   "plugins": [
     "stylelint-order",
     "stylelint-declaration-block-no-ignored-properties",
@@ -15,7 +15,13 @@
     "declaration-empty-line-before": null,
     "value-keyword-case": null,
     "plugin/declaration-block-no-ignored-properties": true,
-    "plugin/no-low-performance-animation-properties": null
+    "plugin/no-low-performance-animation-properties": null,
+    "scss/dollar-variable-pattern": null,
+    "custom-property-pattern": null,
+    "scss/at-import-no-partial-leading-underscore": null,
+    "function-url-quotes": null,
+    "number-max-precision": null,
+    "selector-class-pattern": null
   },
-  "ignoreFiles": ["!./styles/**/*.{css,less,scss}", "!/styles/**/*.*"]
+  "ignoreFiles": ["!./styles/**/*.{css,less,scss,sass}", "!/styles/**/*.*"]
 }
