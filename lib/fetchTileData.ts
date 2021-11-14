@@ -6,14 +6,8 @@ import { checkGameMap } from "@utils/utils";
 
 type tileXYZ = Pick<Tile, "x" | "y" | "z">;
 
-interface TileMeta {
-  tileName: string;
-  tileLevel: number;
-  tileRegion: string;
-}
-
+type TileMeta = typeof tileMeta.dq3;
 const version = `?version=${checkGameMap()}`;
-const baseUrl = tileMeta.baseUrl;
 
 const fetchOptions = {
   fetch: {
@@ -21,20 +15,15 @@ const fetchOptions = {
   }
 };
 const fetchData = async ({ x, y, z }: tileXYZ, Meta: TileMeta): Promise<[]> => {
-  const url = `${baseUrl}/${Meta.tileName}/${z + Meta.tileLevel}/${x}_${y}.jpg${version}?region=${Meta.tileRegion}`;
+  const url = `${Meta.baseUrl}/${Meta.tileName}/${z + Meta.tileLevel}/${x}_${y}.jpg${version}?region=${
+    Meta.tileRegion
+  }`;
   return localStorage.getItem("webp") === "true"
     ? ((await load(url, ImageLoader, fetchOptions)) as Promise<[]>)
     : ((await load(url, ImageLoader)) as Promise<[]>);
 };
 
-export const fetchTileData = async ({ x, y, z }: tileXYZ, tileUrlIndex: number): Promise<[]> => {
-  switch (tileUrlIndex) {
-    case 1:
-      return await fetchData({ x, y, z }, tileMeta.qd);
-    case 2:
-      return await fetchData({ x, y, z }, tileMeta.qd1);
-    default:
-      return await fetchData({ x, y, z }, tileMeta.dq3);
-  }
+export const fetchTileData = async ({ x, y, z }: tileXYZ, tileUrlIndex: TileMeta): Promise<[]> => {
+  return await fetchData({ x, y, z }, tileUrlIndex);
 };
 export default fetchTileData;

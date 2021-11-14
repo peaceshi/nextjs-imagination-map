@@ -30,6 +30,13 @@ export default class extends Document {
 
           <link rel="manifest" href="/manifest.webmanifest" />
           <link rel="shortcut icon" href="/icons/favicon.ico" />
+          <link
+            rel="preload"
+            href="https://assets.yuanshen.site/fonts/woff2/font.woff2"
+            as="font"
+            crossOrigin="anonymous"
+            type="font/woff2"
+          />
         </Head>
         <body>
           <Main />

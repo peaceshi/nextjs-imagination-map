@@ -1,9 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import DeckGL from "@deck.gl/react";
-import { useAnimation, useIconLayer, useJsonDiff, useTileLayer } from "@hooks/hooks";
+import { useAnimation, useIconLayer, useJsonDiff, useTagLayer, useTileLayer } from "@hooks/hooks";
 // import { Animations } from "@lib/Animations";
 import { fetchTileData } from "@lib/fetchTileData";
 import { FeatureProperties, Tile, TileLayersSubProperties } from "@lib/Interface";
@@ -17,7 +13,7 @@ import React, { ReactElement, useCallback, useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { ScatterplotLayer } from "@deck.gl/layers";
 import { DataFilterExtension } from "@deck.gl/extensions";
-
+type UnknownObject = Record<string, unknown>;
 const mapCenter = {
   deltaX: 3568,
   deltaY: 6286
@@ -27,7 +23,7 @@ const INITIAL_VIEW_STATE = {
   bearing: 0,
   zoom: -3, // full zoom level
   maxZoom: 10,
-  minZoom: -6
+  minZoom: -3.5
 };
 const controller: ControllerOptions = {
   scrollZoom: { smooth: true },
@@ -40,7 +36,8 @@ const postProcessEffect = new PostProcessEffect(vignette, {
   amount: 0.6
 });
 
-export default function OrthographicMap({ index }: { index: number }): ReactElement {
+export default function OrthographicMap({ index }: { index: string }): ReactElement {
+  const [viewState, setViewState] = useState<UnknownObject>(INITIAL_VIEW_STATE);
   // const [layersAnimations, setLayersAnimations] = useState({
   //   getColor0: Animations.fadeOutColor,
   //   transitions0: Animations.fadeOut,
@@ -51,39 +48,13 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
   // });
 
   // const layersAnimationsDebounce = useDebounce(layersAnimations, { wait: 500 });
-  const view = new OrthographicView({ id: "teyvat" });
+  const view = new OrthographicView({ id: index });
 
   // const diff = useJsonDiff(
   //   "https://assets.yuanshen.site/data/region.json",
   //   "https://assets.yuanshen.site/data/latest-region.json"
   // );
-  const tileLayer = useTileLayer({
-    tileSize: 256,
-    minZoom: -2, // native tile level
-    maxZoom: 0, // native tile level
-    extent: [0, 0, 12288, 15360],
-    refinementStrategy: "best-available",
-    getTileData: async ({ x, y, z }: Tile) => await fetchTileData({ x, y, z }, index),
-    renderSubLayers: (properties: TileLayersSubProperties) => {
-      const { left, bottom, right, top } = properties.tile.bbox;
-      const width = 12288;
-      const height = 15360;
-      const { id, data } = properties;
-      const bbox = {
-        left: clamp(left, 0, width) as number,
-        bottom: clamp(bottom, 0, height) as number,
-        right: clamp(right, 0, width) as number,
-        top: clamp(top, 0, height) as number
-      };
-      return [
-        new BitmapLayer({
-          id: id,
-          image: data,
-          bounds: [bbox.left, bbox.bottom, bbox.right, bbox.top]
-        })
-      ];
-    }
-  });
+  const tileLayer = useTileLayer(index);
   // const tagLayer0 = useIconLayer({
   //   id: "tagLayer0",
   //   data: diff[0],
@@ -183,12 +154,22 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
   //     layersAnimationsDebounce.getColor2
   //   ]
   // );
-  const scatterplotLayer = useAnimation();
+  const onViewStateChange = useCallback(
+    ({ viewState, interactionState }: { viewState: UnknownObject; interactionState: UnknownObject }) => {
+      if (interactionState.isZooming as boolean) {
+        viewState.transitionDuration = 300;
+        setViewState(viewState);
+      }
+    },
+    []
+  );
+  // const scatterplotLayer = useAnimation();
+  const tagLayer = useTagLayer(viewState);
   return (
     <DeckGL
       views={[view]}
       // layers={[tileLayer, tagLayer0, tagLayer1, tagLayer2]}
-      layers={[tileLayer, ...scatterplotLayer]}
+      layers={[tileLayer, tagLayer]}
       initialViewState={INITIAL_VIEW_STATE}
       controller={isMobile ? true : controller}
       ////@ts-expect-error: Bad types define
@@ -196,10 +177,10 @@ export default function OrthographicMap({ index }: { index: number }): ReactElem
       // style={{ backgroundColor: "#000000" }}
       effects={[postProcessEffect]}
       // _onMetrics={onMetrics}
-      // onViewStateChange={onViewStateChange}
+      onViewStateChange={onViewStateChange}
       ////@ts-expect-error: Bad types define
       //   getCursor={getCursor}
-      // useDevicePixels={false}
+      useDevicePixels={true}
     />
   );
 }

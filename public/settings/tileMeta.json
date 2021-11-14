@@ -1,6 +1,6 @@
 {
-  "baseUrl": "https://assets.yuanshen.site",
   "dq3": {
+    "baseUrl": "https://assets.yuanshen.site",
     "tileName": "tiles_dq3",
     "tileLevel": 13,
     "tileRegion": "Teyvat",
@@ -11,6 +11,7 @@
     "height": 15360
   },
   "qd": {
+    "baseUrl": "https://assets.yuanshen.site",
     "tileName": "tiles_qd",
     "tileLevel": 14,
     "tileRegion": "qd",
@@ -21,6 +22,7 @@
     "height": 12288
   },
   "qd1": {
+    "baseUrl": "https://assets.yuanshen.site",
     "tileName": "tiles_qd1",
     "tileLevel": 14,
     "tileRegion": "qd1",

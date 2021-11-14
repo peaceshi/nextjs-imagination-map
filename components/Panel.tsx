@@ -9,11 +9,8 @@ interface LanguageControlPanelProperties {
   t: typeof useTranslation;
   router: NextRouter;
 }
-interface TileLayerControlPanelProperties {
-  setTileLayerUrlIndex: (argument0: number) => void;
-}
 
-type PanelProperties = LanguageControlPanelProperties & TileLayerControlPanelProperties;
+type PanelProperties = LanguageControlPanelProperties;
 
 export const LanguageControlPanel = ({ href, t, router }: LanguageControlPanelProperties): ReactElement => {
   return (
@@ -31,36 +28,36 @@ export const LanguageControlPanel = ({ href, t, router }: LanguageControlPanelPr
     </div>
   );
 };
-export const TileLayerControlPanel = ({ setTileLayerUrlIndex }: TileLayerControlPanelProperties): ReactElement => {
+export const TileLayerControlPanel = (): ReactElement => {
   return (
     <div className={styles.left}>
       <div>
         <Link href="/">
-          <button onClick={() => setTileLayerUrlIndex(0)}>to Teyvat</button>
+          <button>to Teyvat</button>
         </Link>
       </div>
       <div>
         <Link href="/qd">
-          <button onClick={() => setTileLayerUrlIndex(1)}>to QD</button>
+          <button>to QD</button>
         </Link>
       </div>
       <div>
         <Link href="/qd1">
-          <button onClick={() => setTileLayerUrlIndex(2)}>to QD1</button>
+          <button>to QD1</button>
         </Link>
       </div>
       <div>
         <Link href="/layers/ImageTileLayer">
-          <button onClick={() => setTileLayerUrlIndex(2)}>ImageTileLayer</button>
+          <button>ImageTileLayer</button>
         </Link>
       </div>
     </div>
   );
 };
-export const Panel = (properties: PanelProperties) => (
+export const Panel = (properties: PanelProperties): ReactElement => (
   <>
     <LanguageControlPanel href={properties.href} t={properties.t} router={properties.router} />
-    <TileLayerControlPanel setTileLayerUrlIndex={properties.setTileLayerUrlIndex} />
+    <TileLayerControlPanel />
   </>
 );
 export default Panel;

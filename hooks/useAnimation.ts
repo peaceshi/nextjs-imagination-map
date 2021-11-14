@@ -1,7 +1,6 @@
 import { DataFilterExtension } from "@deck.gl/extensions";
 import { ScatterplotLayer, ScatterplotLayerProps } from "@deck.gl/layers";
 import { RGBAColor } from "deck.gl";
-
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const data = ((pointCount: number) => {

@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   }
 });
 export default function Home(): ReactElement {
-  const [tileLayerUrlIndex, setTileLayerUrlIndex] = useState<number>(1);
+  const [tileLayerUrlIndex] = useState<string>("qd");
   const { t } = useTranslation(["common", "footer"]);
   const router = useRouter();
   return (
@@ -23,7 +23,7 @@ export default function Home(): ReactElement {
       <Layout>
         <OrthographicMap index={tileLayerUrlIndex} />
       </Layout>
-      <Panel href="/qd" t={t} router={router} setTileLayerUrlIndex={setTileLayerUrlIndex} />
+      <Panel href="/qd" t={t} router={router} />
     </>
   );
 }

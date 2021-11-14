@@ -1,9 +1,18 @@
 {
-  "teyvat": {
-    "viewID": "teyvat",
-    "mapsCenter": [3568, 6286],
-    "zoom": -6,
-    "maxZoom": 10,
-    "minZoom": -8
-  }
+  "tiles": [
+    {
+      "viewID": "teyvat",
+      "mapsCenter": [3568, 6286],
+      "zoom": -6,
+      "maxZoom": 10,
+      "minZoom": -8
+    },
+    {
+      "viewID": "qd",
+      "mapsCenter": [3568, 6286],
+      "zoom": -6,
+      "maxZoom": 10,
+      "minZoom": -8
+    }
+  ]
 }
