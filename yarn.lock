@@ -6486,9 +6486,9 @@ neo-async@^2.6.0:
   integrity sha1-tKr7k+OustgXTKU88WOrfXMIMF8=
 
 next-i18next@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.npmmirror.com/next-i18next/download/next-i18next-9.0.0.tgz#fbf60e271426b215847621e472cddf4156fc00ad"
-  integrity sha1-+/YOJxQmshWEdiHkcs3fQVb8AK0=
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/next-i18next/-/next-i18next-9.1.0.tgz#4842598a6063ebeddad7494136e3578389908f69"
+  integrity sha512-M9ySHHVaB7b/Y+/wJmOADE40Clu5Tq0/vFCr9Sl09Htogs5sVN/r/4ZxrW5x1bWAAXqWBdxFcbyzDru85WK82Q==
   dependencies:
     "@babel/runtime" "^7.13.17"
     "@types/hoist-non-react-statics" "^3.3.1"
