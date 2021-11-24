@@ -2,5 +2,6 @@
 
 @font-face {
   font-family: "HYWenHei 85W";
-  src: url(https://assets.yuanshen.site/fonts/woff2/font.woff2);
+  src: local("HYWenHei 85W"), url(https://assets.yuanshen.site/fonts/woff2/font.woff2) format("woff2");
+  font-display: swap;
 }
