@@ -1,29 +1,23 @@
 import Layout from "@components/Layout";
 import OrthographicMap from "@components/OrthographicMap";
+import { useGeoJson } from "@hooks/hooks";
 import { GetStaticProps } from "next";
-import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
-import React, { ReactElement, useState } from "react";
-const Panel = dynamic(() => import("@components/Panel"));
+import nextI18NextConfig from "../next-i18next.config.js";
 // eslint-disable-next-line unicorn/prevent-abbreviations
-export const getStaticProps: GetStaticProps = async ({ locale }) => ({
-  props: {
-    //@ts-expect-error: Bad types define
-    ...(await serverSideTranslations(locale, ["common", "footer"]))
-  }
-});
-export default function Home(): ReactElement {
-  const [tileLayerUrlIndex] = useState<string>("qd");
-  const { t } = useTranslation(["common", "footer"]);
-  const router = useRouter();
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const defaultLocale = "zh-CN";
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? defaultLocale, ["tag"], nextI18NextConfig))
+    }
+  };
+};
+export default function Map() {
+  const { data, fallbackData } = useGeoJson("/api/data/tag");
   return (
-    <>
-      <Layout>
-        <OrthographicMap index={tileLayerUrlIndex} />
-      </Layout>
-      <Panel href="/qd" t={t} router={router} />
-    </>
+    <Layout>
+      <OrthographicMap id="qd" data={data ?? fallbackData} />
+    </Layout>
   );
 }

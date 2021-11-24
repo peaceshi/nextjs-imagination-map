@@ -5,13 +5,13 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 const Panel = dynamic(() => import("@components/Panel"));
+const initialLocale = "zh-CN";
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    //@ts-expect-error: Bad types define
-    ...(await serverSideTranslations(locale, ["common", "footer"]))
+    ...(await serverSideTranslations(locale ?? initialLocale, ["common", "footer", "tag"]))
   }
 });
 export default function Home(): ReactElement {

@@ -1,15 +1,15 @@
-import Head from "next/head";
-import React, { ReactElement } from "react";
-import { ReactNode } from "react";
+// import Head from "next/head";
+import { ReactElement, ReactNode } from "react";
+import { Panel } from "@components/Panel";
 
 export default function Layout({ children }: { children: ReactNode }): ReactElement {
   return (
     <div>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <header></header>
-      <main>{children}</main>
+      <main>
+        {children}
+        <Panel />
+      </main>
     </div>
   );
 }

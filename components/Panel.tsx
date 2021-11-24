@@ -1,30 +1,17 @@
 import styles from "@styles/panel/panel.module.css";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import { NextRouter } from "next/router";
-import React, { ReactElement } from "react";
+import { useRouter } from "next/router";
+import { ReactElement } from "react";
 
-interface LanguageControlPanelProperties {
-  href: string;
-  t: typeof useTranslation;
-  router: NextRouter;
-}
-
-type PanelProperties = LanguageControlPanelProperties;
-
-export const LanguageControlPanel = ({ href, t, router }: LanguageControlPanelProperties): ReactElement => {
+export const LanguageControlPanel = (): ReactElement => {
+  const { t } = useTranslation(["tag"]);
+  const router = useRouter();
   return (
     <div className={styles.right}>
-      <div>
-        <Link href={href} locale={router.locale === "en" ? "de" : "en"}>
-          <button>{t("footer:description")}</button>
-        </Link>
-      </div>
-      <div>
-        <Link href={href} locale={router.locale === "en" ? "de" : "en"}>
-          <button>{t("common:change-locale")}</button>
-        </Link>
-      </div>
+      <Link href={router.pathname} locale={router.locale === "en-US" ? "ja-JP" : "en-US"}>
+        <button>{t("tag:选择语言")}</button>
+      </Link>
     </div>
   );
 };
@@ -51,12 +38,17 @@ export const TileLayerControlPanel = (): ReactElement => {
           <button>ImageTileLayer</button>
         </Link>
       </div>
+      <div>
+        <Link href="/editor">
+          <button>Editor</button>
+        </Link>
+      </div>
     </div>
   );
 };
-export const Panel = (properties: PanelProperties): ReactElement => (
+export const Panel = (): ReactElement => (
   <>
-    <LanguageControlPanel href={properties.href} t={properties.t} router={properties.router} />
+    <LanguageControlPanel />
     <TileLayerControlPanel />
   </>
 );

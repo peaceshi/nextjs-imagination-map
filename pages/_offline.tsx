@@ -1,6 +1,5 @@
 import Layout from "@components/Layout";
 import { useRouter } from "next/router";
-import * as React from "react";
 import { ReactElement } from "react";
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";

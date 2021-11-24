@@ -3,7 +3,8 @@ import { checkWebpFeature, pwaHelper } from "@utils/utils";
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
+import nextI18NextConfig from "../next-i18next.config";
 
 const MyAppHead = (): ReactElement => (
   <Head>
@@ -26,4 +27,4 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
     </>
   );
 };
-export default appWithTranslation(MyApp);
+export default appWithTranslation(MyApp, nextI18NextConfig);

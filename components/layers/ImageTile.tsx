@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import DeckGL, { OrthographicView, COORDINATE_SYSTEM } from "deck.gl";
 import { TileLayer } from "@deck.gl/geo-layers";

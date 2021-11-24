@@ -1,36 +1,32 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
 import { DataFilterExtension } from "@deck.gl/extensions";
 import { TextLayer, TextLayerProps } from "@deck.gl/layers";
-import { Vector2 } from "@math.gl/core";
-import d from "@data/latest-region.json";
+import { FeatureCollection, FeatureOf, FeatureWithProps, Point } from "@nebula.gl/edit-modes";
+import { TFunction, useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
 
-const data = d.features;
-type Data = typeof data[number];
+type Data = FeatureOf<Point> & FeatureWithProps<Point, { region: number }>;
+
 type FilterRange = [number, number];
+
 const initialLayerProperties: TextLayerProps<Data> = {
-  id: "all-text",
-  data: data,
-  getPosition: (d: Data) => new Vector2(d.geometry.coordinates[0], d.geometry.coordinates[1]).scale(1 / 3).toArray(),
+  id: "tag-layer",
+  data: [],
+  getPosition: (d: Data) => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
   characterSet: "auto",
   fontFamily: "'HYWenHei 85W'",
-  getText: (d) => d.properties.image.id,
+  getText: (d) => d.id as string,
   getColor: [236, 236, 236],
-  getSize: (d: Data) => (d.properties.region == 1 ? 210 : d.properties.region == 2 ? 90 : 30), // baseFontSize
+  getSize: (d: Data) => (d.properties.region == 1 ? 210 : d.properties.region == 2 ? 90 : 40),
   sizeScale: 1,
   fontWeight: "normal",
-  sizeUnits: "meters",
+  sizeUnits: "common",
   getAlignmentBaseline: "center",
   fontSettings: {
     sdf: true,
-    fontSize: 64,
-    buffer: 7,
-    radius: 12
+    fontSize: 68
   },
   outlineColor: [0, 0, 0, 76],
-  outlineWidth: 0.25,
+  outlineWidth: 0.15,
   filterTransformSize: false,
   filterTransformColor: false,
   filterEnabled: true,
@@ -53,10 +49,15 @@ const filterUpdater = (zoom: number, setFilterRange: (range: () => FilterRange) 
 };
 const propertiesUpdater = (
   filterRange: FilterRange,
-  setLayerProperties: (properties: () => TextLayerProps<Data>) => void
+  setLayerProperties: (properties: () => TextLayerProps<Data>) => void,
+  t: TFunction,
+  geojson: FeatureCollection,
+  zoomRegion: { min: number; max: number; step: number }
 ) => {
   setLayerProperties(() => ({
     ...initialLayerProperties,
+    data: geojson?.features as Data[],
+    getText: (d) => t(`tag:${d.id as string}`),
     getFilterValue: (d: Data) =>
       d.properties.region == 1
         ? zoomRegion.min
@@ -68,16 +69,22 @@ const propertiesUpdater = (
     filterRange: filterRange
   }));
 };
-export const useTagLayer = (viewState: Record<string, unknown>): TextLayer<Data, TextLayerProps<Data>> => {
-  const zoom = viewState.zoom as number;
-  const [layerProperties, setLayerProperties] = useState<TextLayerProps<Data>>(() => initialLayerProperties);
+export const useTagLayer = (zoom: number, geoJson: FeatureCollection): TextLayer<Data, TextLayerProps<Data>> => {
+  const [layerProperties, setLayerProperties] = useState<TextLayerProps<Data>>(() => ({
+    ...initialLayerProperties,
+    data: geoJson?.features as Data[]
+  }));
+  const { t } = useTranslation(["tag"]);
   const [filterRange, setFilterRange] = useState<FilterRange>(() => initialFilterRange);
+
   useEffect(() => {
     filterUpdater(zoom, setFilterRange);
   }, [zoom]);
+
   useEffect(() => {
-    propertiesUpdater(filterRange, setLayerProperties);
-  }, [filterRange]);
+    propertiesUpdater(filterRange, setLayerProperties, t, geoJson, zoomRegion);
+  }, [filterRange, geoJson, t]);
+
   return new TextLayer(layerProperties);
 };
 export default useTagLayer;
