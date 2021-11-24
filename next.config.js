@@ -24,12 +24,12 @@ const securityHeaders = [
   {
     key: "Referrer-Policy",
     value: "no-referrer"
-  },
-  {
-    key: "Content-Security-Policy",
-    value:
-      "script-src 'self'; object-src 'none'; style-src yuanshen.site *.yuanshen.site *.minemc.top minemc.top; child-src https:"
   }
+  // {
+  //   key: "Content-Security-Policy",
+  //   value:
+  //     "script-src 'self'; object-src 'none'; style-src yuanshen.site *.yuanshen.site *.minemc.top minemc.top; child-src https:"
+  // }
 ];
 // @ts-check
 /**
@@ -90,7 +90,7 @@ const nextConfig = withPWA({
   },
   compress: false,
   poweredByHeader: false,
-  swcMinify: false
+  swcMinify: true
 });
 
 module.exports = nextConfig;

@@ -2,7 +2,7 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2020,
+    "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -20,12 +20,16 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:jsx-a11y/recommended",
+    // "plugin:import/recommended", Do not use, too many bugs.
+    // "plugin:import/typescript", Do not use, too many bugs.
     "plugin:promise/recommended",
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint", "prettier", "promise", "unicorn", "react-hooks"],
+  "plugins": ["@typescript-eslint", "prettier", "promise", "react", "unicorn", "jsx-a11y", "react-hooks"],
   "rules": {
     "prettier/prettier": "error",
     "unicorn/filename-case": [
@@ -44,16 +48,11 @@
       {
         "ignore": ["-env."]
       }
-    ],
-    "typescript-eslint/indent": "off",
-    "react/display-name": ["off", { "ignoreTranspilerName": true }],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    ]
   },
   "settings": {
     "react": {
-      "pragma": "React",
-      "version": "17.0.0"
+      "version": "detect" // React version. "detect" automatically picks the version you have installed.
     }
   }
 }
