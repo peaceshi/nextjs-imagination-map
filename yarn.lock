@@ -1081,9 +1081,9 @@
     indefinitely-typed "^1.1.0"
 
 "@danmarshall/deckgl-typings@^4.9.10":
-  version "4.9.10"
-  resolved "https://registry.npmmirror.com/@danmarshall/deckgl-typings/download/@danmarshall/deckgl-typings-4.9.10.tgz#bbc2d2a15dfdd0aa4c1ff3792f0effd1b84cf9e9"
-  integrity sha1-u8LSoV390KpMH/N5Lw7/0bhM+ek=
+  version "4.9.11"
+  resolved "https://registry.yarnpkg.com/@danmarshall/deckgl-typings/-/deckgl-typings-4.9.11.tgz#98339f1c36d6fcb6afad04056b9c1a5e9d7d4ca0"
+  integrity sha512-Fh7ptaFvmPykGGLzAS0L/hmNKjNRl4msOXfKKj5QTtu6Kr3oeBOljQPQynRH8tQKX43tdnDYZ0hWgJnMw041iA==
   dependencies:
     "@types/hammerjs" "^2.0.36"
     "@types/react" "*"
