@@ -1,9 +1,8 @@
 import Layout from "@components/Layout";
-import { useRouter } from "next/router";
-import { ReactElement } from "react";
 import { GetStaticProps } from "next";
-import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { ReactElement } from "react";
+
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
@@ -13,12 +12,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
 });
 
 export default function Home(): ReactElement {
-  const router = useRouter();
-  const { t } = useTranslation(["common", "footer"]);
   return (
     <>
       <Layout>
-        <h1>{t("footer:description")}</h1>
+        <h1>Offline</h1>
       </Layout>
     </>
   );
