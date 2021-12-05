@@ -1,17 +1,26 @@
 import styles from "@styles/panel/panel.module.css";
-import { useTranslation } from "next-i18next";
+import { TFunction, useTranslation } from "next-i18next";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import { ReactElement } from "react";
-
+const LanguageSelector = ({ t, router }: { t: TFunction; router: NextRouter }) => (
+  <ul>
+    <li key="language-selector">{t("tag:选择语言")}</li>
+    {router.locales?.map((locale, index) => (
+      <li key={index}>
+        <Link href={router.pathname} locale={locale}>
+          {locale}
+        </Link>
+      </li>
+    ))}
+  </ul>
+);
 export const LanguageControlPanel = (): ReactElement => {
   const { t } = useTranslation(["tag"]);
   const router = useRouter();
   return (
     <div className={styles.right}>
-      <Link href={router.pathname} locale={router.locale === "en-US" ? "ja-JP" : "en-US"}>
-        <button>{t("tag:选择语言")}</button>
-      </Link>
+      <LanguageSelector t={t} router={router} />
     </div>
   );
 };
@@ -52,4 +61,4 @@ export const Panel = (): ReactElement => (
     <TileLayerControlPanel />
   </>
 );
-export default Panel;
+export { Panel as default } from "./Panel";

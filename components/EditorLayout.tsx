@@ -9,7 +9,6 @@ import {
 } from "@nebula.gl/edit-modes";
 import { ReactElement, useRef } from "react";
 import Draggable from "react-draggable";
-import { Vector2 } from "@math.gl/core";
 const DownloadButton = ({ data }: { data: FeatureCollection }) => {
   const download = () => {
     // const initialJson: FeatureCollection = {
