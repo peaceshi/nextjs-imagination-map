@@ -2,9 +2,11 @@
   position: absolute;
   right: 0;
   top: 20;
+  background-color: aqua;
 }
 
 .left {
+  background-color: aqua;
   position: absolute;
   left: 0;
   top: 20;
