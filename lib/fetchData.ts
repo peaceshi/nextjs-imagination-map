@@ -1,6 +1,5 @@
 import { load } from "@loaders.gl/core";
 import { JSONLoader } from "@loaders.gl/json";
-import { FeatureCollection } from "@nebula.gl/edit-modes";
 
 export const fetchDziMeta = async (dziSource: string): Promise<{ height: number; width: number; tileSize: number }> => {
   const response = await fetch(dziSource);
@@ -15,6 +14,6 @@ export const fetchDziMeta = async (dziSource: string): Promise<{ height: number;
   return { height, width, tileSize };
 };
 
-export const fetchGeoJson = async (url: string): Promise<FeatureCollection> => {
-  return (await load(url, JSONLoader)) as Promise<FeatureCollection>;
+export const fetchJSON = async <T>(url: string): Promise<T> => {
+  return (await load(url, JSONLoader)) as Promise<T>;
 };

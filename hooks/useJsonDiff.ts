@@ -1,4 +1,4 @@
-import { fetchGeoJson } from "@lib/fetchData";
+import { fetchJSON } from "@lib/fetchData";
 import { FeatureCollectionWithProperties, FeatureProperties } from "@lib/Interface";
 import { FeatureWithProps, Geometry } from "@nebula.gl/edit-modes";
 import { useMemo, useState } from "react";
@@ -66,8 +66,7 @@ export const useJsonDiff = (
   //   const [fetchDiff] = useWorker(calcDiff);
   useMemo(() => {
     void (async () => {
-      //@ts-expect-error: Bad types define
-      const diff = await calcDiff(await fetchGeoJson(original), await fetchGeoJson(changed));
+      const diff = await calcDiff(await fetchJSON(original), await fetchJSON(changed));
       setGeoJson(diff);
     })();
   }, [changed, original]);
