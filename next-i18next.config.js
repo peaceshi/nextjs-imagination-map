@@ -15,7 +15,8 @@ module.exports = {
     backends: [I18NextHttpBackend],
     backendOptions: [
       {
-        loadPath: "https://assets.yuanshen.site/data/i18n/{{ns}}.{{lng}}.json",
+        // loadPath: "https://assets.yuanshen.site/data/i18n/{{ns}}.{{lng}}.json",
+        loadPath: "https://yuanshen.site/HotUpdate/Language/{{lng}}.json",
         crossDomain: true,
         requestOptions: {
           mode: "no-cors",

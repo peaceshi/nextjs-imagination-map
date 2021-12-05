@@ -38,7 +38,7 @@ const securityHeaders = [
 const nextConfig = withPWA({
   pwa: {
     dest: "public",
-    cacheOnFrontEndNav: true,
+    cacheOnFrontEndNav: false,
     runtimeCaching,
     buildExcludes: [/middleware-manifest\.json$/]
   },
