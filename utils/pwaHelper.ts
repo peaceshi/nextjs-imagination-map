@@ -24,7 +24,7 @@ const serviceWorkerState = (serviceWorker: ServiceWorkerContainer): void => {
  * @url: https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
  * @param serviceWorker ServiceWorkerContainer
  */
-const serviceWorkerUpdate = async (serviceWorker: ServiceWorkerContainer): Promise<void> => {
+const serviceWorkerUpdater = async (serviceWorker: ServiceWorkerContainer): Promise<void> => {
   await serviceWorker.ready.then((registration) => {
     registration.addEventListener("updatefound", () => {
       console.log("Newer version is available");
@@ -33,35 +33,35 @@ const serviceWorkerUpdate = async (serviceWorker: ServiceWorkerContainer): Promi
     return;
   });
 };
-const NotificationMessage = {
-  title: "Notification",
-  options: {
-    body: "Notification",
-    icon: "/icons/android-chrome-192x192.png",
-    badge: "/icons/maskable_icon_x128.png",
-    tag: "Notification"
-  }
-};
-const serviceWorkershowNotification = async (serviceWorker: ServiceWorkerContainer): Promise<void> => {
-  await serviceWorker.ready
-    .then((registration) => {
-      void registration.showNotification(NotificationMessage.title, NotificationMessage.options);
-      return;
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-};
+// const NotificationMessage = {
+//   title: "Notification",
+//   options: {
+//     body: "Notification",
+//     icon: "/icons/android-chrome-192x192.png",
+//     badge: "/icons/maskable_icon_x128.png",
+//     tag: "Notification"
+//   }
+// };
+// const serviceWorkershowNotification = async (serviceWorker: ServiceWorkerContainer): Promise<void> => {
+//   await serviceWorker.ready
+//     .then((registration) => {
+//       void registration.showNotification(NotificationMessage.title, NotificationMessage.options);
+//       return;
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//     });
+// };
 
-const serviceWorkerNotification = async (serviceWorker: ServiceWorkerContainer): Promise<void> => {
-  await Notification.requestPermission((result) => {
-    if (result === "granted") {
-      void serviceWorkershowNotification(serviceWorker);
-    } else {
-      throw new Error("We weren't granted notification permission.");
-    }
-  });
-};
+// const serviceWorkerNotification = async (serviceWorker: ServiceWorkerContainer): Promise<void> => {
+//   await Notification.requestPermission((result) => {
+//     if (result === "granted") {
+//       void serviceWorkershowNotification(serviceWorker);
+//     } else {
+//       throw new Error("We weren't granted notification permission.");
+//     }
+//   });
+// };
 export const pwaHelper = (): void => {
   if (typeof window !== "undefined") {
     // Because of the way Next.js handles SSR,
@@ -70,7 +70,7 @@ export const pwaHelper = (): void => {
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         serviceWorkerState(navigator.serviceWorker);
-        void serviceWorkerUpdate(navigator.serviceWorker);
+        void serviceWorkerUpdater(navigator.serviceWorker);
         // void serviceWorkerNotification(navigator.serviceWorker);
       });
     } else {
