@@ -1304,13 +1304,23 @@
     "@loaders.gl/worker-utils" "3.0.13"
     draco3d "1.4.1"
 
-"@loaders.gl/gis@3.0.13", "@loaders.gl/gis@^3.0.8":
+"@loaders.gl/gis@3.0.13":
   version "3.0.13"
   resolved "https://registry.npmmirror.com/@loaders.gl/gis/download/@loaders.gl/gis-3.0.13.tgz#b6b9729cde0cfdf8dc14cac6ccf49bac9b453299"
   integrity sha512-pftgUaKJ65gFwNyi+a2NGwjW8M5FlLZYnhKHjQ5/lNMYsodwSxp7HrJR5RKON+x6P7gaxjBgoCMDrAgWKNCDHQ==
   dependencies:
     "@loaders.gl/loader-utils" "3.0.13"
     "@loaders.gl/schema" "3.0.13"
+    "@mapbox/vector-tile" "^1.3.1"
+    pbf "^3.2.1"
+
+"@loaders.gl/gis@3.1.0", "@loaders.gl/gis@^3.0.8":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/gis/-/gis-3.1.0.tgz#536dabe0f05f07db1a42b4462992852893f72f0c"
+  integrity sha512-m7q5zZIGpyJMTFQ1EqPxKU+36SWazSDubMfrSSw67hDOnJqg/iZR1yUYBOEH0ceY/ntKy53Vl27QbnOiCLEUyg==
+  dependencies:
+    "@loaders.gl/loader-utils" "3.1.0"
+    "@loaders.gl/schema" "3.1.0"
     "@mapbox/vector-tile" "^1.3.1"
     pbf "^3.2.1"
 
@@ -1332,21 +1342,30 @@
     "@loaders.gl/loader-utils" "3.0.13"
 
 "@loaders.gl/json@^3.0.13":
-  version "3.0.13"
-  resolved "https://registry.npmmirror.com/@loaders.gl/json/download/@loaders.gl/json-3.0.13.tgz#095e4a325da750de8fadf477da4e432d8991dc78"
-  integrity sha1-CV5KMl2nUN6PrfR32k5DLYmR3Hg=
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/json/-/json-3.1.0.tgz#419d440768dd786aa6777142558bc538a797129e"
+  integrity sha512-wHdgneBnq9Nswcxsn0EBOw/pLitwiVW2SiUJScTGUcGsS8uI8XGTrAGLxwz7uzPRJx2MSOf+blht4Jfon6OVUw==
   dependencies:
-    "@loaders.gl/gis" "3.0.13"
-    "@loaders.gl/loader-utils" "3.0.13"
-    "@loaders.gl/schema" "3.0.13"
+    "@loaders.gl/gis" "3.1.0"
+    "@loaders.gl/loader-utils" "3.1.0"
+    "@loaders.gl/schema" "3.1.0"
 
-"@loaders.gl/loader-utils@3.0.13", "@loaders.gl/loader-utils@^3.0.8":
+"@loaders.gl/loader-utils@3.0.13":
   version "3.0.13"
   resolved "https://registry.npmmirror.com/@loaders.gl/loader-utils/download/@loaders.gl/loader-utils-3.0.13.tgz#d6970a00ddea775e9e80d3617bbd4ad2ef12a1b8"
   integrity sha512-tVDmytWaO1XHBV9F5UEQd55vAdnVDZhK2nUKY5oBfDlo1mG5PhXWOj2Za+yV4btMC86PWXYhLiUUgy+9vABPOw==
   dependencies:
     "@babel/runtime" "^7.3.1"
     "@loaders.gl/worker-utils" "3.0.13"
+    "@probe.gl/stats" "^3.4.0"
+
+"@loaders.gl/loader-utils@3.1.0", "@loaders.gl/loader-utils@^3.0.8":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/loader-utils/-/loader-utils-3.1.0.tgz#65214dbd930faf3f19177e94feda36c655901671"
+  integrity sha512-0OD6uAbVgrW4pWKvDdOMduEQngWlbSzxoiNjadS6uzaohnojooub3w2rI13z4qxJeLNSUUjbIvM50O1Zvwo1MA==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    "@loaders.gl/worker-utils" "3.1.0"
     "@probe.gl/stats" "^3.4.0"
 
 "@loaders.gl/math@3.0.13":
@@ -1377,6 +1396,13 @@
     apache-arrow "^4.0.0"
     d3-dsv "^1.2.0"
 
+"@loaders.gl/schema@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/schema/-/schema-3.1.0.tgz#2a72bc89f373bd8d2a133cb942bec933459021fa"
+  integrity sha512-83onulwpq91Eilee2xC6IhYSmBUnZ4LnF5gqDsm1FSbhgc1uY2QoHRVdHr6p2NZEBFp8XUtDvAdv46Ksum+qfg==
+  dependencies:
+    "@types/geojson" "^7946.0.7"
+
 "@loaders.gl/terrain@^3.0.8":
   version "3.0.13"
   resolved "https://registry.npmmirror.com/@loaders.gl/terrain/download/@loaders.gl/terrain-3.0.13.tgz#a90e7bd36121cc748ef5ab56a031ce4743050b7e"
@@ -1405,6 +1431,13 @@
   version "3.0.13"
   resolved "https://registry.npmmirror.com/@loaders.gl/worker-utils/download/@loaders.gl/worker-utils-3.0.13.tgz#861f6ec62a617fb8eacd36f98c9f70b87782ef28"
   integrity sha512-QB4jZumKGsouJprPzNKnKXTXMLf89afBwmi4Rnnw4SVj49olPiAGh4FZjf00GHFHKZlvAj8LB5rfqwd+Te6IVA==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+
+"@loaders.gl/worker-utils@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/worker-utils/-/worker-utils-3.1.0.tgz#93f7c6c92181d04c6c495695911573ee9370851e"
+  integrity sha512-sw6JcpFRbIWLLMJyE+T6hVZhjTYnJLgrpln4stesKcriq8brJLra1aX4t7BxZ17KLTM4eVGxLAne73EK1WORug==
   dependencies:
     "@babel/runtime" "^7.3.1"
 
