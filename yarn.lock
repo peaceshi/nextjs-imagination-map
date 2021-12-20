@@ -1304,7 +1304,7 @@
     "@loaders.gl/worker-utils" "3.0.13"
     draco3d "1.4.1"
 
-"@loaders.gl/gis@3.0.13", "@loaders.gl/gis@^3.0.8":
+"@loaders.gl/gis@3.0.13":
   version "3.0.13"
   resolved "https://registry.npmmirror.com/@loaders.gl/gis/download/@loaders.gl/gis-3.0.13.tgz#b6b9729cde0cfdf8dc14cac6ccf49bac9b453299"
   integrity sha512-pftgUaKJ65gFwNyi+a2NGwjW8M5FlLZYnhKHjQ5/lNMYsodwSxp7HrJR5RKON+x6P7gaxjBgoCMDrAgWKNCDHQ==
@@ -1312,6 +1312,17 @@
     "@loaders.gl/loader-utils" "3.0.13"
     "@loaders.gl/schema" "3.0.13"
     "@mapbox/vector-tile" "^1.3.1"
+    pbf "^3.2.1"
+
+"@loaders.gl/gis@3.1.3", "@loaders.gl/gis@^3.0.8":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/gis/-/gis-3.1.3.tgz#5a53311238f3773ef1956aad13cbbdffacd94ca3"
+  integrity sha512-5oSthbxETYClo4qaDV62ShuSmVuhWQbWPxaiGVnR8F644ewU6Y7t2687JVI5ZgbcuA24G+5gI+9p3yQd9PhHQA==
+  dependencies:
+    "@loaders.gl/loader-utils" "3.1.3"
+    "@loaders.gl/schema" "3.1.3"
+    "@mapbox/vector-tile" "^1.3.1"
+    "@math.gl/polygon" "^3.5.1"
     pbf "^3.2.1"
 
 "@loaders.gl/gltf@3.0.13", "@loaders.gl/gltf@^3.0.8":
@@ -1332,15 +1343,15 @@
     "@loaders.gl/loader-utils" "3.0.13"
 
 "@loaders.gl/json@^3.0.13":
-  version "3.0.13"
-  resolved "https://registry.npmmirror.com/@loaders.gl/json/download/@loaders.gl/json-3.0.13.tgz#095e4a325da750de8fadf477da4e432d8991dc78"
-  integrity sha1-CV5KMl2nUN6PrfR32k5DLYmR3Hg=
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/json/-/json-3.1.3.tgz#61415cee6900bd880d53d51d0c87151ff2986ee1"
+  integrity sha512-6FfVdYkyrAx7lcXKhxhdz0YkRxNdD+6H3PNSEOozG0dbTn5Hi032+iQIF/m+V1Jdx/xauqcs0EeLrXtpmcHxAg==
   dependencies:
-    "@loaders.gl/gis" "3.0.13"
-    "@loaders.gl/loader-utils" "3.0.13"
-    "@loaders.gl/schema" "3.0.13"
+    "@loaders.gl/gis" "3.1.3"
+    "@loaders.gl/loader-utils" "3.1.3"
+    "@loaders.gl/schema" "3.1.3"
 
-"@loaders.gl/loader-utils@3.0.13", "@loaders.gl/loader-utils@^3.0.8":
+"@loaders.gl/loader-utils@3.0.13":
   version "3.0.13"
   resolved "https://registry.npmmirror.com/@loaders.gl/loader-utils/download/@loaders.gl/loader-utils-3.0.13.tgz#d6970a00ddea775e9e80d3617bbd4ad2ef12a1b8"
   integrity sha512-tVDmytWaO1XHBV9F5UEQd55vAdnVDZhK2nUKY5oBfDlo1mG5PhXWOj2Za+yV4btMC86PWXYhLiUUgy+9vABPOw==
@@ -1348,6 +1359,15 @@
     "@babel/runtime" "^7.3.1"
     "@loaders.gl/worker-utils" "3.0.13"
     "@probe.gl/stats" "^3.4.0"
+
+"@loaders.gl/loader-utils@3.1.3", "@loaders.gl/loader-utils@^3.0.8":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/loader-utils/-/loader-utils-3.1.3.tgz#eb49e9715c5eeb83e7a525c9d372961cc3ae97f0"
+  integrity sha512-cnSfGHD6s24YW1OvLmRbXZWju5MCiRumXGuW3ua3OMacYkASNe3/cCjK+aN5RjdznQBPXxdPNBMC7Xv86s4O8w==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    "@loaders.gl/worker-utils" "3.1.3"
+    "@probe.gl/stats" "^3.5.0"
 
 "@loaders.gl/math@3.0.13":
   version "3.0.13"
@@ -1377,6 +1397,13 @@
     apache-arrow "^4.0.0"
     d3-dsv "^1.2.0"
 
+"@loaders.gl/schema@3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/schema/-/schema-3.1.3.tgz#5bbeccb78b3fd96223ea36bb4f8bfbdf4e503441"
+  integrity sha512-jcYWxMvIYXb3nw7iKE6bKQC0rMO3Q3/L6gM6hUuGFKE9Mz1kvIQahyaUJ7OUOCNahiR1JMx9D6WpSOA4R0CqMA==
+  dependencies:
+    "@types/geojson" "^7946.0.7"
+
 "@loaders.gl/terrain@^3.0.8":
   version "3.0.13"
   resolved "https://registry.npmmirror.com/@loaders.gl/terrain/download/@loaders.gl/terrain-3.0.13.tgz#a90e7bd36121cc748ef5ab56a031ce4743050b7e"
@@ -1405,6 +1432,13 @@
   version "3.0.13"
   resolved "https://registry.npmmirror.com/@loaders.gl/worker-utils/download/@loaders.gl/worker-utils-3.0.13.tgz#861f6ec62a617fb8eacd36f98c9f70b87782ef28"
   integrity sha512-QB4jZumKGsouJprPzNKnKXTXMLf89afBwmi4Rnnw4SVj49olPiAGh4FZjf00GHFHKZlvAj8LB5rfqwd+Te6IVA==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+
+"@loaders.gl/worker-utils@3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@loaders.gl/worker-utils/-/worker-utils-3.1.3.tgz#223fea3da995979c55b29af05d53dd75c308c6dd"
+  integrity sha512-EOsbZzGNgNsUKOSyKkC5M1filS1Ts5AZazjFMLw9zFPcTIET22g+ej4UgXZg4Toyu/AsKxPjp6n8i0QBkOBf6Q==
   dependencies:
     "@babel/runtime" "^7.3.1"
 
@@ -1790,6 +1824,13 @@
   version "3.4.1"
   resolved "https://registry.npmmirror.com/@probe.gl/stats/download/@probe.gl/stats-3.4.1.tgz#5bc0ec5f87ae3195c22a98363e9c15031fbfe8e8"
   integrity sha1-W8DsX4euMZXCKpg2PpwVAx+/6Og=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
+"@probe.gl/stats@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@probe.gl/stats/-/stats-3.5.0.tgz#774495772f06e898aae28c1d315c9edac07f3425"
+  integrity sha512-IH2M+F3c8HR1DTroBARePUFG7wIewumtKA0UFqx51Z7S4hKrD60wFbpMmg0AcF4FvHAXMBoC+kYi1UKW9XbAOw==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
