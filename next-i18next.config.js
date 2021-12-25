@@ -1,3 +1,6 @@
+/* eslint-disable unicorn/prefer-module */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 const I18nextChainedBackend = require("i18next-chained-backend/dist/cjs/i18nextChainedBackend");
 const I18NextHttpBackend = require("i18next-http-backend/cjs");
 
@@ -15,7 +18,6 @@ module.exports = {
     backends: [I18NextHttpBackend],
     backendOptions: [
       {
-        // loadPath: "https://assets.yuanshen.site/data/i18n/{{ns}}.{{lng}}.json",
         loadPath: "https://yuanshen.site/HotUpdate/Language/{{lng}}.json",
         crossDomain: true,
         requestOptions: {
