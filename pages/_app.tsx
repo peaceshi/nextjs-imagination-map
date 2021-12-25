@@ -1,10 +1,13 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import "@styles/index.sass";
 import { checkWebpFeature, pwaHelper } from "@utils/utils";
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { ReactElement } from "react";
+import { createContext, ReactElement } from "react";
 import nextI18NextConfig from "../next-i18next.config";
+
+export const FirstLoadingContext = createContext(true);
 
 const MyAppHead = (): ReactElement => (
   <Head>
@@ -21,10 +24,10 @@ const clientSideFunction = () => {
 const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
   clientSideFunction();
   return (
-    <>
+    <ChakraProvider>
       <MyAppHead />
       <Component {...pageProps} />
-    </>
+    </ChakraProvider>
   );
 };
 export default appWithTranslation(MyApp, nextI18NextConfig);

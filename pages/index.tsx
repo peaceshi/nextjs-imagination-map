@@ -1,11 +1,8 @@
-import Layout from "@components/Layout";
-import { useGeoJSON } from "@hooks/hooks";
-import { GetStaticProps } from "next";
+import MapView from "@components/View/MapView";
+import type { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import dynamic from "next/dynamic";
 import nextI18NextConfig from "../next-i18next.config.js";
-const OrthographicMap = dynamic(() => import("@components/OrthographicMap"));
-// eslint-disable-next-line unicorn/prevent-abbreviations
+
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const defaultLocale = "zh-CN";
   return {
@@ -15,11 +12,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   };
 };
 
-export default function Map() {
-  const { data } = useGeoJSON("/api/data/tags/dq3");
-  return (
-    <Layout>
-      <OrthographicMap id="dq3" data={data} />
-    </Layout>
-  );
-}
+const Map = () => {
+  return <MapView id="dq3" />;
+};
+export { Map as default };

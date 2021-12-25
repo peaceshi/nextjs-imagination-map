@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 const APP_NAME = "next-pwa example";
 const APP_DESCRIPTION = "This is an example of using next-pwa plugin";
 
-export default class extends Document {
+export default class AppDocument extends Document {
   static async getInitialProps(context: DocumentContext): Promise<DocumentInitialProps> {
     return await Document.getInitialProps(context);
   }
@@ -30,6 +30,7 @@ export default class extends Document {
 
           <link rel="manifest" href="/manifest.webmanifest" />
           <link rel="shortcut icon" href="/icons/favicon.ico" />
+          <link rel="dns-prefetch" href="https://assets.yuanshen.site" />
           <link
             rel="preload"
             href="https://assets.yuanshen.site/fonts/woff2/font.woff2"
