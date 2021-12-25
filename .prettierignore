@@ -1,12 +1,5 @@
-.build
-build
 .next
 cspell.json
-web_modules
-layers/
-icons/
-data/
-public/locales/
 public/sw.js*
 public/workbox-*.js*
 public/fallback-*.js*
