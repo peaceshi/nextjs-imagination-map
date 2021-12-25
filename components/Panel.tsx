@@ -1,64 +1,89 @@
-import styles from "@styles/panel/panel.module.css";
-import { TFunction, useTranslation } from "next-i18next";
+import { Box, Button, Flex, Spacer, Text } from "@chakra-ui/react";
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import { NextRouter, useRouter } from "next/router";
-import { ReactElement } from "react";
-const LanguageSelector = ({ t, router }: { t: TFunction; router: NextRouter }) => (
-  <ul>
-    <li key="language-selector">{t("tag:选择语言")}</li>
-    {router.locales?.map((locale, index) => (
-      <li key={index}>
-        <Link href={router.pathname} locale={locale}>
-          {locale}
-        </Link>
-      </li>
-    ))}
-  </ul>
-);
-export const LanguageControlPanel = (): ReactElement => {
-  const { t } = useTranslation(["tag"]);
+import { useRouter } from "next/router";
+
+export const LanguageControlPanel = () => {
   const router = useRouter();
+  const { pathname, locales, query, asPath } = router;
+  const { t } = useTranslation();
   return (
-    <div className={styles.right}>
-      <LanguageSelector t={t} router={router} />
-    </div>
+    <Box bg="red.400">
+      <Flex w="100%" flexDirection="column">
+        <Box w="100%">
+          <Text color="white" mb={2}>
+            {t("tag:选择语言")}
+          </Text>
+        </Box>
+        {locales?.map((locale, index) => (
+          <Button
+            key={index}
+            onClick={() => {
+              void router.push({ pathname, query }, asPath, { locale: locale });
+            }}
+          >
+            {locale}
+          </Button>
+        ))}
+      </Flex>
+    </Box>
   );
 };
-export const TileLayerControlPanel = (): ReactElement => {
+
+export const TileLayerControlPanel = () => {
+  const { locale } = useRouter();
+
   return (
-    <div className={styles.left}>
-      <div>
-        <Link href="/">
-          <button>to Teyvat</button>
+    <Box bg="green.400">
+      <Flex w="100%" flexDirection="column">
+        <Link
+          href={{
+            pathname: `/`
+          }}
+          locale={locale}
+          passHref
+        >
+          <Button>to Teyvat</Button>
         </Link>
-      </div>
-      <div>
-        <Link href="/qd">
-          <button>to QD</button>
+        <Link
+          href={{
+            pathname: `/[id]`,
+            query: { id: "qd" }
+          }}
+          locale={locale}
+          passHref
+        >
+          <Button>to QD</Button>
         </Link>
-      </div>
-      <div>
-        <Link href="/qd1">
-          <button>to QD1</button>
+        <Link
+          href={{
+            pathname: `/[id]`,
+            query: { id: "qd1" }
+          }}
+          locale={locale}
+          passHref
+        >
+          <Button>to QD1</Button>
         </Link>
-      </div>
-      <div>
-        <Link href="/layers/ImageTileLayer">
-          <button>ImageTileLayer</button>
+        <Link
+          href={{
+            pathname: `/[id]`,
+            query: { id: "editor" }
+          }}
+          locale={locale}
+          passHref
+        >
+          <Button>Editor</Button>
         </Link>
-      </div>
-      <div>
-        <Link href="/editor">
-          <button>Editor</button>
-        </Link>
-      </div>
-    </div>
+      </Flex>
+    </Box>
   );
 };
-export const Panel = (): ReactElement => (
-  <>
-    <LanguageControlPanel />
+export const Panel = () => (
+  <Flex w="100%">
     <TileLayerControlPanel />
-  </>
+    <Spacer />
+    <LanguageControlPanel />
+  </Flex>
 );
 export { Panel as default } from "./Panel";
