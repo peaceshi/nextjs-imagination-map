@@ -1,12 +1,11 @@
 import type { Tile } from "@lib/Interface";
 import { load } from "@loaders.gl/core";
 import { ImageLoader } from "@loaders.gl/images";
-import tileMeta from "@settings/tileMeta.json";
 import { checkGameMap } from "@utils/utils";
 
 type TileXYZ = Pick<Tile, "x" | "y" | "z">;
 
-type TileMeta = typeof tileMeta.dq3;
+type TileMeta = TileJSON;
 const version = `?version=${checkGameMap()}`;
 
 const fetchOptions = {
@@ -22,4 +21,4 @@ export const fetchTileData = async ({ x, y, z }: TileXYZ, Meta: TileMeta): Promi
     ? ((await load(url, ImageLoader, fetchOptions)) as Promise<[]>)
     : ((await load(url, ImageLoader)) as Promise<[]>);
 };
-export default fetchTileData;
+export { fetchTileData as default };
