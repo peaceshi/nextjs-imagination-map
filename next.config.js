@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable unicorn/prefer-module */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-var-requires */
 // The `next.config.js` file must be a JavaScript file as it does not get parsed by Babel or TypeScript,
 // however you can add some type checking in your IDE using JSDoc as below:
 const { i18n } = require("./next-i18next.config");
@@ -75,11 +80,7 @@ const nextConfig = withPWA({
     // your project has ESLint errors.
     ignoreDuringBuilds: true
   },
-  extends: [
-    //...
-    "plugin:@next/next/recommended"
-  ],
-  // basePath: '/v3',
+
   reactStrictMode: true,
   typescript: {
     // !! WARN !!
@@ -90,7 +91,10 @@ const nextConfig = withPWA({
   },
   compress: false,
   poweredByHeader: false,
-  swcMinify: true
+  swcMinify: true,
+  experimental: {
+    concurrentFeatures: false
+  }
 });
 
 module.exports = nextConfig;
