@@ -1,13 +1,4 @@
-.build
 .next
-build
-web_modules
-next.config.js
-snowpack.config.js
-web-test-runner.config.js
-workbox-config.js
-workbox-config-dev.js
-next-i18next.config.js
 public/sw.js*
 public/workbox-*.js*
 public/fallback-*.js*
