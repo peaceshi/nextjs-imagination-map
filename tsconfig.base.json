@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6",
     "lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,8 +20,6 @@
       "@lib/*": ["lib/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
-      "@data/*": ["public/data/*"],
-      "@settings/*": ["public/settings/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"]
     }
