@@ -8,30 +8,6 @@ type Data = FeatureOf<Point> & FeatureWithProps<Point, { region: number }>;
 
 type FilterRange = [number, number];
 
-const initialLayerProperties: TextLayerProps<Data> = {
-  id: "tag-layer",
-  data: [],
-  getPosition: (d: Data) => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
-  characterSet: "auto",
-  fontFamily: "'HYWenHei 85W'",
-  getText: (d) => d.id as string,
-  getColor: [236, 236, 236],
-  getSize: (d: Data) => (d.properties.region == 1 ? 210 : d.properties.region == 2 ? 90 : 40),
-  sizeScale: 1,
-  fontWeight: "normal",
-  sizeUnits: "common",
-  getAlignmentBaseline: "center",
-  fontSettings: {
-    sdf: true,
-    fontSize: 68
-  },
-  outlineColor: [0, 0, 0, 76],
-  outlineWidth: 0.15,
-  filterTransformSize: false,
-  filterTransformColor: false,
-  filterEnabled: true,
-  extensions: [new DataFilterExtension({ filterSize: 1 })]
-};
 const zoomRegion = {
   min: -3,
   max: 0,
@@ -55,9 +31,24 @@ const propertiesUpdater = (
   zoomRegion: { min: number; max: number; step: number }
 ) => {
   setLayerProperties(() => ({
-    ...initialLayerProperties,
+    id: "tag-layer",
     data: geojson?.features as Data[],
+    getPosition: (d: Data) => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
+    characterSet: "auto",
+    fontFamily: "'HYWenHei 85W'",
     getText: (d) => t(`tag:${d.id as string}`),
+    getColor: [236, 236, 236],
+    getSize: (d: Data) => (d.properties.region == 1 ? 210 : d.properties.region == 2 ? 90 : 40),
+    sizeScale: 1,
+    fontWeight: "normal",
+    sizeUnits: "common",
+    getAlignmentBaseline: "center",
+    fontSettings: {
+      sdf: true,
+      fontSize: 68
+    },
+    outlineColor: [0, 0, 0, 76],
+    outlineWidth: 0.15,
     getFilterValue: (d: Data) =>
       d.properties.region == 1
         ? zoomRegion.min
@@ -66,14 +57,15 @@ const propertiesUpdater = (
         : d.properties.region == 3
         ? zoomRegion.max - zoomRegion.step
         : zoomRegion.max,
-    filterRange: filterRange
+    filterRange: filterRange,
+    filterTransformSize: false,
+    filterTransformColor: false,
+    filterEnabled: true,
+    extensions: [new DataFilterExtension({ filterSize: 1 })]
   }));
 };
 export const useTagLayer = (zoom: number, geoJson: FeatureCollection): TextLayer<Data, TextLayerProps<Data>> => {
-  const [layerProperties, setLayerProperties] = useState<TextLayerProps<Data>>(() => ({
-    ...initialLayerProperties,
-    data: geoJson?.features as Data[]
-  }));
+  const [layerProperties, setLayerProperties] = useState<TextLayerProps<Data>>(() => ({}));
   const { t } = useTranslation(["tag"]);
   const [filterRange, setFilterRange] = useState<FilterRange>(() => initialFilterRange);
 
@@ -87,4 +79,4 @@ export const useTagLayer = (zoom: number, geoJson: FeatureCollection): TextLayer
 
   return new TextLayer(layerProperties);
 };
-export default useTagLayer;
+export { useTagLayer as default };

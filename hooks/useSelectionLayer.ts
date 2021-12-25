@@ -11,7 +11,7 @@ interface SelectionLayerProperties {
   id: string;
   selectionType: string | null;
   layerIds: string[];
-  onSelect: (argument0: Record<string, unknown>) => void;
+  onSelect: (argument0: any) => void;
   _subLayerProps: Record<string, unknown>;
 }
 
@@ -19,8 +19,8 @@ export const useSelectionLayer = (mode: typeof ViewMode, setSelectedFeatureIndex
   const [layerProperties, setLayerProperties] = useState<SelectionLayerProperties>({
     id: "selection",
     selectionType: mode === GeoJsonEditMode ? SELECTION_TYPE.RECTANGLE : SELECTION_TYPE.NONE,
-    onSelect: ({ pickingInfos }) => {
-      setSelectedFeatureIndexes(pickingInfos.map((pi) => pi.index));
+    onSelect: ({ pickingInfos }: any) => {
+      setSelectedFeatureIndexes(pickingInfos.map((pi: { index: any }) => pi.index));
     },
     layerIds: ["geojson-layer"],
     _subLayerProps: {
@@ -34,8 +34,8 @@ export const useSelectionLayer = (mode: typeof ViewMode, setSelectedFeatureIndex
     setLayerProperties({
       id: "selection",
       selectionType: mode === GeoJsonEditMode ? SELECTION_TYPE.RECTANGLE : SELECTION_TYPE.NONE,
-      onSelect: ({ pickingInfos }) => {
-        setSelectedFeatureIndexes(pickingInfos.map((pi) => pi.index));
+      onSelect: ({ pickingInfos }: any) => {
+        setSelectedFeatureIndexes(pickingInfos.map((pi: { index: any }) => pi.index));
       },
       layerIds: ["geojson-layer"],
       _subLayerProps: {
