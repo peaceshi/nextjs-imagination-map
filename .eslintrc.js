@@ -36,7 +36,8 @@ module.exports = {
           kebabCase: true,
           camelCase: true,
           pascalCase: true
-        }
+        },
+        ignore: ["useJSON"]
       }
     ],
     "unicorn/numeric-separators-style": "off",
@@ -52,6 +53,7 @@ module.exports = {
       }
     ]
   },
+
   settings: {
     react: {
       version: "detect" // React version. "detect" automatically picks the version you have installed.
