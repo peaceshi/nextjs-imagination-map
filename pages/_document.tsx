@@ -1,15 +1,17 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from "next/document";
-import { ReactElement } from "react";
 
 const APP_NAME = "next-pwa example";
 const APP_DESCRIPTION = "This is an example of using next-pwa plugin";
-
+/**
+ * Custom Document
+ * @url https://nextjs.org/docs/advanced-features/custom-document
+ */
 export default class AppDocument extends Document {
   static async getInitialProps(context: DocumentContext): Promise<DocumentInitialProps> {
     return await Document.getInitialProps(context);
   }
 
-  render(): ReactElement {
+  render() {
     return (
       <Html lang="en" dir="ltr">
         <Head>

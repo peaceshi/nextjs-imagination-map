@@ -4,12 +4,12 @@ import { checkWebpFeature, pwaHelper } from "@utils/utils";
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { createContext, ReactElement } from "react";
+import { createContext } from "react";
 import nextI18NextConfig from "../next-i18next.config";
 
 export const FirstLoadingContext = createContext(true);
 
-const MyAppHead = (): ReactElement => (
+const MyAppHead = () => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Web Map</title>
@@ -21,7 +21,11 @@ const clientSideFunction = () => {
   void checkWebpFeature();
   pwaHelper();
 };
-const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
+/**
+ * Custom App
+ * @url https://nextjs.org/docs/advanced-features/custom-app
+ */
+const MyApp = ({ Component, pageProps }: AppProps) => {
   clientSideFunction();
   return (
     <ChakraProvider>

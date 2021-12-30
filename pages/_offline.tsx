@@ -1,9 +1,4 @@
-// export const getStaticProps: GetStaticProps = async ({ locale }) => ({
-//   props: {
-//     ...(await serverSideTranslations(locale, ["common", "footer"]))
-//   }
-// });
-
+// The offline fallback page.
 export default function Home() {
   return <h1>Offline</h1>;
 }
