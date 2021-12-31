@@ -46,6 +46,8 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.3",
+    "@dnd-kit/core": "^4.0.3",
+    "@dnd-kit/modifiers": "^4.0.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@loaders.gl/json": "^3.1.4",
@@ -62,7 +64,7 @@
     "react-device-detect": "^2.1.2",
     "react-dom": "^18.0.0-rc.0",
     "react-draggable": "^4.4.4",
-    "sass": "^1.45.1",
+    "sass": "^1.45.2",
     "swr": "^1.1.2"
   },
   "devDependencies": {
@@ -80,7 +82,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-unicorn": "^39.0.0",
+    "eslint-plugin-unicorn": "^40.0.0",
     "husky": "7.0.4",
     "lint-staged": "^12.1.4",
     "npm-check-updates": "^12.0.5",
