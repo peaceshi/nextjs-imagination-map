@@ -6,7 +6,7 @@ import { checkGameMap } from "@utils/utils";
 type TileXYZ = Pick<Tile, "x" | "y" | "z">;
 
 type TileMeta = TileJSON;
-const version = `?version=${checkGameMap()}`;
+const version = `${checkGameMap()}`;
 
 const fetchOptions = {
   fetch: {
@@ -14,7 +14,7 @@ const fetchOptions = {
   }
 };
 export const fetchTileData = async ({ x, y, z }: TileXYZ, Meta: TileMeta): Promise<[]> => {
-  const url = `${Meta.baseUrl}/${Meta.tileName}/${z + Meta.tileLevel}/${x}_${y}.jpg${version}?region=${
+  const url = `${Meta.baseUrl}/${Meta.tileName}/${z + Meta.tileLevel}/${x}_${y}.jpg?version=${version}&region=${
     Meta.tileRegion
   }`;
   return localStorage.getItem("webp") === "true"
