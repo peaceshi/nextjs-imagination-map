@@ -1,4 +1,4 @@
-import MapView from "@components/View/MapView";
+import MainView from "@components/View/MainView";
 import type { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import nextI18NextConfig from "../next-i18next.config.js";
@@ -17,6 +17,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 };
 
 const Map = () => {
-  return <MapView id="dq3" />;
+  return <MainView id="dq3" />;
 };
 export { Map as default };

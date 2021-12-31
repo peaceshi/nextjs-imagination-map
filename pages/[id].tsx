@@ -1,4 +1,4 @@
-import MapView from "@components/View/MapView";
+import MainView from "@components/View/MainView";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useRouter } from "next/router";
@@ -33,6 +33,6 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 const Map = () => {
   const { id } = useRouter().query as { id: string };
-  return <MapView id={id} />;
+  return <MainView id={id} />;
 };
 export { Map as default };
