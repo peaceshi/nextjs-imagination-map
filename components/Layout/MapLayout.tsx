@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import { ControllerOptions } from "@deck.gl/core/controllers/controller";
 import DeckGL from "@deck.gl/react";
-import { useTagLayer, useTileLayer } from "@hooks/hooks";
+import { useTagLayer, useTileLayer } from "@hooks";
 import { vignette } from "@luma.gl/shadertools";
 import { OrthographicView, PostProcessEffect } from "deck.gl";
 import { ReactElement, useCallback, useState } from "react";

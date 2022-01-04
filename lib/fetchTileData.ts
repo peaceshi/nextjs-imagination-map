@@ -1,7 +1,7 @@
 import type { Tile } from "@lib/Interface";
 import { load } from "@loaders.gl/core";
 import { ImageLoader } from "@loaders.gl/images";
-import { checkGameMap } from "@utils/utils";
+import { checkGameMap } from "@utils";
 
 type TileXYZ = Pick<Tile, "x" | "y" | "z">;
 

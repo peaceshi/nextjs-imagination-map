@@ -2,7 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import EditorLayout from "@components/EditorLayout";
 import { ControllerOptions } from "@deck.gl/core/controllers/controller";
 import DeckGL from "@deck.gl/react";
-import { useEditableLayer, useTagLayer, useTileLayer } from "@hooks/hooks";
+import { useEditableLayer, useTagLayer, useTileLayer } from "@hooks";
 import { vignette } from "@luma.gl/shadertools";
 import { ModifyMode } from "@nebula.gl/edit-modes";
 import { OrthographicView, PostProcessEffect } from "deck.gl";

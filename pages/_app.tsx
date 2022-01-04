@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import "@styles/index.sass";
-import { checkWebpFeature, pwaHelper } from "@utils/utils";
+import { checkWebpFeature, pwaHelper } from "@utils";
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Head from "next/head";

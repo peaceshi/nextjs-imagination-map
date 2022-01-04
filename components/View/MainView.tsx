@@ -2,10 +2,9 @@ import MainLayout from "@components/Layout/MainLayout";
 import MapEditorLayout from "@components/Layout/MapEditorLayout";
 import MapLayout from "@components/Layout/MapLayout";
 import SplashScreen from "@components/Screen/SplashScreen";
-import { useJSON } from "@hooks/hooks";
+import { useJSON } from "@hooks";
 import { FirstLoadingContext } from "@pages/_app";
 import { ReactNode, useContext } from "react";
-
 const MainViewSplashScreen = () => {
   const isFirstLoading = useContext(FirstLoadingContext);
   return isFirstLoading ? (
