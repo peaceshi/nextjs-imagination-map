@@ -22,11 +22,13 @@ module.exports = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:promise/recommended",
     "plugin:unicorn/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
     "plugin:prettier/recommended",
     "next",
     "prettier"
   ],
-  plugins: ["@typescript-eslint", "promise", "unicorn", "prettier"],
+  plugins: ["@typescript-eslint", "promise", "unicorn", "jest", "prettier"],
   rules: {
     "prettier/prettier": "error",
     "unicorn/filename-case": [

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "ES6",
     "lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker"],
@@ -16,11 +17,14 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      // https://github.com/microsoft/TypeScript/issues/26859#issuecomment-858667769
       "@components/*": ["components/*"],
       "@lib/*": ["lib/*"],
+      "@hooks": ["hooks"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
+      "@utils": ["utils"],
       "@utils/*": ["utils/*"]
     }
   }
