@@ -1,7 +1,6 @@
 // global.d.ts should NOT have any import directly.
-declare type GeoJSON = import("@types/geojson").GeoJSON;
-declare type Feature = import("@types/geojson").Feature;
-declare type Point = import("@types/geojson").Point;
+/// <reference types="jest-extended" />
+/// <reference types="geojson" />
 /**
  * DeckGL InitialViewState
  */
