@@ -48,7 +48,9 @@ declare interface TileJSON {
   maxZoomNative: number;
   width: number;
   height: number;
+  version: number;
+  extName: string;
 }
 declare interface TileMetaJSONCollection {
-  [key: string]: TileMetaJSON;
+  [key: string]: TileJSON;
 }
