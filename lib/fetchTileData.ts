@@ -1,12 +1,9 @@
 import type { Tile } from "@lib/Interface";
 import { load } from "@loaders.gl/core";
 import { ImageLoader } from "@loaders.gl/images";
-import { checkGameMap } from "@utils";
-
 type TileXYZ = Pick<Tile, "x" | "y" | "z">;
 
 type TileMeta = TileJSON;
-const version = `${checkGameMap()}`;
 
 const fetchOptions = {
   fetch: {
@@ -14,9 +11,9 @@ const fetchOptions = {
   }
 };
 export const fetchTileData = async ({ x, y, z }: TileXYZ, Meta: TileMeta): Promise<[]> => {
-  const url = `${Meta.baseUrl}/${Meta.tileName}/${z + Meta.tileLevel}/${x}_${y}.jpg?version=${version}&region=${
-    Meta.tileRegion
-  }`;
+  const url = `${Meta.baseUrl}/${Meta.tileName}/${z + Meta.tileLevel}/${x}_${y}.${Meta.extName}?version=${
+    Meta.version
+  }&region=${Meta.tileRegion}`;
   return localStorage.getItem("webp") === "true"
     ? ((await load(url, ImageLoader, fetchOptions)) as Promise<[]>)
     : ((await load(url, ImageLoader)) as Promise<[]>);
