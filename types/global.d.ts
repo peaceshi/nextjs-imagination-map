@@ -51,6 +51,6 @@ declare interface TileJSON {
   version: number;
   extName: string;
 }
-declare interface TileMetaJSONCollection {
+declare interface TileJSONCollection {
   [key: string]: TileJSON;
 }
