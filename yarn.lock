@@ -9819,9 +9819,9 @@ react-use-measure@^2.1.1:
     debounce "^1.2.1"
 
 react@^18.0.0-rc.0:
-  version "18.0.0-rc.0-next-fe905f152-20220107"
-  resolved "https://registry.npmmirror.com/react/download/react-18.0.0-rc.0-next-fe905f152-20220107.tgz#0dbc93be2b5ff5df4a353c74bbabfc97e47d8098"
-  integrity sha512-eePjzo6pCiwk9iDRYG0Hn5F0p9e7dlLGIys/eeLUCxByHP90rsXg/H/842S6ggBgarcfvRtDu8cAU7kxfLC4MA==
+  version "18.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.0.0-rc.0.tgz#60bfcf1edd0b35fbeeeca852515c6cc2ce06a6eb"
+  integrity sha512-PawosMBgF8k5Nlc3++ibzjFqPvo1XKv80MNtVYqz3abHHB2w3IpU65sSdSmBd2ooCwVhcp9b1vkx/twqhakNtA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
