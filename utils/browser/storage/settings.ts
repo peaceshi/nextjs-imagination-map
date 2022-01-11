@@ -26,7 +26,9 @@ export const setDriver = async (driverName: string | string[]) => {
 };
 /**
  * **`Synchronous API`** setConfig
- * @description Set and persist localForage options. This must be called before any other calls to localForage are made, but can be called after localForage is loaded.
+ * @description **`localforage._ready = null;`**
+ *
+ * Set and persist localForage options. This must be called before any other calls to localForage are made, but can be called after localForage is loaded.
  *
  * If you set any config values with this method they will persist after driver changes, so you can call `config()` then `setDriver()`
  *
@@ -48,6 +50,9 @@ export const setDriver = async (driverName: string | string[]) => {
  */
 export const setConfig = (options?: LocalForageOptions) => {
   try {
+    // @ts-expect-error: The library is not exported it.
+    // eslint-disable-next-line unicorn/no-null
+    localforage._ready = null;
     if (options) {
       const value = localforage.config(options);
       console.debug(value);
