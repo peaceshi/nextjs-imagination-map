@@ -3,8 +3,9 @@ import { ControllerOptions } from "@deck.gl/core/controllers/controller";
 import DeckGL from "@deck.gl/react";
 import { useTagLayer, useTileLayer } from "@hooks";
 import { vignette } from "@luma.gl/shadertools";
+import { storage } from "@utils";
 import { OrthographicView, PostProcessEffect } from "deck.gl";
-import { ReactElement, useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 
 type UnknownObject = Record<string, unknown>;
@@ -31,9 +32,19 @@ interface MapProperties {
   tag: TagJSON;
   tileMeta: TileJSON;
 }
-export const MapLayout = (properties: MapProperties): ReactElement => {
+export const MapLayout = (properties: MapProperties) => {
   const { id, tag: tagJSON, tileMeta } = properties;
-  const [viewState, setViewState] = useState(() => initialViewState);
+  const [interruptViewState, setInterruptViewState] = useState(() => initialViewState);
+
+  const [viewState, setViewState] = useState(() => interruptViewState);
+  useEffect(() => {
+    void (async () => {
+      storage.setConfig({ name: "map", storeName: id });
+      await storage.setItem("viewID", id);
+      const viewState = await storage.getItem("viewState");
+      setInterruptViewState(viewState as InitialViewState);
+    })();
+  }, [id]);
 
   const view = new OrthographicView({ id: id });
 
@@ -52,6 +63,14 @@ export const MapLayout = (properties: MapProperties): ReactElement => {
         viewState.transitionDuration = 300;
         setViewState(viewState);
       }
+      void (async () => {
+        await storage.setItem("viewState", {
+          target: viewState.target,
+          zoom: viewState.zoom,
+          maxZoom: viewState.maxZoom,
+          minZoom: viewState.minZoom
+        });
+      })();
     },
     []
   );
@@ -60,7 +79,7 @@ export const MapLayout = (properties: MapProperties): ReactElement => {
       <DeckGL
         views={[view]}
         layers={[tileLayer, tagLayer]}
-        initialViewState={initialViewState}
+        initialViewState={interruptViewState}
         controller={isMobile ? true : controller}
         effects={[postProcessEffect]}
         onViewStateChange={onViewStateChange}
