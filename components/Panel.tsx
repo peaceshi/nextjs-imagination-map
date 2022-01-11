@@ -65,7 +65,7 @@ export const TileLayerControlPanel = () => {
         >
           <Button>to QD1</Button>
         </Link>
-        <Link
+        {/* <Link
           href={{
             pathname: `/[id]`,
             query: { id: "editor" }
@@ -74,7 +74,7 @@ export const TileLayerControlPanel = () => {
           passHref
         >
           <Button>Editor</Button>
-        </Link>
+        </Link> */}
       </Flex>
     </Box>
   );
