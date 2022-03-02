@@ -9721,13 +9721,12 @@ react-device-detect@^2.1.2:
     ua-parser-js "^0.7.30"
 
 react-dom@^18.0.0-rc.0:
-  version "18.0.0-rc.0-next-fe905f152-20220107"
-  resolved "https://registry.npmmirror.com/react-dom/download/react-dom-18.0.0-rc.0-next-fe905f152-20220107.tgz#22714f7c6e006e4728f87972df2774818022dcaa"
-  integrity sha512-tl+6q+8h9Vj7r4iI1jYQfLp4oHLC+f7tenqlYBw9eOyJ/SXJXzZ0Mp7QG1LYkK+oapO3vlj5I7ddnbnf8bcDJQ==
+  version "18.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-rc.1.tgz#97296d5a5e7582e65ea0d82a9ccd5953aa05e7f6"
+  integrity sha512-BZ9NEwUp56MEguEwAzuh3u4bYE9Jv3QrzjaTmu11PV4C/lJCARTELEI16vjnHLq184GoJcCHMBrDILqlCrkZFQ==
   dependencies:
     loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    scheduler "0.21.0-rc.0-next-fe905f152-20220107"
+    scheduler "^0.21.0-rc.1"
 
 react-draggable@^4.4.4:
   version "4.4.4"
@@ -10221,13 +10220,12 @@ saxes@^5.0.1:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@0.21.0-rc.0-next-fe905f152-20220107:
-  version "0.21.0-rc.0-next-fe905f152-20220107"
-  resolved "https://registry.npmmirror.com/scheduler/download/scheduler-0.21.0-rc.0-next-fe905f152-20220107.tgz#410f6df2f39d5543b00f98fbad7de6c9b374df89"
-  integrity sha512-+sY0WajWdMjoxbmHM8P6P1FKGw8sSVKKG/HthqTFQFPxVGbKLmV1BiFPaVF9gOyQWqmnLYSXJMN+4Bs5ZygsTw==
+scheduler@^0.21.0-rc.1:
+  version "0.21.0-rc.1-next-f468816ef-20220225"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-rc.1-next-f468816ef-20220225.tgz#1909b9ce9e67de48f5ca06b52d98828401771e66"
+  integrity sha512-/maKldJ78Ba2o1e9kh2mUpqNZH7XrmSQ1o1aa3HUPN/OMotUB9+pBKX/y3Zihkjco21H4cujG9hK2sJOZUpzJw==
   dependencies:
     loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 schema-utils@^2.6.5:
   version "2.7.1"
