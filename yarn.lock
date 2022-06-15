@@ -9359,9 +9359,9 @@ react-style-singleton@^2.1.0:
     tslib "^1.0.0"
 
 react@^18.0.0-rc.0:
-  version "18.0.0-rc.2-next-b9de50d2f-20220308"
-  resolved "https://registry.npmmirror.com/react/-/react-18.0.0-rc.2-next-b9de50d2f-20220308.tgz#817d40520b76c3f3e8314eeda1abf85d9070465c"
-  integrity sha512-1RpONBLI/vgKN/kdq0DtPxrgXHS5OXCHbzXWXk2RcLRjlbBiqmAPUIpCq7x+02WhYQkgA6D0iRJo4NJ9fZMCGQ==
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
+  integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
   dependencies:
     loose-envify "^1.1.0"
 
