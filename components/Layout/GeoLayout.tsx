@@ -127,6 +127,49 @@ export const MapLayout = () => {
             // maxzoom={17}
           />
         </Source>
+        <Source
+          id="geojson-layer"
+          type="geojson"
+          data={{
+            type: "Feature",
+            properties: {
+              description: "表演蒙德222's ATheater ",
+              id: 2
+            },
+            geometry: {
+              type: "Polygon",
+              // These coordinates outline Maine.
+              coordinates: [
+                [
+                  [0, 0],
+                  [0, 0.01],
+                  [0.01, 0],
+                  [0, 0]
+                ]
+              ]
+            }
+          }}
+        >
+          <Layer
+            id="poly"
+            type="fill"
+            source="geojson-layer"
+            paint={{
+              "fill-color": "#1494ef", // blue color fill
+              "fill-opacity": 0.2
+            }}
+          />
+          <Layer
+            id="outline"
+            type="line"
+            source="geojson-layer"
+            paint={{
+              "line-color": "#1494ef", // blue color fill
+              "line-opacity": 0.84,
+              "line-width": 3
+            }}
+          />
+        </Source>
         <DownloadButton style={{ height: "100px", width: "100px", position: "absolute" }} data={features} />
       </Map>
     </Flex>
