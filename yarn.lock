@@ -2555,7 +2555,42 @@
     "@babel/runtime" "^7.12.0"
     gl-matrix "~3.3.0"
 
-"@nebula.gl/edit-modes@1.0.2-alpha.2", "@nebula.gl/edit-modes@^1.0.2-alpha.2":
+"@nebula.gl/edit-modes@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@nebula.gl/edit-modes/-/edit-modes-1.0.2.tgz#56a549685003e6f8288085916166fcd2afd838b0"
+  integrity sha512-D8HERMjsvRPduc86dCdQeB9PlhuZefL7zAlwcAmomqdJteGiOVUglgxTtnH615LadZ5VfoWLZZ9ENeMbQ2NXyg==
+  dependencies:
+    "@turf/along" ">=6.3.0"
+    "@turf/area" ">=4.0.0"
+    "@turf/bbox" ">=4.0.0"
+    "@turf/bbox-polygon" ">=4.0.0"
+    "@turf/bearing" ">=4.0.0"
+    "@turf/boolean-point-in-polygon" ">=4.0.0"
+    "@turf/buffer" ">=4.0.0"
+    "@turf/center" ">=4.0.0"
+    "@turf/centroid" ">=4.0.0"
+    "@turf/circle" ">=4.0.0"
+    "@turf/destination" ">=4.0.0"
+    "@turf/difference" ">=4.0.0"
+    "@turf/distance" ">=4.0.0"
+    "@turf/ellipse" ">=4.0.0"
+    "@turf/helpers" ">=4.0.0"
+    "@turf/intersect" ">=4.0.0"
+    "@turf/line-intersect" ">=4.0.0"
+    "@turf/midpoint" ">=4.0.0"
+    "@turf/nearest-point-on-line" ">=4.0.0"
+    "@turf/point-to-line-distance" ">=4.0.0"
+    "@turf/polygon-to-line" ">=4.0.0"
+    "@turf/rewind" ">=4.0.0"
+    "@turf/transform-rotate" ">=4.0.0"
+    "@turf/transform-scale" ">=4.0.0"
+    "@turf/transform-translate" ">=4.0.0"
+    "@turf/union" ">=4.0.0"
+    geojson "0.5.0"
+    lodash.throttle "^4.1.1"
+    viewport-mercator-project ">=6.0.0"
+
+"@nebula.gl/edit-modes@^1.0.2-alpha.2":
   version "1.0.2-alpha.2"
   resolved "https://registry.npmmirror.com/@nebula.gl/edit-modes/-/edit-modes-1.0.2-alpha.2.tgz#2b71e25ee728922bdac2175d6010e12f921674bf"
   integrity sha512-QKBros+KUq/DdZlplFMqLVxZwhXdFJ2nt927tY+IPBDloiw7fcnfPUeY1dr1na7V2lpseQGvFqHxvUSuVYDldQ==
@@ -2590,13 +2625,13 @@
     lodash.throttle "^4.1.1"
     viewport-mercator-project ">=6.0.0"
 
-"@nebula.gl/layers@^1.0.2-alpha.2":
-  version "1.0.2-alpha.2"
-  resolved "https://registry.npmmirror.com/@nebula.gl/layers/-/layers-1.0.2-alpha.2.tgz#8c1505037bb7b4d5e64dc12348e5d314b29becbf"
-  integrity sha512-k4IoVjbe7Ail/GD/nYkJarUccsnCWBqoDY2DH/moZSVi//0npytU893z1fQcm1fZE2RtmofHEUaWDuHZYTn+TA==
+"@nebula.gl/layers@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@nebula.gl/layers/-/layers-1.0.2.tgz#b07b70a09b01dbb42faeb8c99c8b753d321ccb41"
+  integrity sha512-xA1NOyv+Ryj2UZRvPuXfmXpo2GYGF2FjL6bO6rn+aBpvaRqiP4JL4Psfc0iinXc2mIL4akRrkVsMnq7BLE1uow==
   dependencies:
     "@danmarshall/deckgl-typings" "4.9.12"
-    "@nebula.gl/edit-modes" "1.0.2-alpha.2"
+    "@nebula.gl/edit-modes" "1.0.2"
     "@turf/bbox" ">=4.0.0"
     "@turf/bbox-polygon" ">=4.0.0"
     "@turf/bearing" ">=4.0.0"
