@@ -9,7 +9,7 @@ jobs:
     name: label stale issues
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-cool/issues-helper@v2.3.1
+      - uses: actions-cool/issues-helper@v3.0.1
         with:
           actions: "check-inactive"
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -24,7 +24,7 @@ jobs:
     if: github.event.label.name == 'invalid'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-cool/issues-helper@v2.3.1
+      - uses: actions-cool/issues-helper@v3.0.1
         with:
           actions: "close-issue, lock-issue"
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -37,7 +37,7 @@ jobs:
     if: github.event.label.name == 'need reproduction'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-cool/issues-helper@v2.2.1
+      - uses: actions-cool/issues-helper@v3.0.1
         with:
           actions: "create-comment"
           token: ${{ secrets.GITHUB_TOKEN }}
