@@ -9324,9 +9324,9 @@ react-is@^17.0.1:
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
 react-map-gl@^7.0.9:
-  version "7.0.9"
-  resolved "https://registry.npmmirror.com/react-map-gl/-/react-map-gl-7.0.9.tgz#64d121e1aca774f7683ccee247ec770f9c8682ef"
-  integrity sha512-V2ts14w0XljVs92BW+oqLgN1AqdCwfmyoaQA4PXLdj4Wpcq9uSmE77vNiYu9mmc3n8mnK7cNghAFwOHU3RKoUw==
+  version "7.0.19"
+  resolved "https://registry.yarnpkg.com/react-map-gl/-/react-map-gl-7.0.19.tgz#bcd5e7963cf0209175a5398a3d99f5c3a40f3f0a"
+  integrity sha512-s3E8aU6BursSDVwzQZbzdDzDRUX4kdfRqZODYvkdDbInr3RzaNdlbhJ5tojXKWOonsxV6wt+Acv9JCaOMKaf0A==
   dependencies:
     "@types/mapbox-gl" "^2.6.0"
 
