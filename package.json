@@ -63,7 +63,7 @@
     "mapbox-gl": "^2.7.0",
     "mapbox-gl-draw-bezier-curve-mode": "^1.0.2",
     "maplibre-gl": "^2.1.7",
-    "next": "^12.1.0",
+    "next": "^13.5.4",
     "next-i18next": "^10.5.0",
     "next-pwa": "^5.4.5",
     "react": "^18.0.0-rc.0",
